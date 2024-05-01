@@ -8,16 +8,59 @@
   box-sizing: border-box;
 }
 
-/* General Styles */
+/* ----------------- General Styles */
 body {
   font-family: "News Cycle", Impact, sans-serif;
 }
 
-/* General Classes */
+/* ----------------- General Classes */
 .hidden-text {
   display: none;
 }
 
 .reveal {
-    display: none;
+  display: none;
+}
+
+/* ----------------- Homepage */
+#homepage {
+  background-image: url("../images/backgrounds/homepage-background.webp");
+  background-color: #ed1d24;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100vh;
+  width: 100vw;
+}
+
+#start-button-contiainer {
+  position: absolute;
+  right: 290px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+#start-button {
+  position: relative;
+  top: 240px;
+  height: 90px;
+  width: 220px;
+  border-radius: 10px;
+  font-family: "News Cycle", Impact, sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 38px;
+  font-stretch: condensed;
+  color: white;
+  background-color: #ed1d24;
+  border: solid 5px #a80006;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+#start-button:hover {
+  background-color: #a80006;
+  border-color: #ed1d24;
+  font-size: 40px;
+  transition: all 0.5s;
+  box-shadow: none;
 }
