@@ -147,3 +147,203 @@ body {
   color: rgb(224, 224, 224);
   transition: all 0.2s;
 }
+
+/* ----------------- Game Page: Hero */
+#heroes-game {
+  background-image: url("../images/backgrounds/game-heroes-background.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100vh;
+  width: 100vw;
+}
+
+#deal-button-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 300px;
+}
+
+#deal-cards-button {
+  padding: 0 10px;
+  border-radius: 10px;
+  font-family: "News Cycle", Impact, sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 38px;
+  font-stretch: condensed;
+  color: white;
+  background-color: #ed1d24;
+  border-color: white;
+  cursor: pointer;
+}
+
+#deal-cards-button:hover {
+  color: #ed1d24;
+  background-color: white;
+  border-color: #ed1d24;
+  transition: all 0.5s;
+}
+
+/* User Hero Cards */
+#user-hero-card {
+  position: absolute;
+  top: 40px;
+  left: 220px;
+  width: 250px;
+  height: 470px;
+  border-radius: 15px;
+  transform-style: preserve-3d;
+}
+
+#user-hero-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  text-align: center;
+  border: groove 3px rgba(255, 255, 255, 0.3);
+  background-image: url(../images/backgrounds/card-back.webp);
+  z-index: 1;
+  backface-visibility: hidden;
+}
+
+#user-hero-card-back > img {
+  position: relative;
+  top: 150px;
+  width: 150px;
+  border-radius: 10px;
+  opacity: 0.9;
+}
+
+#user-hero-card-front {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  background-image: url("../images/backgrounds/card-front-hero.webp");
+  border: groove 3px rgba(17, 128, 255, 0.8);
+  transform: rotateY(180deg);
+}
+
+#user-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#user-hero > img {
+  position: relative;
+  top: 25px;
+  width: 75%;
+  height: 230px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  border: solid 3px whitesmoke;
+}
+
+#user-hero > h3 {
+  color: white;
+  margin-bottom: 5px;
+}
+
+#user-hero > h4 {
+  width: 85%;
+  color: white;
+  font-size: 80%;
+  line-height: 140%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#user-hero-stats {
+  color: white;
+  font-size: 75%;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+#cpu-villain-card {
+  position: absolute;
+  top: 40px;
+  right: 220px;
+  border-radius: 15px;
+  width: 250px;
+  height: 470px;
+  transform-style: preserve-3d;
+}
+
+#cpu-villain-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  border: groove 3px rgba(255, 255, 255, 0.3);
+  text-align: center;
+  background-image: url(../images/backgrounds/card-back.webp);
+  z-index: 1;
+  backface-visibility: hidden;
+}
+
+#cpu-villain-card-back > img {
+  position: relative;
+  top: 150px;
+  width: 150px;
+  border-radius: 10px;
+  opacity: 0.9;
+}
+
+#cpu-villain-card-front {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  background-image: url("../images/backgrounds/card-front-villain.webp");
+  border: groove 3px rgba(255, 255, 255, 0.3);
+  transform: rotateY(180deg);
+}
+
+#cpu-villain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#cpu-villain > img {
+  position: relative;
+  top: 25px;
+  width: 75%;
+  height: 230px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  border: solid 3px whitesmoke;
+}
+
+#cpu-villain > h3 {
+  color: white;
+  margin-bottom: 5px;
+}
+
+#cpu-villain > h4 {
+  width: 85%;
+  color: white;
+  font-size: 80%;
+  line-height: 140%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#cpu-villain-stats {
+  color: white;
+  font-size: 75%;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+td > i {
+  padding-right: 10px;
+}
+
+.skill {
+  padding-right: 100px;
+}
