@@ -31,14 +31,14 @@ body {
   width: 100vw;
 }
 
-#start-button-contiainer {
+#play-button-contiainer {
   position: absolute;
   right: 290px;
   text-align: center;
   padding-top: 20px;
 }
 
-#start-button {
+#play-button {
   position: relative;
   top: 240px;
   height: 90px;
@@ -55,7 +55,7 @@ body {
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
 }
 
-#start-button:hover {
+#play-button:hover {
   background-color: #a80006;
   border-color: #ed1d24;
   font-size: 40px;
@@ -129,4 +129,21 @@ body {
   transition: all 0.5s;
   box-shadow: none;
   border: solid 3px black;
+}
+
+#close-window {
+  position: relative;
+  top: 5px;
+  left: 190px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+#close-window:hover {
+  color: rgb(224, 224, 224);
+  transition: all 0.2s;
 }
