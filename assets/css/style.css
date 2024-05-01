@@ -13,17 +13,15 @@ body {
   font-family: "News Cycle", Impact, sans-serif;
 }
 
-/* ----------------- General Classes */
+/* ----------------- Hidden Classes */
 .hidden-text {
-  display: none;
-}
-
-.reveal {
   display: none;
 }
 
 /* ----------------- Homepage */
 #homepage {
+  display: flex;
+  justify-content: center;
   background-image: url("../images/backgrounds/homepage-background.webp");
   background-color: #ed1d24;
   background-size: contain;
@@ -63,4 +61,72 @@ body {
   font-size: 40px;
   transition: all 0.5s;
   box-shadow: none;
+}
+
+#deck-choice-container {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 170px;
+  height: 300px;
+  width: 450px;
+  background-image: url(../images/backgrounds/deck-choice-background.webp);
+  background-size: cover;
+  border: groove 3px white;
+  border-radius: 30px;
+  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.9);
+  color: white;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+#deck-choice-container > h3 {
+  margin-bottom: 10px;
+  font-size: 45px;
+}
+
+#heroes-button {
+  margin-bottom: 20px;
+  height: 70px;
+  width: 180px;
+  font-size: 35px;
+  font-style: italic;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 10px;
+  background-image: url(../images/backgrounds/card-front-hero.webp);
+  background-size: cover;
+  cursor: pointer;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+#villains-button {
+  margin-bottom: 10px;
+  height: 70px;
+  width: 180px;
+  font-size: 35px;
+  font-style: italic;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 10px;
+  background-image: url(../images/backgrounds/card-front-villain.webp);
+  background-size: cover;
+  cursor: pointer;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+#heroes-button:hover {
+  font-size: 37px;
+  transition: all 0.2s;
+  box-shadow: none;
+  border: solid 3px black;
+}
+
+#villains-button:hover {
+  font-size: 37px;
+  transition: all 0.5s;
+  box-shadow: none;
+  border: solid 3px black;
 }
