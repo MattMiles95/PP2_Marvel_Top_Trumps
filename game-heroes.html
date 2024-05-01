@@ -18,10 +18,57 @@
 <body id="heroes-game">
 
     <!-- Game Controls -->
+    <div id="deal-button-container">
+        <button id="deal-cards-button">Fight!</button>
+    </div>
+
+    <div id="results-screen">
+        <!-- This div will be populated with either a 'win', 'lose' or 'draw' pop up once the user picks a stat to play -->
+    </div>
 
     <!-- User Card -->
+    <div id="user-hero-card">
+        <div id="user-hero-card-back">
+            <img src="assets/images/game-logo.webp">
+        </div>
+        <div id="user-hero-card-front">
+            <div id="user-hero">
+                <!-- This div will be populated with a randomly selected hero from userHeroesGallery array -->
+            </div>
+        </div>
+    </div>
+
+    <div class="user-buttons">
+        <ul>
+            <li>
+                <button id="power-btn"><i class="fa-solid fa-fire-flame-curved"></i></button>
+            </li>
+            <li>
+                <button id="agility-btn"><i class="fa-solid fa-feather-pointed"></i></button>
+            </li>
+            <li>
+                <button id="intel-btn"><i class="fa-solid fa-brain"></i></button>
+            </li>
+            <li>
+                <button id="fighting-btn"><i class="fa-solid fa-hand-fist"></i></button>
+            </li>
+            <li>
+                <button id="battle-iq-btn"><i class="fa-solid fa-bullseye"></i></button>
+            </li>
+        </ul>
+    </div>
 
     <!-- CPU Card -->
+    <div id="cpu-villain-card">
+        <div id="cpu-villain-card-back">
+            <img src="assets/images/game-logo.webp">
+        </div>
+        <div id="cpu-villain-card-front">
+            <div id="cpu-villain">
+                <!-- This div will be filled with a randomly selected villain from villainsGallery array -->
+            </div>
+        </div>
+    </div>
 
     <!-- SCRIPT LINKS -->
 
