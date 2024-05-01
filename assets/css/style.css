@@ -1,0 +1,23 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&display=swap");
+
+/* Asterisk wildcard selector to override default styles added by the browser */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+  font-family: "News Cycle", Impact, sans-serif;
+}
+
+/* General Classes */
+.hidden-text {
+  display: none;
+}
+
+.reveal {
+    display: none;
+}
