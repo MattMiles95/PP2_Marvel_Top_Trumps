@@ -163,7 +163,7 @@ body {
   display: flex;
   justify-content: center;
   position: relative;
-  top: 300px;
+  top: 420px;
 }
 
 #deal-cards-button {
@@ -347,3 +347,16 @@ td > i {
 .skill {
   padding-right: 100px;
 }
+
+/* Card Flip Animation */
+#user-hero-card.active {
+    transform: perspective(700px) rotateY(180deg);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
+    transition: all 1.2s;
+  }
+  
+  #cpu-villain-card.active {
+    transform: perspective(700px) rotateY(180deg);
+    box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.8);
+    transition: all 1.2s;
+  }

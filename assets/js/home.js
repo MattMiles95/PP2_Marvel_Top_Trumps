@@ -1,4 +1,4 @@
-// Homepage
+// HOMEPAGE
 
 /**
  * Script to display and close User's Deck Choice window
@@ -13,4 +13,4 @@ playBtn.addEventListener("click", () => {
 
 closeWindow.addEventListener("click", () => {
     deckChoiceContainer.style.display = "none";
-})
+});
