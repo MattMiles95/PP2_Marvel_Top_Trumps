@@ -15,16 +15,33 @@
     <title>Marvel Top Trumps</title>
 </head>
 
-<body>
+<body id="homepage">
 
     <!-- Header -->
-
+    <h1 id="game-heading">
+        <img id="game-logo" src="assets/images/game-logo.webp" alt="logo"> <span class="hidden-text">Marvel's Top
+            Trumps</span>
+    </h1>
 
     <!-- Main Content -->
+    <div id="start-button-container">
+        <button id="start-button">Play Game!</button>
+    </div>
 
+    <div id="deck-choice-container" class="reveal">
+        <h3 id="deck-choice-container">Choose your deck:</h3>
+        <a href="game-hero.html" aria-label="Play game with the hero deck">
+            <button id="heroes-button">Heroes</button>
+        </a>
+        <a href="game-villains.html" aria-label="Play game with the villain deck">
+            <button id="hero-button">Villains</button>
+        </a>
+    </div>
 
-    <!-- Footer -->
-
+    <div id="settings-container">
+        <button id="sound-button"><i class="fa-solid fa-volume-high"></i></button>
+        <button id="help-button"><i class="fa-solid fa-circle-info"></i></button>
+    </div>
 
     <!-- SCRIPT LINKS -->
 
