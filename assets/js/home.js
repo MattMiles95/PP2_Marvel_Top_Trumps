@@ -1,5 +1,3 @@
-// HOMEPAGE
-
 /**
  * Script to display and close User's Deck Choice window
  */
