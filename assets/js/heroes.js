@@ -1,13 +1,16 @@
 // Card Flip Toggle
 let heroCard = document.getElementById("hero-card");
 let villainCard = document.getElementById("villain-card");
-let dealCardsButton = document.getElementById("deal-cards-button");
+let userBtns = document.getElementById("user-buttons");
+let dealBtnContainer = document.getElementById("deal-button-container");
+let dealCardsBtn = document.getElementById("deal-cards-button")
 
-dealCardsButton.addEventListener("click", () => {
+dealCardsBtn.addEventListener("click", () => {
   heroCard.classList.toggle("active");
   villainCard.classList.toggle("active");
+  userBtns.style.display = "block";
   dealCardsUH();
-  // dealCardsButton.classList.toggle("hidden-text"); (commented out for editing ease - uncomment to play)
+  // dealBtnContainer.style.display = "none"; (Commented out for ease of editing - uncomment to play)
 });
 
 /**

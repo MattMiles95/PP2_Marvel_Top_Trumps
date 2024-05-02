@@ -159,16 +159,35 @@ body {
 }
 
 #deal-button-container {
-  width: 100%;
+  position: relative;
   display: flex;
   justify-content: center;
+  align-items: center;
+  top: 150px;
+}
+
+#deal-button-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 370px;
+  height: 300px;
+  border: groove 3px white;
+  border-radius: 30px;
+  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.9);
+  background-image: url(../images/backgrounds/deck-choice-background.webp);
+}
+
+#deal-button-box p {
   position: relative;
-  top: 420px;
+  top: 50px;
+  color: white;
 }
 
 #deal-cards-button {
+  height: 150px;
+  width: 150px;
   padding: 0 10px;
-  border-radius: 10px;
   font-family: "News Cycle", Impact, sans-serif;
   text-transform: uppercase;
   font-weight: 900;
@@ -176,18 +195,29 @@ body {
   font-stretch: condensed;
   color: white;
   background-color: #ed1d24;
+  border-radius: 50%;
   border-color: white;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   cursor: pointer;
 }
 
 #deal-cards-button:hover {
-  color: #ed1d24;
-  background-color: white;
-  border-color: #ed1d24;
-  transition: all 0.5s;
+  background-color: #d6191f;
+  box-shadow: none;
 }
 
-/* Hero Cards */
+#user-buttons {
+  display: block;
+  transform: rotateY(180deg);
+}
+
+#user-buttons > ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+/* ----------------- Hero Cards */
 #hero-card {
   position: absolute;
   top: 40px;
@@ -263,6 +293,8 @@ body {
   text-transform: uppercase;
   font-weight: bolder;
 }
+
+/* ----------------- Villain Card */
 
 #villain-card {
   position: absolute;
@@ -348,7 +380,7 @@ td > i {
   padding-right: 100px;
 }
 
-/* Card Flip Animation */
+/* ----------------- Card Flip Animation */
 #hero-card.active {
   transform: perspective(700px) rotateY(180deg);
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
