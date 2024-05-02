@@ -29,11 +29,11 @@ function dealCardsUH() {
 
 
 /**
- * Battle Buttons - each button
- * triggers a different function,
- * depending on which stat. the player
- * is using for the round
+ * BATTLE BUTTONS - each button triggers a different function,
+ * depending on which stat the player is using for the round
  */
+
+// Power
 let powerBtn = document.getElementById("power-btn");
 powerBtn.addEventListener("click", () => {
   powerAtk();
@@ -52,7 +52,83 @@ function powerAtk() {
   }
 }
 
-// Heroes
+// Agility
+let agilityBtn = document.getElementById("agility-btn");
+agilityBtn.addEventListener("click", () => {
+  agilityAtk();
+});
+
+function agilityAtk() {
+  let userAgility = parseInt(document.getElementById("user-agility").innerText);
+  let cpuAgility = parseInt(document.getElementById("cpu-agility").innerText);
+
+  if (userAgility > cpuAgility) {
+    alert("win");
+  } else if (userAgility === cpuAgility) {
+    alert("draw");
+  } else if (userAgility < cpuAgility) {
+    alert("lose");
+  }
+}
+
+// Intelligence
+let intelBtn = document.getElementById("intel-btn");
+intelBtn.addEventListener("click", () => {
+  intelAtk();
+});
+
+function intelAtk() {
+  let userIntel = parseInt(document.getElementById("user-intel").innerText);
+  let cpuIntel = parseInt(document.getElementById("cpu-intel").innerText);
+
+  if (userIntel > cpuIntel) {
+    alert("win");
+  } else if (userIntel === cpuIntel) {
+    alert("draw");
+  } else if (userIntel < cpuIntel) {
+    alert("lose");
+  }
+}
+
+// Fighting Skills
+let fightingBtn = document.getElementById("fighting-btn");
+fightingBtn.addEventListener("click", () => {
+  fightingAtk();
+});
+
+function fightingAtk() {
+  let userFighting = parseInt(document.getElementById("user-fighting").innerText);
+  let cpuFighting = parseInt(document.getElementById("cpu-fighting").innerText);
+
+  if (userFighting > cpuFighting) {
+    alert("win");
+  } else if (userFighting === cpuFighting) {
+    alert("draw");
+  } else if (userFighting < cpuFighting) {
+    alert("lose");
+  }
+}
+
+// Battle IQ
+let battleIqBtn = document.getElementById("battle-iq-btn");
+battleIqBtn.addEventListener("click", () => {
+  battleIqAtk();
+});
+
+function battleIqAtk() {
+  let userBattleIq = parseInt(document.getElementById("user-battle-iq").innerText);
+  let cpuBattleIq = parseInt(document.getElementById("cpu-fighting").innerText);
+
+  if (userBattleIq > cpuBattleIq) {
+    alert("win");
+  } else if (userBattleIq === cpuBattleIq) {
+    alert("draw");
+  } else if (userBattleIq < cpuBattleIq) {
+    alert("lose");
+  }
+}
+
+// Heroes Gallery
 let spiderMan = `
   <img src="assets/images/heroes/spider-man.webp">
     <h3>Spider-Man</h3>
@@ -163,7 +239,7 @@ let captainAmerica = `
  */
 let heroesGallery = [spiderMan, ironMan, captainAmerica];
 
-// Villains
+// Villains Gallery
 let venom = `
   <img src="assets/images/villains/venom.webp">
                   <h3>Venom</h3>
