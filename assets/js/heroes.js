@@ -137,7 +137,7 @@ function battleIqAtk() {
 // Heroes Gallery
 let spiderMan = `
   <img src="assets/images/heroes/spider-man.webp">
-    <h3>Spider-Man</h3>
+    <h3 id="hero-name">Spider-Man</h3>
       <h4>"I don't suppose I could convince you to come up here and fight like a spider?"</h4>
         <div id="hero-stats">
             <table>
@@ -172,7 +172,7 @@ let spiderMan = `
 
 let ironMan = `
   <img src="assets/images/heroes/spider-man.webp">
-    <h3>Iron Man</h3>
+    <h3 id="hero-name">Iron Man</h3>
       <h4>"Doth mother know you weareth her drapes?"</h4>
         <div id="hero-stats">
             <table>
@@ -207,7 +207,7 @@ let ironMan = `
 
 let captainAmerica = `
   <img src="assets/images/heroes/spider-man.webp">
-    <h3>Captain America</h3>
+    <h3 id="hero-name">Captain America</h3>
       <h4>"I can do this all day."</h4>
         <div id="hero-stats">
             <table>
@@ -248,7 +248,7 @@ let heroesGallery = [spiderMan, ironMan, captainAmerica];
 // Villains Gallery
 let venom = `
   <img src="assets/images/villains/venom.webp">
-                  <h3>Venom</h3>
+                  <h3 id="villain-name">Venom</h3>
                   <h4>“Eyes, lungs, pancreas. So many snacks, so little time.”</h4>
                   <div id="villain-stats" class="hidden-text">
                       <table>

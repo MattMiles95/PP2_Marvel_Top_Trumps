@@ -148,7 +148,7 @@ body {
   transition: all 0.2s;
 }
 
-/* ----------------- Game Page: Hero */
+/* ----------------- GAME PAGE: HERO */
 #heroes-game {
   background-image: url("../images/backgrounds/game-heroes-background.webp");
   background-size: cover;
@@ -158,6 +158,7 @@ body {
   width: 100vw;
 }
 
+/* ----------------- Deal Cards */
 #deal-button-container {
   position: relative;
   display: flex;
@@ -209,6 +210,7 @@ body {
   box-shadow: none;
 }
 
+/* ----------------- User Buttons */
 #user-buttons {
   display: none;
   position: absolute;
@@ -234,9 +236,11 @@ body {
   color: white;
   font-size: 30px;
   cursor: pointer;
-
 }
 
+/* ----------------- Results */
+
+/* ----------------- Background Cards */
 #user-background-card1 {
   position: absolute;
   top: 70px;
@@ -325,7 +329,7 @@ body {
   opacity: 0.9;
 }
 
-/* ----------------- Hero Cards */
+/* ----------------- User & CPU Cards */
 #user-card {
   position: absolute;
   top: 40px;
@@ -335,6 +339,18 @@ body {
   border-radius: 15px;
   transform-style: preserve-3d;
 }
+
+#cpu-card {
+  position: absolute;
+  top: 40px;
+  right: 220px;
+  border-radius: 15px;
+  width: 250px;
+  height: 470px;
+  transform-style: preserve-3d;
+}
+
+/* ----------------- Hero Cards */
 
 #hero-card-back {
   position: absolute;
@@ -403,16 +419,6 @@ body {
 }
 
 /* ----------------- Villain Card */
-
-#cpu-card {
-  position: absolute;
-  top: 40px;
-  right: 220px;
-  border-radius: 15px;
-  width: 250px;
-  height: 470px;
-  transform-style: preserve-3d;
-}
 
 #villain-card-back {
   position: absolute;
