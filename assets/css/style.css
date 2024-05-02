@@ -236,6 +236,94 @@ body {
   cursor: pointer;
 }
 
+#user-background-card1 {
+  position: absolute;
+  top: 70px;
+  left: 190px;
+  width: 250px;
+  height: 470px;
+  border-radius: 15px;
+  text-align: center;
+  border: groove 3px rgba(255, 255, 255, 0.3);
+  background-image: url(../images/backgrounds/card-back.webp);
+}
+
+#user-background-card2 {
+  position: absolute;
+  top: 60px;
+  left: 200px;
+  width: 250px;
+  height: 470px;
+  border-radius: 15px;
+  text-align: center;
+  border: groove 3px rgba(255, 255, 255, 0.3);
+  background-image: url(../images/backgrounds/card-back.webp);
+}
+
+#user-background-card3 {
+  position: absolute;
+  top: 50px;
+  left: 210px;
+  width: 250px;
+  height: 470px;
+  border-radius: 15px;
+  text-align: center;
+  border: groove 3px rgba(255, 255, 255, 0.3);
+  background-image: url(../images/backgrounds/card-back.webp);
+}
+
+#user-background-card3 > img {
+  position: relative;
+  top: 150px;
+  width: 150px;
+  border-radius: 10px;
+  opacity: 0.9;
+}
+
+#cpu-background-card1 {
+  position: absolute;
+  top: 70px;
+  right: 190px;
+  width: 250px;
+  height: 470px;
+  border-radius: 15px;
+  text-align: center;
+  border: groove 3px rgba(255, 255, 255, 0.3);
+  background-image: url(../images/backgrounds/card-back.webp);
+}
+
+#cpu-background-card2 {
+  position: absolute;
+  top: 60px;
+  right: 200px;
+  width: 250px;
+  height: 470px;
+  border-radius: 15px;
+  text-align: center;
+  border: groove 3px rgba(255, 255, 255, 0.3);
+  background-image: url(../images/backgrounds/card-back.webp);
+}
+
+#cpu-background-card3 {
+  position: absolute;
+  top: 50px;
+  right: 210px;
+  width: 250px;
+  height: 470px;
+  border-radius: 15px;
+  text-align: center;
+  border: groove 3px rgba(255, 255, 255, 0.3);
+  background-image: url(../images/backgrounds/card-back.webp);
+}
+
+#cpu-background-card3 > img {
+  position: relative;
+  top: 150px;
+  width: 150px;
+  border-radius: 10px;
+  opacity: 0.9;
+}
+
 /* ----------------- Hero Cards */
 #hero-card {
   position: absolute;
