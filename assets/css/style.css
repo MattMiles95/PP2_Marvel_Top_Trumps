@@ -326,7 +326,7 @@ body {
 }
 
 /* ----------------- Hero Cards */
-#hero-card {
+#user-card {
   position: absolute;
   top: 40px;
   left: 220px;
@@ -404,7 +404,7 @@ body {
 
 /* ----------------- Villain Card */
 
-#villain-card {
+#cpu-card {
   position: absolute;
   top: 40px;
   right: 220px;
@@ -489,13 +489,13 @@ td > i {
 }
 
 /* ----------------- Card Flip Animation */
-#hero-card.active {
+#user-card.active {
   transform: perspective(700px) rotateY(180deg);
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
   transition: all 1.2s;
 }
 
-#villain-card.active {
+#cpu-card.active {
   transform: perspective(700px) rotateY(180deg);
   box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.8);
   transition: all 1.2s;
