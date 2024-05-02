@@ -150,6 +150,10 @@ body {
 
 /* ----------------- GAME PAGE: HERO */
 #heroes-game {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-image: url("../images/backgrounds/game-heroes-background.webp");
   background-size: cover;
   background-repeat: no-repeat;
@@ -160,11 +164,9 @@ body {
 
 /* ----------------- Deal Cards */
 #deal-button-container {
-  position: relative;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
-  top: 150px;
 }
 
 #deal-button-box {
@@ -239,6 +241,72 @@ body {
 }
 
 /* ----------------- Results */
+#results-screen {
+  text-align: center;
+  width: 370px;
+  height: 300px;
+  color: white;
+  font-size: 23px;
+  text-transform: uppercase;
+}
+
+#win {
+  display: none;
+  background-image: url(../images/backgrounds/green-background.webp);
+  border: groove 3px white;
+  border-radius: 30px;
+  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.9);
+}
+
+#lose {
+  display: none;
+  background-image: url(../images/backgrounds/red-background.webp);
+  border: groove 3px white;
+  border-radius: 30px;
+  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.9);
+}
+
+#win button {
+  position: relative;
+  bottom: 30px;
+  background: none;
+  border: none;
+  color: #0daa63;
+  background-color: white;
+  text-transform: uppercase;
+  font-size: 20px;
+  border: groove 3px white;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  cursor: pointer;
+}
+
+#win button:hover {
+  box-shadow: none;
+  color: #0ec674;
+}
+
+#lose button {
+  position: relative;
+  bottom: 30px;
+  background: none;
+  border: none;
+  color: #931323;
+  background-color: white;
+  text-transform: uppercase;
+  font-size: 20px;
+  border: groove 3px white;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  cursor: pointer;
+}
+
+#lose button:hover {
+  box-shadow: none;
+  color: #bd192c;
+}
 
 /* ----------------- Background Cards */
 #user-background-card1 {
