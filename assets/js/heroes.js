@@ -10,7 +10,7 @@ dealCardsBtn.addEventListener("click", () => {
   villainCard.classList.toggle("active");
   userBtns.style.display = "block";
   dealCardsUH();
-  // dealBtnContainer.style.display = "none"; (Commented out for ease of editing - uncomment to play)
+  dealBtnContainer.style.display = "none"; 
 });
 
 /**
@@ -40,6 +40,9 @@ function dealCardsUH() {
 let powerBtn = document.getElementById("power-btn");
 powerBtn.addEventListener("click", () => {
   powerAtk();
+  userBtns.style.display = "none";
+  heroCard.classList.toggle("active");
+  villainCard.classList.toggle("active");
 });
 
 function powerAtk() {
