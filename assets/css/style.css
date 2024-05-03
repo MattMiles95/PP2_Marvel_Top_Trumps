@@ -80,6 +80,8 @@ body {
   color: white;
   text-transform: uppercase;
   font-style: italic;
+  font-stretch: condensed;
+  font-weight: 900;
 }
 
 #deck-choice-container > h3 {
@@ -91,9 +93,11 @@ body {
   margin-bottom: 20px;
   height: 70px;
   width: 180px;
-  font-size: 35px;
+  font-size: 30px;
   font-style: italic;
   color: white;
+  font-stretch: condensed;
+  font-weight: 900;
   text-transform: uppercase;
   border-radius: 10px;
   background-image: url(../images/backgrounds/card-front-hero.webp);
@@ -106,7 +110,9 @@ body {
   margin-bottom: 10px;
   height: 70px;
   width: 180px;
-  font-size: 35px;
+  font-size: 30px;
+  font-stretch: condensed;
+  font-weight: 900;
   font-style: italic;
   color: white;
   text-transform: uppercase;
@@ -118,14 +124,14 @@ body {
 }
 
 #heroes-button:hover {
-  font-size: 37px;
+  font-size: 32px;
   transition: all 0.5s;
   box-shadow: none;
   border: solid 3px black;
 }
 
 #villains-button:hover {
-  font-size: 37px;
+  font-size: 32px;
   transition: all 0.5s;
   box-shadow: none;
   border: solid 3px black;
@@ -174,6 +180,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+  top: 30px;
   width: 370px;
   height: 300px;
   border: groove 3px white;
@@ -343,6 +351,38 @@ body {
 #lose button:hover {
   box-shadow: none;
   color: #bd192c;
+}
+
+#score-board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: absolute;
+  top: 10px;
+  height: 143px;
+  width: 210px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 24px;
+  color: white;
+  background-image: url(../images/backgrounds/score-board.webp);
+  background-size: contain;
+  border: groove 5px white;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.hero-score {
+  color: #2bb8ff;
+}
+
+.villain-score {
+  color: #f52220;
+}
+
+#user-win-score, #cpu-win-score {
+  font-size: 50px;
 }
 
 /* ----------------- Background Cards */

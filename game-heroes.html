@@ -18,10 +18,18 @@
 <body id="heroes-game">
 
     <!-- Game Controls -->
-    <div id="score-board">
-        <p class="scores">Hero Wins: <span id="user-win-score">0</span></p>
-        <p class="scores">Villain Wins: <span id="cpu-win-score">0</span></p>
-    </div>
+    <table id="score-board">
+        <tr>
+            <td class="hero-score">Heroes</td>
+            <td></td>
+            <td class="villain-score">Villains</td>
+        </tr>
+        <tr>
+            <td id="user-win-score" class="hero-score">0</td>
+            <td>:</td>
+            <td id="cpu-win-score" class="villain-score">0</td>
+        </tr>
+    </table>
 
     <div id="deal-button-container">
         <div id="deal-button-box">
