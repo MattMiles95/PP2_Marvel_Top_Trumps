@@ -171,10 +171,18 @@ body {
   width: 100vw;
 }
 
-#home-arrow {
+#page-buttons {
   position: absolute;
   top: 15px;
   left: 20px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#home-arrow {
   width: 125px;
   height: 90px;
   background: none;
@@ -190,6 +198,44 @@ body {
   filter: brightness(130%);
   width: 135px;
   height: 98px;
+  transition: all 0.3s;
+}
+
+#help-button {
+  width: 60px;
+  height: 60px;
+  background: none;
+  border: none;
+  background-image: url(../images/icons/help-button.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  filter: brightness(100%);
+}
+
+#help-button:hover {
+  filter: brightness(130%);
+  width: 75px;
+  height: 75px;
+  transition: all 0.3s;
+}
+
+#sfx-button {
+  width: 70px;
+  height: 70px;
+  background: none;
+  border: none;
+  background-image: url(../images/icons/audio-on.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  filter: brightness(100%);
+}
+
+#sfx-button:hover {
+  filter: brightness(130%);
+  width: 80px;
+  height: 80px;
   transition: all 0.3s;
 }
 
