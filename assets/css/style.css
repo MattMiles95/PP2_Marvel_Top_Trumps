@@ -168,6 +168,25 @@ body {
   width: 100vw;
 }
 
+#home-arrow {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  width: 125px;
+  height: 90px;
+  background: none;
+  border: none;
+  background-image: url(../images/logos/home-arrow.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  filter: brightness(80%)
+}
+
+#home-arrow:hover {
+  filter: brightness(100%);
+}
+
 /* ----------------- Deal Cards */
 #deal-button-container {
   display: flex;
