@@ -164,7 +164,7 @@ body {
 
 /* ----------------- Deal Cards */
 #deal-button-container {
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -242,17 +242,32 @@ body {
 
 /* ----------------- Results */
 #results-screen {
+  display: none;
   text-align: center;
   width: 370px;
   height: 300px;
   color: white;
-  font-size: 23px;
+  font-size: 30px;
   text-transform: uppercase;
+}
+
+#results-screen h2 {
+  padding-top: 20px;
 }
 
 #win {
   display: none;
+  height: 200px;
   background-image: url(../images/backgrounds/green-background.webp);
+  border: groove 3px white;
+  border-radius: 30px;
+  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.9);
+}
+
+#draw {
+  display: none;
+  height: 200px;
+  background-image: url(../images/backgrounds/yellow-background.webp);
   border: groove 3px white;
   border-radius: 30px;
   box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.9);
@@ -260,6 +275,7 @@ body {
 
 #lose {
   display: none;
+  height: 200px;
   background-image: url(../images/backgrounds/red-background.webp);
   border: groove 3px white;
   border-radius: 30px;
@@ -268,7 +284,7 @@ body {
 
 #win button {
   position: relative;
-  bottom: 30px;
+  top: 10px;
   background: none;
   border: none;
   color: #0daa63;
@@ -287,9 +303,30 @@ body {
   color: #0ec674;
 }
 
+#draw button {
+  position: relative;
+  top: 10px;
+  background: none;
+  border: none;
+  color: #eec008;
+  background-color: white;
+  text-transform: uppercase;
+  font-size: 20px;
+  border: groove 3px white;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  cursor: pointer;
+}
+
+#draw button:hover {
+  box-shadow: none;
+  color: #ffcb05;
+}
+
 #lose button {
   position: relative;
-  bottom: 30px;
+  top: 10px;
   background: none;
   border: none;
   color: #931323;

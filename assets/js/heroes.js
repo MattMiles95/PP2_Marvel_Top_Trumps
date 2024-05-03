@@ -3,14 +3,14 @@ let heroCard = document.getElementById("user-card");
 let villainCard = document.getElementById("cpu-card");
 let userBtns = document.getElementById("user-buttons");
 let dealBtnContainer = document.getElementById("deal-button-container");
-let dealCardsBtn = document.getElementById("deal-cards-button")
+let dealCardsBtn = document.getElementById("deal-cards-button");
 
 dealCardsBtn.addEventListener("click", () => {
   heroCard.classList.toggle("active");
   villainCard.classList.toggle("active");
   userBtns.style.display = "block";
   dealCardsUH();
-  dealBtnContainer.style.display = "none"; 
+  dealBtnContainer.style.display = "none";
 });
 
 /**
@@ -26,10 +26,24 @@ function dealCardsUH() {
   document.getElementById("villain").innerHTML = selectVillain;
 }
 
-/**
- * Game Score Functions
- */
+// Results
+let heroName = document.getElementsByClassName("hero-name");
+let villainName = document.getElementsByClassName("villain-name");
 
+function win() {
+  document.getElementById("results-screen").style.display = "block";
+  document.getElementById("win").style.display = "block";
+}
+
+function draw() {
+  document.getElementById("results-screen").style.display = "block";
+  document.getElementById("draw").style.display = "block";
+}
+
+function lose() {
+  document.getElementById("results-screen").style.display = "block";
+  document.getElementById("lose").style.display = "block";
+}
 
 /**
  * BATTLE BUTTONS - each button triggers a different function,
@@ -41,8 +55,6 @@ let powerBtn = document.getElementById("power-btn");
 powerBtn.addEventListener("click", () => {
   powerAtk();
   userBtns.style.display = "none";
-  heroCard.classList.toggle("active");
-  villainCard.classList.toggle("active");
 });
 
 function powerAtk() {
@@ -50,11 +62,11 @@ function powerAtk() {
   let cpuPower = parseInt(document.getElementById("cpu-power").innerText);
 
   if (userPower > cpuPower) {
-    alert("win");
+    win();
   } else if (userPower === cpuPower) {
-    alert("draw");
+    draw();
   } else if (userPower < cpuPower) {
-    alert("lose");
+    lose();
   }
 }
 
@@ -62,6 +74,7 @@ function powerAtk() {
 let agilityBtn = document.getElementById("agility-btn");
 agilityBtn.addEventListener("click", () => {
   agilityAtk();
+  userBtns.style.display = "none";
 });
 
 function agilityAtk() {
@@ -69,11 +82,11 @@ function agilityAtk() {
   let cpuAgility = parseInt(document.getElementById("cpu-agility").innerText);
 
   if (userAgility > cpuAgility) {
-    alert("win");
+    win();
   } else if (userAgility === cpuAgility) {
-    alert("draw");
+    draw();
   } else if (userAgility < cpuAgility) {
-    alert("lose");
+    lose();
   }
 }
 
@@ -81,18 +94,19 @@ function agilityAtk() {
 let intelBtn = document.getElementById("intel-btn");
 intelBtn.addEventListener("click", () => {
   intelAtk();
+  userBtns.style.display = "none";
 });
 
 function intelAtk() {
-  let userIntel = parseInt(document.getElementById("user-intel").innerText);
-  let cpuIntel = parseInt(document.getElementById("cpu-intel").innerText);
+  let userIntel = parseInt(document.getElementById("user-intelligence").innerText);
+  let cpuIntel = parseInt(document.getElementById("cpu-intelligence").innerText);
 
   if (userIntel > cpuIntel) {
-    alert("win");
+    win();
   } else if (userIntel === cpuIntel) {
-    alert("draw");
+    draw();
   } else if (userIntel < cpuIntel) {
-    alert("lose");
+    lose();
   }
 }
 
@@ -100,18 +114,21 @@ function intelAtk() {
 let fightingBtn = document.getElementById("fighting-btn");
 fightingBtn.addEventListener("click", () => {
   fightingAtk();
+  userBtns.style.display = "none";
 });
 
 function fightingAtk() {
-  let userFighting = parseInt(document.getElementById("user-fighting").innerText);
+  let userFighting = parseInt(
+    document.getElementById("user-fighting").innerText
+  );
   let cpuFighting = parseInt(document.getElementById("cpu-fighting").innerText);
 
   if (userFighting > cpuFighting) {
-    alert("win");
+    win();
   } else if (userFighting === cpuFighting) {
-    alert("draw");
+    draw();
   } else if (userFighting < cpuFighting) {
-    alert("lose");
+    lose();
   }
 }
 
@@ -119,25 +136,28 @@ function fightingAtk() {
 let battleIqBtn = document.getElementById("battle-iq-btn");
 battleIqBtn.addEventListener("click", () => {
   battleIqAtk();
+  userBtns.style.display = "none";
 });
 
 function battleIqAtk() {
-  let userBattleIq = parseInt(document.getElementById("user-battle-iq").innerText);
-  let cpuBattleIq = parseInt(document.getElementById("cpu-fighting").innerText);
+  let userBattleIq = parseInt(
+    document.getElementById("user-battle-iq").innerText
+  );
+  let cpuBattleIq = parseInt(document.getElementById("cpu-battle-iq").innerText);
 
   if (userBattleIq > cpuBattleIq) {
-    alert("win");
+    win();
   } else if (userBattleIq === cpuBattleIq) {
-    alert("draw");
+    draw();
   } else if (userBattleIq < cpuBattleIq) {
-    alert("lose");
+    lose();
   }
 }
 
 // Heroes Gallery
 let spiderMan = `
   <img src="assets/images/heroes/spider-man.webp">
-    <h3 id="hero-name">Spider-Man</h3>
+    <h3 class="hero-name">Spider-Man</h3>
       <h4>"I don't suppose I could convince you to come up here and fight like a spider?"</h4>
         <div id="hero-stats">
             <table>
@@ -172,7 +192,7 @@ let spiderMan = `
 
 let ironMan = `
   <img src="assets/images/heroes/spider-man.webp">
-    <h3 id="hero-name">Iron Man</h3>
+    <h3 class="hero-name">Iron Man</h3>
       <h4>"Doth mother know you weareth her drapes?"</h4>
         <div id="hero-stats">
             <table>
@@ -207,7 +227,7 @@ let ironMan = `
 
 let captainAmerica = `
   <img src="assets/images/heroes/spider-man.webp">
-    <h3 id="hero-name">Captain America</h3>
+    <h3 class="hero-name">Captain America</h3>
       <h4>"I can do this all day."</h4>
         <div id="hero-stats">
             <table>
@@ -219,17 +239,17 @@ let captainAmerica = `
                 <tr>
                     <td><i class="fa-solid fa-feather-pointed"></i></td>
                     <td>Agility</td>
-                    <td id="user-agility">8</td>
+                    <td id="user-agility">7</td>
                 </tr>
                 <tr>
                     <td><i class="fa-solid fa-brain"></i></td>
                     <td>Intelligence</td>
-                    <td id="user-intelligence">6</td>
+                    <td id="user-intelligence">5</td>
                 </tr>
                 <tr>
                     <td><i class="fa-solid fa-hand-fist"></i></td>
                     <td>Fighting Skills</td>
-                    <td id="user-fighting">9</td>
+                    <td id="user-fighting">8</td>
                 </tr>
                 <tr>
                     <td><i class="fa-solid fa-bullseye"></i></td>
@@ -240,7 +260,7 @@ let captainAmerica = `
         </div>
   `;
 
-  /**
+/**
  * Heroes Array
  */
 let heroesGallery = [spiderMan, ironMan, captainAmerica];
@@ -248,7 +268,7 @@ let heroesGallery = [spiderMan, ironMan, captainAmerica];
 // Villains Gallery
 let venom = `
   <img src="assets/images/villains/venom.webp">
-                  <h3 id="villain-name">Venom</h3>
+                  <h3 class="villain-name">Venom</h3>
                   <h4>“Eyes, lungs, pancreas. So many snacks, so little time.”</h4>
                   <div id="villain-stats" class="hidden-text">
                       <table>
@@ -265,23 +285,23 @@ let venom = `
                           <tr>
                               <td><i class="fa-solid fa-brain"></i></td>
                               <td>Intelligence</td>
-                              <td id="cpu-intelligence">5</td>
+                              <td id="cpu-intelligence">3</td>
                           </tr>
                           <tr>
                               <td><i class="fa-solid fa-hand-fist"></i></td>
                               <td>Fighting Skills</td>
-                              <td id="cpu-fighting">7</td>
+                              <td id="cpu-fighting">8</td>
                           </tr>
                           <tr>
                               <td><i class="fa-solid fa-bullseye"></i></td>
                               <td>Battle IQ</td>
-                              <td id="cpu-battle-iq">4</td>
+                              <td id="cpu-battle-iq">6</td>
                           </tr>
                       </table>
                   </div>
   `;
 
-  /**
+/**
  * Villains Array
  */
 let villainsGallery = [venom];
