@@ -407,10 +407,16 @@ body {
 
 .hero-score {
   color: #2bb8ff;
+  text-shadow: 0 0 10px #6ecfff;
 }
 
 .villain-score {
   color: #f52220;
+  text-shadow: 0 0 10px #ff5e5b;
+}
+
+.glow {
+  text-shadow: 0 0 5px white;
 }
 
 #user-win-score, #cpu-win-score {
