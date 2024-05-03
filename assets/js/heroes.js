@@ -14,7 +14,7 @@ dealCardsBtn.addEventListener("click", () => {
 });
 
 /**
- * Main Game Loop
+ * Start Game
  */
 function dealCardsUH() {
   let selectHero =
@@ -38,6 +38,7 @@ function win() {
   resultsScreen.style.display = "block";
   resultsWin.style.display = "block";
   incrementUserWins();
+  checkScore();
 };
 
 function draw() {
@@ -49,6 +50,7 @@ function lose() {
   resultsScreen.style.display = "block";
   resultsLose.style.display = "block";
   incrementCpuWins();
+  checkScore();
 };
 
 // Reset Game
@@ -87,14 +89,30 @@ loseResetButton.addEventListener("click", function() {
 });
 
 // Score Board
+let userDisplayScore = document.getElementById("user-display-score");
+let userScore = 0;
+let cpuDisplayScore = document.getElementById("cpu-display-score");
+let cpuScore = 0;
+let winningScore = 2;
+
 function incrementUserWins() {
-  let previousUserWins = parseInt(document.getElementById("user-win-score").innerText);
-  document.getElementById("user-win-score").innerText = ++previousUserWins;
-}
+  let previousUserWins = parseInt(userDisplayScore.innerText);
+  userDisplayScore.innerText = ++previousUserWins;
+  ++userScore;
+};
 
 function incrementCpuWins() {
-  let previousCpuWins = parseInt(document.getElementById("cpu-win-score").innerText);
-  document.getElementById("cpu-win-score").innerText = ++previousCpuWins;
+  let previousCpuWins = parseInt(cpuDisplayScore.innerText);
+  cpuDisplayScore.innerText = ++previousCpuWins;
+  ++cpuScore;
+};
+
+function checkScore() {
+  if (userScore === winningScore) {
+    alert("You win!");
+  } else if (cpuScore === winningScore) {
+    alert("You lose!")
+  }
 }
 
 /**

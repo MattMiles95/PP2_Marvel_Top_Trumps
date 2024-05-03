@@ -492,7 +492,7 @@ body {
   text-shadow: 0 0 5px white;
 }
 
-#user-win-score, #cpu-win-score {
+#user-display-score, #cpu-display-score {
   font-size: 50px;
 }
 
