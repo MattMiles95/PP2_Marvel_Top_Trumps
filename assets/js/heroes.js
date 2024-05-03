@@ -37,6 +37,7 @@ let resultsLose = document.getElementById("lose");
 function win() {
   resultsScreen.style.display = "block";
   resultsWin.style.display = "block";
+  incrementUserWins();
 };
 
 function draw() {
@@ -47,6 +48,7 @@ function draw() {
 function lose() {
   resultsScreen.style.display = "block";
   resultsLose.style.display = "block";
+  incrementCpuWins();
 };
 
 // Reset Game
@@ -83,6 +85,17 @@ loseResetButton.addEventListener("click", function() {
   resultsDraw.style.display = "none";
   resultsLose.style.display = "none";
 });
+
+// Score Board
+function incrementUserWins() {
+  let previousUserWins = parseInt(document.getElementById("user-win-score").innerText);
+  document.getElementById("user-win-score").innerText = ++previousUserWins;
+}
+
+function incrementCpuWins() {
+  let previousCpuWins = parseInt(document.getElementById("cpu-win-score").innerText);
+  document.getElementById("cpu-win-score").innerText = ++previousCpuWins;
+}
 
 /**
  * BATTLE BUTTONS - each button triggers a different function,
