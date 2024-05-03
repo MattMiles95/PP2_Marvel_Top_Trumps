@@ -29,21 +29,60 @@ function dealCardsUH() {
 // Results
 let heroName = document.getElementsByClassName("hero-name");
 let villainName = document.getElementsByClassName("villain-name");
+let resultsScreen = document.getElementById("results-screen");
+let resultsWin = document.getElementById("win");
+let resultsDraw = document.getElementById("draw");
+let resultsLose = document.getElementById("lose");
 
 function win() {
-  document.getElementById("results-screen").style.display = "block";
-  document.getElementById("win").style.display = "block";
-}
+  resultsScreen.style.display = "block";
+  resultsWin.style.display = "block";
+};
 
 function draw() {
-  document.getElementById("results-screen").style.display = "block";
-  document.getElementById("draw").style.display = "block";
-}
+  resultsScreen.style.display = "block";
+  resultsDraw.style.display = "block";
+};
 
 function lose() {
-  document.getElementById("results-screen").style.display = "block";
-  document.getElementById("lose").style.display = "block";
-}
+  resultsScreen.style.display = "block";
+  resultsLose.style.display = "block";
+};
+
+// Reset Game
+let winResetButton = document.getElementsByClassName("next-game-button")[0];
+let drawResetButton = document.getElementsByClassName("next-game-button")[1];
+let loseResetButton = document.getElementsByClassName("next-game-button")[2];
+
+winResetButton.addEventListener("click", function() {
+  resultsScreen.style.display = "none";
+  dealBtnContainer.style.display = "flex";
+  heroCard.classList.toggle("active");
+  villainCard.classList.toggle("active");
+  resultsWin.style.display = "none";
+  resultsDraw.style.display = "none";
+  resultsLose.style.display = "none";
+});
+
+drawResetButton.addEventListener("click", function() {
+  resultsScreen.style.display = "none";
+  dealBtnContainer.style.display = "flex";
+  heroCard.classList.toggle("active");
+  villainCard.classList.toggle("active");
+  resultsWin.style.display = "none";
+  resultsDraw.style.display = "none";
+  resultsLose.style.display = "none";
+});
+
+loseResetButton.addEventListener("click", function() {
+  resultsScreen.style.display = "none";
+  dealBtnContainer.style.display = "flex";
+  heroCard.classList.toggle("active");
+  villainCard.classList.toggle("active");
+  resultsWin.style.display = "none";
+  resultsDraw.style.display = "none";
+  resultsLose.style.display = "none";
+});
 
 /**
  * BATTLE BUTTONS - each button triggers a different function,
