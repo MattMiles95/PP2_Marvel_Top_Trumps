@@ -56,9 +56,9 @@ body {
 }
 
 #play-button:hover {
-  background-color: #a80006;
-  border-color: #ed1d24;
+  filter: brightness(130%);
   font-size: 40px;
+  text-shadow: 0 0 20px #fff;
   transition: all 0.5s;
   box-shadow: none;
 }
@@ -125,6 +125,7 @@ body {
 
 #heroes-button:hover {
   font-size: 32px;
+  text-shadow: 0 0 10px #fff;
   transition: all 0.5s;
   box-shadow: none;
   border: solid 3px black;
@@ -132,6 +133,7 @@ body {
 
 #villains-button:hover {
   font-size: 32px;
+  text-shadow: 0 0 10px #fff;
   transition: all 0.5s;
   box-shadow: none;
   border: solid 3px black;
@@ -151,6 +153,7 @@ body {
 
 #close-window:hover {
   color: rgb(224, 224, 224);
+  text-shadow: 0 0 5px #fff;
   transition: all 0.2s;
 }
 
@@ -176,11 +179,11 @@ body {
   height: 90px;
   background: none;
   border: none;
-  background-image: url(../images/logos/home-arrow.webp);
+  background-image: url(../images/icons/home-arrow.webp);
   background-size: cover;
   background-repeat: no-repeat;
   cursor: pointer;
-  filter: brightness(100%)
+  filter: brightness(100%);
 }
 
 #home-arrow:hover {
@@ -235,11 +238,12 @@ body {
   border-color: white;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   cursor: pointer;
-  filter: brightness(90%);
+  filter: brightness(100%);
 }
 
 #deal-cards-button:hover {
   filter: brightness(130%);
+  text-shadow: 0 0 5px #fff;
   box-shadow: none;
   transition: all 0.3s;
 }
@@ -270,6 +274,10 @@ body {
   color: white;
   font-size: 30px;
   cursor: pointer;
+}
+
+#user-buttons button:hover {
+  text-shadow: 0 0 7px #fff;
 }
 
 /* ----------------- Results */
