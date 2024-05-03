@@ -18,6 +18,10 @@ body {
   display: none;
 }
 
+.grow {
+  font-size: larger;
+}
+
 /* ----------------- Homepage */
 #homepage {
   display: flex;
@@ -139,10 +143,10 @@ body {
   border: solid 3px black;
 }
 
-#close-window {
-  position: relative;
-  top: 5px;
-  left: 190px;
+.close-window {
+  position: absolute;
+  top: 15px;
+  right: 15px;
   cursor: pointer;
   background: none;
   border: none;
@@ -151,8 +155,7 @@ body {
   margin-bottom: 0;
 }
 
-#close-window:hover {
-  color: rgb(224, 224, 224);
+.close-window:hover {
   text-shadow: 0 0 5px #fff;
   transition: all 0.2s;
 }
@@ -237,6 +240,30 @@ body {
   width: 80px;
   height: 80px;
   transition: all 0.3s;
+}
+
+#h2p {
+  display: none;
+  position: absolute;
+  padding: 20px;
+  background-color: #f6851f;
+  color: white;
+  font-weight: 900;
+  border: solid 5px black;
+  border-radius: 20px;
+  z-index: 1;
+}
+
+#h2p > h2 {
+  text-transform: uppercase;
+}
+
+#h2p ul {
+  list-style: none;
+}
+
+#h2p ol {
+  margin-left: 35px;
 }
 
 /* ----------------- Deal Cards */

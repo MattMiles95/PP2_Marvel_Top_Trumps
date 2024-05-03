@@ -206,6 +206,16 @@ function battleIqAtk() {
   }
 }
 
+// Page Buttons
+document.getElementById("help-button").addEventListener("click", () => {
+  document.getElementById("h2p").style.display = "block";
+})
+
+let closeWindow = document.getElementsByClassName("close-window")[0];
+closeWindow.addEventListener("click", () => {
+  document.getElementById("h2p").style.display = "none";
+});
+
 // Heroes Gallery
 let spiderMan = `
   <img src="assets/images/heroes/spider-man.webp">
