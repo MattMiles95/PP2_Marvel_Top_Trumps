@@ -180,11 +180,14 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   cursor: pointer;
-  filter: brightness(80%)
+  filter: brightness(100%)
 }
 
 #home-arrow:hover {
-  filter: brightness(100%);
+  filter: brightness(130%);
+  width: 135px;
+  height: 98px;
+  transition: all 0.3s;
 }
 
 /* ----------------- Deal Cards */
@@ -232,11 +235,13 @@ body {
   border-color: white;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   cursor: pointer;
+  filter: brightness(90%);
 }
 
 #deal-cards-button:hover {
-  background-color: #d6191f;
+  filter: brightness(130%);
   box-shadow: none;
+  transition: all 0.3s;
 }
 
 /* ----------------- User Buttons */
