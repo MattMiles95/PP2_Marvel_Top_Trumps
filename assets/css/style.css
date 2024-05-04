@@ -227,12 +227,26 @@ body {
   transition: all 0.3s;
 }
 
-#sfx-button {
+#sfx-button-on {
+  display: block;
   width: 70px;
   height: 70px;
   background: none;
   border: none;
   background-image: url(../images/icons/audio-on.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  filter: brightness(100%);
+}
+
+#sfx-button-off {
+  display: none;
+  width: 70px;
+  height: 70px;
+  background: none;
+  border: none;
+  background-image: url(../images/icons/audio-off.webp);
   background-size: cover;
   background-repeat: no-repeat;
   cursor: pointer;

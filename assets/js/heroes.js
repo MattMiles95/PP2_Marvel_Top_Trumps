@@ -269,6 +269,19 @@ closeWindow.addEventListener("click", () => {
   document.getElementById("h2p").style.display = "none";
 });
 
+let sfxBtnOn = document.getElementById("sfx-button-on");
+let sfxBtnOff = document.getElementById("sfx-button-off");
+
+sfxBtnOn.addEventListener("click", () => {
+  sfxBtnOn.style.display = "none";
+  sfxBtnOff.style.display = "block";
+});
+
+sfxBtnOff.addEventListener("click", () => {
+  sfxBtnOff.style.display = "none";
+  sfxBtnOn.style.display = "block";
+});
+
 // Heroes Gallery
 let spiderMan = `
   <img src="assets/images/heroes/spider-man.webp">
