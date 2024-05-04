@@ -93,7 +93,8 @@ let userDisplayScore = document.getElementById("user-display-score");
 let userScore = 0;
 let cpuDisplayScore = document.getElementById("cpu-display-score");
 let cpuScore = 0;
-let winningScore = 2;
+let winningScore = 2; // Set for 2 for test purpose - change back to 7 to play
+let gameOverScreen = document.getElementById("game-over-screen");
 
 function incrementUserWins() {
   let previousUserWins = parseInt(userDisplayScore.innerText);
@@ -107,13 +108,35 @@ function incrementCpuWins() {
   ++cpuScore;
 };
 
+function gameOverWon() {
+  let victory = document.getElementById("victory");
+  
+  resultsScreen.style.display = "none";
+  resultsWin.style.display = "none";
+  gameOverScreen.style.display = "block";
+  victory.style.display = "flex";
+};
+
+function gameOverLost() {
+  let defeat = document.getElementById("defeat");
+
+  resultsScreen.style.display = "none";
+  resultsLose.style.display = "none";
+  gameOverScreen.style.display = "block";
+  defeat.style.display = "flex";
+};
+
 function checkScore() {
   if (userScore === winningScore) {
-    alert("You win!");
+    gameOverWon();
   } else if (cpuScore === winningScore) {
-    alert("You lose!")
+    gameOverLost();
   }
-}
+};
+
+document.getElementById("replay").addEventListener("click", () => {
+  location.reload(true);
+});
 
 /**
  * BATTLE BUTTONS - each button triggers a different function,
