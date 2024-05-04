@@ -514,7 +514,7 @@ body {
   z-index: 1;
 }
 
-.game-over-button {
+.game-win-button {
   position: relative;
   top: 10px;
   background: none;
@@ -530,7 +530,7 @@ body {
   cursor: pointer;
 }
 
-.game-over-button:hover {
+.game-win-button:hover {
   box-shadow: none;
   filter: brightness(120%);
   color: #ffb326;
@@ -547,7 +547,6 @@ body {
   font-weight: 900;
   font-stretch: condensed;
   color: #d5dfe4;
-  
   background-image: url(../images/backgrounds/victory-background.webp);
   background-size: cover;
   background-position: center center;
@@ -576,6 +575,51 @@ body {
 }
 
 #defeat {
+  display: none;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  font-weight: 900;
+  font-stretch: condensed;
+  color: #d5dfe4;
+  background-image: url(../images/backgrounds/defeat-background.webp);
+  background-size: cover;
+  background-position: center center;
+  border: groove 3px white;
+  border-radius: 30px;
+  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.9);
+}
+
+#defeat-buttons-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 170px;
+}
+
+.game-lose-button {
+  position: relative;
+  top: 10px;
+  background: none;
+  border: none;
+  color: #12172d;
+  text-shadow: 0 0 5px #931323;
+  background-color: white;
+  text-transform: uppercase;
+  font-size: 20px;
+  border: groove 3px white;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  cursor: pointer;
+}
+
+.game-lose-button:hover {
+  box-shadow: none;
+  filter: brightness(120%);
+  color: #931323;
+  text-shadow: 0 0 5px #c80017;
 }
 
 /* ----------------- Background Cards */

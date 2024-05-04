@@ -75,7 +75,7 @@
     <!-- Results -->
     <div id="results-screen">
         <div id="win">
-            <h2>Victory!</h2>
+            <h2>You win!</h2>
             <button class="next-game-button">Next game</button>
         </div>
         <div id="draw">
@@ -83,7 +83,7 @@
             <button class="next-game-button">Next game</button>
         </div>
         <div id="lose">
-            <h2>Defeat...</h2>
+            <h2>You lose...</h2>
             <button class="next-game-button">Next game</button>
         </div>
     </div>
@@ -91,13 +91,17 @@
     <div id="game-over-screen">
         <div id="victory">
             <h2>Excelsior!</h2>
-            <p>You defeated your opponent.</p>
-            <button id="replay" class="game-over-button">Play Again</button>
-            <a href="game-villains.html"><Button class="game-over-button">Change Deck</Button></a>
-            <a href="index.html"><button class="game-over-button push-down">Exit</button></a>
+            <p>You defeated your opponent</p>
+            <button id="replay-win" class="game-win-button">Play Again</button>
+            <a href="game-villains.html"><Button class="game-win-button">Change Deck</Button></a>
+            <a href="index.html"><button class="game-win-button push-down">Exit</button></a>
         </div>
         <div id="defeat">
-
+            <div id="defeat-buttons-container">
+                <button id="replay-lose" class="game-lose-button">Play Again</button>
+                <a href="game-villains.html"><Button class="game-lose-button">Change Deck</Button></a>
+                <a href="index.html"><button class="game-lose-button push-down">Exit</button></a>
+            </div>
         </div>
     </div>
 

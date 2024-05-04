@@ -111,19 +111,27 @@ function incrementCpuWins() {
 function gameOverWon() {
   let victory = document.getElementById("victory");
   
+  document.getElementById("heroes-game").style.backdropFilter = "blur(5px)";
+  document.getElementById("page-buttons").style.filter = "blur(5px)";
+  userBtns.style.display = "none";
   resultsScreen.style.display = "none";
   resultsWin.style.display = "none";
   gameOverScreen.style.display = "block";
   victory.style.display = "flex";
+  document.getElementById("help-button").removeEventListener("click");
 };
 
 function gameOverLost() {
   let defeat = document.getElementById("defeat");
 
+  document.getElementById("heroes-game").style.backdropFilter = "blur(5px)";
+  document.getElementById("page-buttons").style.filter = "blur(5px)";
+  userBtns.style.display = "none";
   resultsScreen.style.display = "none";
   resultsLose.style.display = "none";
   gameOverScreen.style.display = "block";
   defeat.style.display = "flex";
+  document.getElementById("help-button").removeEventListener("click");
 };
 
 function checkScore() {
@@ -134,7 +142,11 @@ function checkScore() {
   }
 };
 
-document.getElementById("replay").addEventListener("click", () => {
+document.getElementById("replay-win").addEventListener("click", () => {
+  location.reload(true);
+});
+
+document.getElementById("replay-lose").addEventListener("click", () => {
   location.reload(true);
 });
 
