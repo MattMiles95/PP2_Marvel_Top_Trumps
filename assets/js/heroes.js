@@ -94,6 +94,9 @@ let userScore = 0;
 let cpuDisplayScore = document.getElementById("cpu-display-score");
 let cpuScore = 0;
 let winningScore = 7;
+let roundDisplay = 0;
+let roundsPlayed = 0;
+let deckLimit = 14;
 let gameOverScreen = document.getElementById("game-over-screen");
 
 function incrementUserWins() {
@@ -106,6 +109,12 @@ function incrementCpuWins() {
   let previousCpuWins = parseInt(cpuDisplayScore.innerText);
   cpuDisplayScore.innerText = ++previousCpuWins;
   ++cpuScore;
+}
+
+function incrementRounds() {
+  let previousRoundsPlayed = parseInt(roundDisplay.innerText);
+  roundDisplay.innerText = ++previousRoundsPlayed;
+  ++roundsPlayed;
 }
 
 function gameOverWon() {
@@ -136,6 +145,22 @@ function gameOverLost() {
   document.getElementById("help-button").removeEventListener("click");
 }
 
+function gameOverEmpty() {
+  let emptyDeck = document.getElementById("empty-deck");
+
+  document.getElementById("page-buttons").style.display = "none";
+  document.getElementById("heroes-game").style.backdropFilter = "blur(5px)";
+  document.getElementById("page-buttons").style.filter = "blur(5px)";
+  userBtns.style.display = "none";
+  resultsScreen.style.display = "none";
+  resultsWin.style.display = "none";
+  resultsLose.style.display = "none";
+  resultsDraw.style.display = "none";
+  gameOverScreen.style.display = "block";
+  emptyDeck.style.display = "flex";
+  document.getElementById("help-button").removeEventListener("click");
+}
+
 function checkScore() {
   if (userScore === winningScore) {
     gameOverWon();
@@ -149,6 +174,10 @@ document.getElementById("replay-win").addEventListener("click", () => {
 });
 
 document.getElementById("replay-lose").addEventListener("click", () => {
+  location.reload(true);
+});
+
+document.getElementById("replay-empty").addEventListener("click", () => {
   location.reload(true);
 });
 

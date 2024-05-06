@@ -645,6 +645,58 @@ body {
   text-shadow: 0 0 5px #c80017;
 }
 
+#empty-deck {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  font-weight: 900;
+  font-stretch: condensed;
+  background-image: url(../images/backgrounds/empty-deck.webp);
+  background-size: cover;
+  background-position: center center;
+  border: groove 3px white;
+  border-radius: 30px;
+  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.9);
+}
+
+#empty-deck > h2 {
+  margin-top: 20px;
+  font-size: 40px;
+  line-height: 40px;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 0 10px #d5dfe4;
+}
+
+#empty-buttons-container {
+  margin-bottom: 5px;
+}
+
+.game-empty-button {
+  position: relative;
+  top: 10px;
+  background: none;
+  border: none;
+  color: #12172d;
+  text-shadow: 0 0 5px #2d253a;
+  background-color: white;
+  text-transform: uppercase;
+  font-size: 20px;
+  border: groove 3px white;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  cursor: pointer;
+}
+
+.game-empty-button:hover {
+  box-shadow: none;
+  filter: brightness(120%);
+  text-shadow: 0 0 5px #412a68;
+}
+
 /* ----------------- Background Cards */
 #user-background-card1 {
   position: absolute;
