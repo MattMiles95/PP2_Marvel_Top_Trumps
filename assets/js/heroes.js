@@ -66,6 +66,8 @@ winResetButton.addEventListener("click", function () {
   resultsWin.style.display = "none";
   resultsDraw.style.display = "none";
   resultsLose.style.display = "none";
+  incrementRounds();
+  checkRounds();
 });
 
 drawResetButton.addEventListener("click", function () {
@@ -76,6 +78,8 @@ drawResetButton.addEventListener("click", function () {
   resultsWin.style.display = "none";
   resultsDraw.style.display = "none";
   resultsLose.style.display = "none";
+  incrementRounds();
+  checkRounds();
 });
 
 loseResetButton.addEventListener("click", function () {
@@ -86,6 +90,8 @@ loseResetButton.addEventListener("click", function () {
   resultsWin.style.display = "none";
   resultsDraw.style.display = "none";
   resultsLose.style.display = "none";
+  incrementRounds();
+  checkRounds();
 });
 
 // Score Board
@@ -94,9 +100,9 @@ let userScore = 0;
 let cpuDisplayScore = document.getElementById("cpu-display-score");
 let cpuScore = 0;
 let winningScore = 7;
-let roundDisplay = 0;
+let roundDisplay = document.getElementById("round-display");
 let roundsPlayed = 0;
-let deckLimit = 14;
+let deckLimit = 13;
 let gameOverScreen = document.getElementById("game-over-screen");
 
 function incrementUserWins() {
@@ -151,11 +157,13 @@ function gameOverEmpty() {
   document.getElementById("page-buttons").style.display = "none";
   document.getElementById("heroes-game").style.backdropFilter = "blur(5px)";
   document.getElementById("page-buttons").style.filter = "blur(5px)";
+  dealBtnContainer.style.display = "none";
   userBtns.style.display = "none";
   resultsScreen.style.display = "none";
   resultsWin.style.display = "none";
   resultsLose.style.display = "none";
   resultsDraw.style.display = "none";
+  roundDisplay.innerText = "BUST";
   gameOverScreen.style.display = "block";
   emptyDeck.style.display = "flex";
   document.getElementById("help-button").removeEventListener("click");
@@ -166,6 +174,12 @@ function checkScore() {
     gameOverWon();
   } else if (cpuScore === winningScore) {
     gameOverLost();
+  }
+}
+
+function checkRounds() {
+  if (roundsPlayed === deckLimit) {
+    gameOverEmpty();
   }
 }
 
@@ -1088,7 +1102,7 @@ let profX = `
                 </tr>
             </table>
         </div>
-  `;  
+  `;
 
 /**
  * Heroes Array
@@ -1115,7 +1129,7 @@ let heroesGallery = [
   storm,
   gamora,
   theCreator,
-  profX
+  profX,
 ];
 
 // Villains Gallery
@@ -1542,7 +1556,7 @@ let mandarin = `
 let destroyer = `
   <img src="assets/images/villains/destroyer.webp">
     <h3 class="villain-name">The Destroyer</h3>
-      <h4>"..."</h4>
+      <h4>"Is that one of Stark's?" - S.H.I.E.L.D. Agent</h4>
       <div id="villain-stats" class="hidden-text">
       <table>
           <tr>
@@ -1769,5 +1783,5 @@ let villainsGallery = [
   abomination,
   baronZemo,
   magneto,
-  mystique
+  mystique,
 ];

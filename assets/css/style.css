@@ -485,12 +485,14 @@ body {
 
 #score-board {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
   text-align: center;
+  line-height: 45px;
   position: absolute;
   top: 10px;
-  height: 143px;
+  height: 150px;
   width: 210px;
   border-radius: 10px;
   text-transform: uppercase;
@@ -511,6 +513,11 @@ body {
 .villain-score {
   color: #f52220;
   text-shadow: 0 0 10px #ff5e5b;
+}
+
+#round-counter {
+  text-shadow: 0 0 5px white;
+  line-height: 20px;
 }
 
 .glow {
