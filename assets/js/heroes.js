@@ -39,26 +39,26 @@ function win() {
   resultsWin.style.display = "block";
   incrementUserWins();
   checkScore();
-};
+}
 
 function draw() {
   resultsScreen.style.display = "block";
   resultsDraw.style.display = "block";
-};
+}
 
 function lose() {
   resultsScreen.style.display = "block";
   resultsLose.style.display = "block";
   incrementCpuWins();
   checkScore();
-};
+}
 
 // Reset Game
 let winResetButton = document.getElementsByClassName("next-game-button")[0];
 let drawResetButton = document.getElementsByClassName("next-game-button")[1];
 let loseResetButton = document.getElementsByClassName("next-game-button")[2];
 
-winResetButton.addEventListener("click", function() {
+winResetButton.addEventListener("click", function () {
   resultsScreen.style.display = "none";
   dealBtnContainer.style.display = "flex";
   heroCard.classList.toggle("active");
@@ -68,7 +68,7 @@ winResetButton.addEventListener("click", function() {
   resultsLose.style.display = "none";
 });
 
-drawResetButton.addEventListener("click", function() {
+drawResetButton.addEventListener("click", function () {
   resultsScreen.style.display = "none";
   dealBtnContainer.style.display = "flex";
   heroCard.classList.toggle("active");
@@ -78,7 +78,7 @@ drawResetButton.addEventListener("click", function() {
   resultsLose.style.display = "none";
 });
 
-loseResetButton.addEventListener("click", function() {
+loseResetButton.addEventListener("click", function () {
   resultsScreen.style.display = "none";
   dealBtnContainer.style.display = "flex";
   heroCard.classList.toggle("active");
@@ -93,24 +93,24 @@ let userDisplayScore = document.getElementById("user-display-score");
 let userScore = 0;
 let cpuDisplayScore = document.getElementById("cpu-display-score");
 let cpuScore = 0;
-let winningScore = 2; // Set for 2 for test purpose - change back to 7 to play
+let winningScore = 7;
 let gameOverScreen = document.getElementById("game-over-screen");
 
 function incrementUserWins() {
   let previousUserWins = parseInt(userDisplayScore.innerText);
   userDisplayScore.innerText = ++previousUserWins;
   ++userScore;
-};
+}
 
 function incrementCpuWins() {
   let previousCpuWins = parseInt(cpuDisplayScore.innerText);
   cpuDisplayScore.innerText = ++previousCpuWins;
   ++cpuScore;
-};
+}
 
 function gameOverWon() {
   let victory = document.getElementById("victory");
-  
+
   document.getElementById("heroes-game").style.backdropFilter = "blur(5px)";
   document.getElementById("page-buttons").style.filter = "blur(5px)";
   userBtns.style.display = "none";
@@ -119,7 +119,7 @@ function gameOverWon() {
   gameOverScreen.style.display = "block";
   victory.style.display = "flex";
   document.getElementById("help-button").removeEventListener("click");
-};
+}
 
 function gameOverLost() {
   let defeat = document.getElementById("defeat");
@@ -132,7 +132,7 @@ function gameOverLost() {
   gameOverScreen.style.display = "block";
   defeat.style.display = "flex";
   document.getElementById("help-button").removeEventListener("click");
-};
+}
 
 function checkScore() {
   if (userScore === winningScore) {
@@ -140,7 +140,7 @@ function checkScore() {
   } else if (cpuScore === winningScore) {
     gameOverLost();
   }
-};
+}
 
 document.getElementById("replay-win").addEventListener("click", () => {
   location.reload(true);
@@ -203,8 +203,12 @@ intelBtn.addEventListener("click", () => {
 });
 
 function intelAtk() {
-  let userIntel = parseInt(document.getElementById("user-intelligence").innerText);
-  let cpuIntel = parseInt(document.getElementById("cpu-intelligence").innerText);
+  let userIntel = parseInt(
+    document.getElementById("user-intelligence").innerText
+  );
+  let cpuIntel = parseInt(
+    document.getElementById("cpu-intelligence").innerText
+  );
 
   if (userIntel > cpuIntel) {
     win();
@@ -248,7 +252,9 @@ function battleIqAtk() {
   let userBattleIq = parseInt(
     document.getElementById("user-battle-iq").innerText
   );
-  let cpuBattleIq = parseInt(document.getElementById("cpu-battle-iq").innerText);
+  let cpuBattleIq = parseInt(
+    document.getElementById("cpu-battle-iq").innerText
+  );
 
   if (userBattleIq > cpuBattleIq) {
     win();
@@ -262,7 +268,7 @@ function battleIqAtk() {
 // Page Buttons
 document.getElementById("help-button").addEventListener("click", () => {
   document.getElementById("h2p").style.display = "block";
-})
+});
 
 let closeWindow = document.getElementsByClassName("close-window")[0];
 closeWindow.addEventListener("click", () => {
@@ -285,7 +291,7 @@ sfxBtnOff.addEventListener("click", () => {
 // Heroes Gallery
 let spiderMan = `
   <img src="assets/images/heroes/spider-man.webp">
-    <h3 class="hero-name">Spider-Man</h3>
+    <h3 class="hero-name">The Amazing Spider-Man</h3>
       <h4>"I don't suppose I could convince you to come up here and fight like a spider?"</h4>
         <div id="hero-stats">
             <table>
@@ -319,7 +325,7 @@ let spiderMan = `
   `;
 
 let ironMan = `
-  <img src="assets/images/heroes/spider-man.webp">
+  <img src="assets/images/heroes/iron-man.webp">
     <h3 class="hero-name">Iron Man</h3>
       <h4>"Doth mother know you weareth her drapes?"</h4>
         <div id="hero-stats">
@@ -332,7 +338,7 @@ let ironMan = `
                 <tr>
                     <td><i class="fa-solid fa-feather-pointed"></i></td>
                     <td>Agility</td>
-                    <td id="user-agility">4</td>
+                    <td id="user-agility">3</td>
                 </tr>
                 <tr>
                     <td><i class="fa-solid fa-brain"></i></td>
@@ -354,7 +360,7 @@ let ironMan = `
   `;
 
 let captainAmerica = `
-  <img src="assets/images/heroes/spider-man.webp">
+  <img src="assets/images/heroes/capt-america.webp">
     <h3 class="hero-name">Captain America</h3>
       <h4>"I can do this all day."</h4>
         <div id="hero-stats">
@@ -388,48 +394,1349 @@ let captainAmerica = `
         </div>
   `;
 
+let hulk = `
+  <img src="assets/images/heroes/hulk.webp">
+    <h3 class="hero-name">The Incredible Hulk</h3>
+      <h4>"Hulk... SMASH!"</h4>
+        <div id="hero-stats">
+            <table>
+                <tr>
+                    <td><i class="fa-solid fa-fire-flame-curved"></i></td>
+                    <td class="skill">Power</td>
+                    <td id="user-power">9</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-feather-pointed"></i></td>
+                    <td>Agility</td>
+                    <td id="user-agility">2</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-brain"></i></td>
+                    <td>Intelligence</td>
+                    <td id="user-intelligence">2</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-hand-fist"></i></td>
+                    <td>Fighting Skills</td>
+                    <td id="user-fighting">6</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-bullseye"></i></td>
+                    <td>Battle IQ</td>
+                    <td id="user-battle-iq">2</td>
+                </tr>
+            </table>
+        </div>
+  `;
+
+let thor = `
+  <img src="assets/images/heroes/thor.webp">
+    <h3 class="hero-name">Thor Odinson</h3>
+      <h4>"He's a friend from work!"</h4>
+        <div id="hero-stats">
+            <table>
+                <tr>
+                    <td><i class="fa-solid fa-fire-flame-curved"></i></td>
+                    <td class="skill">Power</td>
+                    <td id="user-power">9</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-feather-pointed"></i></td>
+                    <td>Agility</td>
+                    <td id="user-agility">5</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-brain"></i></td>
+                    <td>Intelligence</td>
+                    <td id="user-intelligence">5</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-hand-fist"></i></td>
+                    <td>Fighting Skills</td>
+                    <td id="user-fighting">8</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-bullseye"></i></td>
+                    <td>Battle IQ</td>
+                    <td id="user-battle-iq">9</td>
+                </tr>
+            </table>
+        </div>
+  `;
+
+let blackWidow = `
+  <img src="assets/images/heroes/black-widow.webp">
+    <h3 class="hero-name">Black Widow</h3>
+      <h4>"I'm always picking up after you boys"</h4>
+        <div id="hero-stats">
+            <table>
+                <tr>
+                    <td><i class="fa-solid fa-fire-flame-curved"></i></td>
+                    <td class="skill">Power</td>
+                    <td id="user-power">3</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-feather-pointed"></i></td>
+                    <td>Agility</td>
+                    <td id="user-agility">8</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-brain"></i></td>
+                    <td>Intelligence</td>
+                    <td id="user-intelligence">7</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-hand-fist"></i></td>
+                    <td>Fighting Skills</td>
+                    <td id="user-fighting">8</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-bullseye"></i></td>
+                    <td>Battle IQ</td>
+                    <td id="user-battle-iq">6</td>
+                </tr>
+            </table>
+        </div>
+  `;
+
+let captMarvel = `
+  <img src="assets/images/heroes/capt-marvel.webp">
+    <h3 class="hero-name">Captain Marvel</h3>
+      <h4>"These are not the droids you're looking for… It was worth a shot."</h4>
+        <div id="hero-stats">
+            <table>
+                <tr>
+                    <td><i class="fa-solid fa-fire-flame-curved"></i></td>
+                    <td class="skill">Power</td>
+                    <td id="user-power">9</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-feather-pointed"></i></td>
+                    <td>Agility</td>
+                    <td id="user-agility">7</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-brain"></i></td>
+                    <td>Intelligence</td>
+                    <td id="user-intelligence">5</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-hand-fist"></i></td>
+                    <td>Fighting Skills</td>
+                    <td id="user-fighting">6</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-bullseye"></i></td>
+                    <td>Battle IQ</td>
+                    <td id="user-battle-iq">6</td>
+                </tr>
+            </table>
+        </div>
+  `;
+
+let squirrelGirl = `
+  <img src="assets/images/heroes/squirrel-girl.webp">
+    <h3 class="hero-name">Squirrel Girl</h3>
+      <h4>"Give a squirrel a nut, feed 'im for a day...but teach 'im to plant an oak tree, and he'll never go nut-less."</h4>
+        <div id="hero-stats">
+            <table>
+                <tr>
+                    <td><i class="fa-solid fa-fire-flame-curved"></i></td>
+                    <td class="skill">Power</td>
+                    <td id="user-power">6</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-feather-pointed"></i></td>
+                    <td>Agility</td>
+                    <td id="user-agility">8</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-brain"></i></td>
+                    <td>Intelligence</td>
+                    <td id="user-intelligence">6</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-hand-fist"></i></td>
+                    <td>Fighting Skills</td>
+                    <td id="user-fighting">8</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-bullseye"></i></td>
+                    <td>Battle IQ</td>
+                    <td id="user-battle-iq">4</td>
+                </tr>
+            </table>
+        </div>
+  `;
+
+let wandaMaximoff = `
+  <img src="assets/images/heroes/wanda-maximoff.webp">
+    <h3 class="hero-name">Wanda Maximoff</h3>
+      <h4>"I can't control their fear. Only my own."</h4>
+        <div id="hero-stats">
+            <table>
+                <tr>
+                    <td><i class="fa-solid fa-fire-flame-curved"></i></td>
+                    <td class="skill">Power</td>
+                    <td id="user-power">9</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-feather-pointed"></i></td>
+                    <td>Agility</td>
+                    <td id="user-agility">3</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-brain"></i></td>
+                    <td>Intelligence</td>
+                    <td id="user-intelligence">5</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-hand-fist"></i></td>
+                    <td>Fighting Skills</td>
+                    <td id="user-fighting">3</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-bullseye"></i></td>
+                    <td>Battle IQ</td>
+                    <td id="user-battle-iq">5</td>
+                </tr>
+            </table>
+        </div>
+  `;
+
+let drStrange = `
+  <img src="assets/images/heroes/dr-strange.webp">
+    <h3 class="hero-name">Dr Strange</h3>
+      <h4>"Dormammu, I have come to bargain."</h4>
+        <div id="hero-stats">
+            <table>
+                <tr>
+                    <td><i class="fa-solid fa-fire-flame-curved"></i></td>
+                    <td class="skill">Power</td>
+                    <td id="user-power">9</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-feather-pointed"></i></td>
+                    <td>Agility</td>
+                    <td id="user-agility">2</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-brain"></i></td>
+                    <td>Intelligence</td>
+                    <td id="user-intelligence">8</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-hand-fist"></i></td>
+                    <td>Fighting Skills</td>
+                    <td id="user-fighting">4</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-bullseye"></i></td>
+                    <td>Battle IQ</td>
+                    <td id="user-battle-iq">5</td>
+                </tr>
+            </table>
+        </div>
+  `;
+
+let deadpool = `
+  <img src="assets/images/heroes/deadpool.webp">
+    <h3 class="hero-name">Deadpool</h3>
+      <h4>"With this collar on, my superpower is just unbridled cancer. Give me a bow and arrow and I'm basically Hawkeye."</h4>
+        <div id="hero-stats">
+            <table>
+                <tr>
+                    <td><i class="fa-solid fa-fire-flame-curved"></i></td>
+                    <td class="skill">Power</td>
+                    <td id="user-power">6</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-feather-pointed"></i></td>
+                    <td>Agility</td>
+                    <td id="user-agility">7</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-brain"></i></td>
+                    <td>Intelligence</td>
+                    <td id="user-intelligence">5</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-hand-fist"></i></td>
+                    <td>Fighting Skills</td>
+                    <td id="user-fighting">8</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-bullseye"></i></td>
+                    <td>Battle IQ</td>
+                    <td id="user-battle-iq">7</td>
+                </tr>
+            </table>
+        </div>
+  `;
+
+let wolverine = `
+  <img src="assets/images/heroes/wolverine.webp">
+    <h3 class="hero-name">Wolverine</h3>
+      <h4>"I'm the best at what I do. And what I do isn't very nice."</h4>
+        <div id="hero-stats">
+            <table>
+                <tr>
+                    <td><i class="fa-solid fa-fire-flame-curved"></i></td>
+                    <td class="skill">Power</td>
+                    <td id="user-power">5</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-feather-pointed"></i></td>
+                    <td>Agility</td>
+                    <td id="user-agility">6</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-brain"></i></td>
+                    <td>Intelligence</td>
+                    <td id="user-intelligence">4</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-hand-fist"></i></td>
+                    <td>Fighting Skills</td>
+                    <td id="user-fighting">8</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-bullseye"></i></td>
+                    <td>Battle IQ</td>
+                    <td id="user-battle-iq">8</td>
+                </tr>
+            </table>
+        </div>
+  `;
+
+let blackPanther = `
+  <img src="assets/images/heroes/black-panther.webp">
+    <h3 class="hero-name">Black Panther</h3>
+      <h4>"Wakanda forever!"</h4>
+        <div id="hero-stats">
+            <table>
+                <tr>
+                    <td><i class="fa-solid fa-fire-flame-curved"></i></td>
+                    <td class="skill">Power</td>
+                    <td id="user-power">5</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-feather-pointed"></i></td>
+                    <td>Agility</td>
+                    <td id="user-agility">7</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-brain"></i></td>
+                    <td>Intelligence</td>
+                    <td id="user-intelligence">5</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-hand-fist"></i></td>
+                    <td>Fighting Skills</td>
+                    <td id="user-fighting">8</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-bullseye"></i></td>
+                    <td>Battle IQ</td>
+                    <td id="user-battle-iq">7</td>
+                </tr>
+            </table>
+        </div>
+  `;
+
+let msMarvel = `
+  <img src="assets/images/heroes/ms-marvel.webp">
+    <h3 class="hero-name">Ms Marvel</h3>
+      <h4>"Good is not a thing you are. It's a thing you do."</h4>
+        <div id="hero-stats">
+            <table>
+                <tr>
+                    <td><i class="fa-solid fa-fire-flame-curved"></i></td>
+                    <td class="skill">Power</td>
+                    <td id="user-power">5</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-feather-pointed"></i></td>
+                    <td>Agility</td>
+                    <td id="user-agility">6</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-brain"></i></td>
+                    <td>Intelligence</td>
+                    <td id="user-intelligence">5</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-hand-fist"></i></td>
+                    <td>Fighting Skills</td>
+                    <td id="user-fighting">5</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-bullseye"></i></td>
+                    <td>Battle IQ</td>
+                    <td id="user-battle-iq">3</td>
+                </tr>
+            </table>
+        </div>
+  `;
+
+let falcon = `
+  <img src="assets/images/heroes/falcon.webp">
+    <h3 class="hero-name">Falcon</h3>
+      <h4>"On your left."</h4>
+        <div id="hero-stats">
+            <table>
+                <tr>
+                    <td><i class="fa-solid fa-fire-flame-curved"></i></td>
+                    <td class="skill">Power</td>
+                    <td id="user-power">4</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-feather-pointed"></i></td>
+                    <td>Agility</td>
+                    <td id="user-agility">6</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-brain"></i></td>
+                    <td>Intelligence</td>
+                    <td id="user-intelligence">4</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-hand-fist"></i></td>
+                    <td>Fighting Skills</td>
+                    <td id="user-fighting">6</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-bullseye"></i></td>
+                    <td>Battle IQ</td>
+                    <td id="user-battle-iq">7</td>
+                </tr>
+            </table>
+        </div>
+  `;
+
+let winterSoldier = `
+  <img src="assets/images/heroes/winter-soldier.webp">
+    <h3 class="hero-name">The Winter Soldier</h3>
+      <h4>"I Read The Hobbit In 1937 When It First Came Out."</h4>
+        <div id="hero-stats">
+            <table>
+                <tr>
+                    <td><i class="fa-solid fa-fire-flame-curved"></i></td>
+                    <td class="skill">Power</td>
+                    <td id="user-power">4</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-feather-pointed"></i></td>
+                    <td>Agility</td>
+                    <td id="user-agility">6</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-brain"></i></td>
+                    <td>Intelligence</td>
+                    <td id="user-intelligence">5</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-hand-fist"></i></td>
+                    <td>Fighting Skills</td>
+                    <td id="user-fighting">8</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-bullseye"></i></td>
+                    <td>Battle IQ</td>
+                    <td id="user-battle-iq">9</td>
+                </tr>
+            </table>
+        </div>
+  `;
+
+let punisher = `
+  <img src="assets/images/heroes/punisher.webp">
+    <h3 class="hero-name">The Punisher</h3>
+      <h4>"One batch, two batch, penny and dime."</h4>
+        <div id="hero-stats">
+            <table>
+                <tr>
+                    <td><i class="fa-solid fa-fire-flame-curved"></i></td>
+                    <td class="skill">Power</td>
+                    <td id="user-power">4</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-feather-pointed"></i></td>
+                    <td>Agility</td>
+                    <td id="user-agility">6</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-brain"></i></td>
+                    <td>Intelligence</td>
+                    <td id="user-intelligence">6</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-hand-fist"></i></td>
+                    <td>Fighting Skills</td>
+                    <td id="user-fighting">7</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-bullseye"></i></td>
+                    <td>Battle IQ</td>
+                    <td id="user-battle-iq">10</td>
+                </tr>
+            </table>
+        </div>
+  `;
+
+let daredevil = `
+  <img src="assets/images/heroes/daredevil.webp">
+    <h3 class="hero-name">Daredevil</h3>
+      <h4>"I'm not seeking penance for what I've done, father. I'm asking forgiveness for what I'm about to do."</h4>
+        <div id="hero-stats">
+            <table>
+                <tr>
+                    <td><i class="fa-solid fa-fire-flame-curved"></i></td>
+                    <td class="skill">Power</td>
+                    <td id="user-power">4</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-feather-pointed"></i></td>
+                    <td>Agility</td>
+                    <td id="user-agility">8</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-brain"></i></td>
+                    <td>Intelligence</td>
+                    <td id="user-intelligence">7</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-hand-fist"></i></td>
+                    <td>Fighting Skills</td>
+                    <td id="user-fighting">9</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-bullseye"></i></td>
+                    <td>Battle IQ</td>
+                    <td id="user-battle-iq">7</td>
+                </tr>
+            </table>
+        </div>
+  `;
+
+let storm = `
+  <img src="assets/images/heroes/storm.webp">
+    <h3 class="hero-name">Storm</h3>
+      <h4>"You spoke once of power. Little man, you do not know the meaning of the word!"</h4>
+        <div id="hero-stats">
+            <table>
+                <tr>
+                    <td><i class="fa-solid fa-fire-flame-curved"></i></td>
+                    <td class="skill">Power</td>
+                    <td id="user-power">8</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-feather-pointed"></i></td>
+                    <td>Agility</td>
+                    <td id="user-agility">5</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-brain"></i></td>
+                    <td>Intelligence</td>
+                    <td id="user-intelligence">5</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-hand-fist"></i></td>
+                    <td>Fighting Skills</td>
+                    <td id="user-fighting">6</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-bullseye"></i></td>
+                    <td>Battle IQ</td>
+                    <td id="user-battle-iq">6</td>
+                </tr>
+            </table>
+        </div>
+  `;
+
+let gamora = `
+  <img src="assets/images/heroes/gamora.webp">
+    <h3 class="hero-name">Gamora</h3>
+      <h4>"Shoot her if she does anything suspicious. Or if you feel like it."</h4>
+        <div id="hero-stats">
+            <table>
+                <tr>
+                    <td><i class="fa-solid fa-fire-flame-curved"></i></td>
+                    <td class="skill">Power</td>
+                    <td id="user-power">5</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-feather-pointed"></i></td>
+                    <td>Agility</td>
+                    <td id="user-agility">7</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-brain"></i></td>
+                    <td>Intelligence</td>
+                    <td id="user-intelligence">6</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-hand-fist"></i></td>
+                    <td>Fighting Skills</td>
+                    <td id="user-fighting">9</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-bullseye"></i></td>
+                    <td>Battle IQ</td>
+                    <td id="user-battle-iq">7</td>
+                </tr>
+            </table>
+        </div>
+  `;
+
+let theCreator = `
+  <img src="assets/images/heroes/the-creator.webp">
+    <h3 class="hero-name">The Creator</h3>
+      <h4>"What kind of ego maniac puts himself in his own game?."</h4>
+        <div id="hero-stats">
+            <table>
+                <tr>
+                    <td><i class="fa-solid fa-fire-flame-curved"></i></td>
+                    <td class="skill">Coding</td>
+                    <td id="user-power">10</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-feather-pointed"></i></td>
+                    <td>Type Speed</td>
+                    <td id="user-agility">10</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-brain"></i></td>
+                    <td>Intelligence</td>
+                    <td id="user-intelligence">10</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-hand-fist"></i></td>
+                    <td>Problem Solving</td>
+                    <td id="user-fighting">10</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-bullseye"></i></td>
+                    <td>Modesty</td>
+                    <td id="user-battle-iq">1</td>
+                </tr>
+            </table>
+        </div>
+  `;
+
+let profX = `
+  <img src="assets/images/heroes/prof-x.webp">
+    <h3 class="hero-name">Professor X</h3>
+      <h4>"Just because someone stumbles and loses their way, doesn't mean they're lost forever."</h4>
+        <div id="hero-stats">
+            <table>
+                <tr>
+                    <td><i class="fa-solid fa-fire-flame-curved"></i></td>
+                    <td class="skill">Power</td>
+                    <td id="user-power">9</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-feather-pointed"></i></td>
+                    <td>Agility</td>
+                    <td id="user-agility">1</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-brain"></i></td>
+                    <td>Intelligence</td>
+                    <td id="user-intelligence">8</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-hand-fist"></i></td>
+                    <td>Fighting Skills</td>
+                    <td id="user-fighting">1</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-bullseye"></i></td>
+                    <td>Battle IQ</td>
+                    <td id="user-battle-iq">8</td>
+                </tr>
+            </table>
+        </div>
+  `;  
+
 /**
  * Heroes Array
  */
-let heroesGallery = [spiderMan, ironMan, captainAmerica];
+let heroesGallery = [
+  spiderMan,
+  ironMan,
+  captainAmerica,
+  hulk,
+  thor,
+  blackWidow,
+  captMarvel,
+  squirrelGirl,
+  wandaMaximoff,
+  drStrange,
+  deadpool,
+  wolverine,
+  blackPanther,
+  msMarvel,
+  falcon,
+  winterSoldier,
+  punisher,
+  daredevil,
+  storm,
+  gamora,
+  theCreator,
+  profX
+];
 
 // Villains Gallery
 let venom = `
   <img src="assets/images/villains/venom.webp">
-                  <h3 class="villain-name">Venom</h3>
-                  <h4>“Eyes, lungs, pancreas. So many snacks, so little time.”</h4>
-                  <div id="villain-stats" class="hidden-text">
-                      <table>
-                          <tr>
-                              <td><i class="fa-solid fa-fire-flame-curved"></i></td>
-                              <td class="skill">Power</td>
-                              <td id="cpu-power">8</td>
-                          </tr>
-                          <tr>
-                              <td><i class="fa-solid fa-feather-pointed"></i></td>
-                              <td>Agility</td>
-                              <td id="cpu-agility">7</td>
-                          </tr>
-                          <tr>
-                              <td><i class="fa-solid fa-brain"></i></td>
-                              <td>Intelligence</td>
-                              <td id="cpu-intelligence">3</td>
-                          </tr>
-                          <tr>
-                              <td><i class="fa-solid fa-hand-fist"></i></td>
-                              <td>Fighting Skills</td>
-                              <td id="cpu-fighting">8</td>
-                          </tr>
-                          <tr>
-                              <td><i class="fa-solid fa-bullseye"></i></td>
-                              <td>Battle IQ</td>
-                              <td id="cpu-battle-iq">6</td>
-                          </tr>
-                      </table>
-                  </div>
+    <h3 class="villain-name">Venom</h3>
+    <h4>“Eyes, lungs, pancreas. So many snacks, so little time.”</h4>
+    <div id="villain-stats" class="hidden-text">
+        <table>
+            <tr>
+                <td><i class="fa-solid fa-fire-flame-curved"></i></td>
+                <td class="skill">Power</td>
+                <td id="cpu-power">7</td>
+            </tr>
+            <tr>
+                <td><i class="fa-solid fa-feather-pointed"></i></td>
+                <td>Agility</td>
+                <td id="cpu-agility">7</td>
+            </tr>
+            <tr>
+                <td><i class="fa-solid fa-brain"></i></td>
+                <td>Intelligence</td>
+                <td id="cpu-intelligence">3</td>
+            </tr>
+            <tr>
+                <td><i class="fa-solid fa-hand-fist"></i></td>
+                <td>Fighting Skills</td>
+                <td id="cpu-fighting">7</td>
+            </tr>
+            <tr>
+                <td><i class="fa-solid fa-bullseye"></i></td>
+                <td>Battle IQ</td>
+                <td id="cpu-battle-iq">3</td>
+            </tr>
+        </table>
+    </div>
   `;
+
+let thanos = `
+  <img src="assets/images/villains/thanos.webp">
+    <h3 class="villain-name">Thanos</h3>
+    <h4>"Fun isn't something one considers when balancing the universe. But this... this does put a smile on my face.”</h4>
+    <div id="villain-stats" class="hidden-text">
+        <table>
+            <tr>
+                <td><i class="fa-solid fa-fire-flame-curved"></i></td>
+                <td class="skill">Power</td>
+                <td id="cpu-power">9</td>
+            </tr>
+            <tr>
+                <td><i class="fa-solid fa-feather-pointed"></i></td>
+                <td>Agility</td>
+                <td id="cpu-agility">5</td>
+            </tr>
+            <tr>
+                <td><i class="fa-solid fa-brain"></i></td>
+                <td>Intelligence</td>
+                <td id="cpu-intelligence">8</td>
+            </tr>
+            <tr>
+                <td><i class="fa-solid fa-hand-fist"></i></td>
+                <td>Fighting Skills</td>
+                <td id="cpu-fighting">8</td>
+            </tr>
+            <tr>
+                <td><i class="fa-solid fa-bullseye"></i></td>
+                <td>Battle IQ</td>
+                <td id="cpu-battle-iq">8</td>
+            </tr>
+        </table>
+    </div>
+  `;
+
+let ultron = `
+  <img src="assets/images/villains/ultron.webp">
+    <h3 class="villain-name">Ultron</h3>
+    <h4>"I had strings, but now I'm free...”</h4>
+    <div id="villain-stats" class="hidden-text">
+        <table>
+            <tr>
+                <td><i class="fa-solid fa-fire-flame-curved"></i></td>
+                <td class="skill">Power</td>
+                <td id="cpu-power">9</td>
+            </tr>
+            <tr>
+                <td><i class="fa-solid fa-feather-pointed"></i></td>
+                <td>Agility</td>
+                <td id="cpu-agility">3</td>
+            </tr>
+            <tr>
+                <td><i class="fa-solid fa-brain"></i></td>
+                <td>Intelligence</td>
+                <td id="cpu-intelligence">10</td>
+            </tr>
+            <tr>
+                <td><i class="fa-solid fa-hand-fist"></i></td>
+                <td>Fighting Skills</td>
+                <td id="cpu-fighting">8</td>
+            </tr>
+            <tr>
+                <td><i class="fa-solid fa-bullseye"></i></td>
+                <td>Battle IQ</td>
+                <td id="cpu-battle-iq">8</td>
+            </tr>
+        </table>
+    </div>
+  `;
+
+let loki = `
+  <img src="assets/images/villains/loki.webp">
+    <h3 class="villain-name">Loki</h3>
+    <h4>"I am Loki, of Asgard, and I am burdened with glorious purpose."</h4>
+    <div id="villain-stats" class="hidden-text">
+        <table>
+            <tr>
+                <td><i class="fa-solid fa-fire-flame-curved"></i></td>
+                <td class="skill">Power</td>
+                <td id="cpu-power">8</td>
+            </tr>
+            <tr>
+                <td><i class="fa-solid fa-feather-pointed"></i></td>
+                <td>Agility</td>
+                <td id="cpu-agility">4</td>
+            </tr>
+            <tr>
+                <td><i class="fa-solid fa-brain"></i></td>
+                <td>Intelligence</td>
+                <td id="cpu-intelligence">9</td>
+            </tr>
+            <tr>
+                <td><i class="fa-solid fa-hand-fist"></i></td>
+                <td>Fighting Skills</td>
+                <td id="cpu-fighting">6</td>
+            </tr>
+            <tr>
+                <td><i class="fa-solid fa-bullseye"></i></td>
+                <td>Battle IQ</td>
+                <td id="cpu-battle-iq">8</td>
+            </tr>
+        </table>
+    </div>
+  `;
+
+let hela = `
+  <img src="assets/images/villains/hela.webp">
+    <h3 class="villain-name">Hela</h3>
+    <h4>"Our destiny is to rule over all others."</h4>
+    <div id="villain-stats" class="hidden-text">
+        <table>
+            <tr>
+                <td><i class="fa-solid fa-fire-flame-curved"></i></td>
+                <td class="skill">Power</td>
+                <td id="cpu-power">9</td>
+            </tr>
+            <tr>
+                <td><i class="fa-solid fa-feather-pointed"></i></td>
+                <td>Agility</td>
+                <td id="cpu-agility">6</td>
+            </tr>
+            <tr>
+                <td><i class="fa-solid fa-brain"></i></td>
+                <td>Intelligence</td>
+                <td id="cpu-intelligence">8</td>
+            </tr>
+            <tr>
+                <td><i class="fa-solid fa-hand-fist"></i></td>
+                <td>Fighting Skills</td>
+                <td id="cpu-fighting">8</td>
+            </tr>
+            <tr>
+                <td><i class="fa-solid fa-bullseye"></i></td>
+                <td>Battle IQ</td>
+                <td id="cpu-battle-iq">9</td>
+            </tr>
+        </table>
+    </div>
+  `;
+
+let galactus = `
+  <img src="assets/images/villains/galactus.webp">
+    <h3 class="villain-name">Galactus</h3>
+    <h4>"You are not unlike an ant fighting the Sun."</h4>
+    <div id="villain-stats" class="hidden-text">
+        <table>
+            <tr>
+                <td><i class="fa-solid fa-fire-flame-curved"></i></td>
+                <td class="skill">Power</td>
+                <td id="cpu-power">10</td>
+            </tr>
+            <tr>
+                <td><i class="fa-solid fa-feather-pointed"></i></td>
+                <td>Agility</td>
+                <td id="cpu-agility">2</td>
+            </tr>
+            <tr>
+                <td><i class="fa-solid fa-brain"></i></td>
+                <td>Intelligence</td>
+                <td id="cpu-intelligence">10</td>
+            </tr>
+            <tr>
+                <td><i class="fa-solid fa-hand-fist"></i></td>
+                <td>Fighting Skills</td>
+                <td id="cpu-fighting">3</td>
+            </tr>
+            <tr>
+                <td><i class="fa-solid fa-bullseye"></i></td>
+                <td>Battle IQ</td>
+                <td id="cpu-battle-iq">3</td>
+            </tr>
+        </table>
+    </div>
+  `;
+
+let redSkull = `
+  <img src="assets/images/villains/red-skull.webp">
+    <h3 class="villain-name">Red Skull</h3>
+    <h4>"Quite simply, gentlemen, I have harnessed the power of the Gods."</h4>
+    <div id="villain-stats" class="hidden-text">
+        <table>
+            <tr>
+                <td><i class="fa-solid fa-fire-flame-curved"></i></td>
+                <td class="skill">Power</td>
+                <td id="cpu-power">3</td>
+            </tr>
+            <tr>
+                <td><i class="fa-solid fa-feather-pointed"></i></td>
+                <td>Agility</td>
+                <td id="cpu-agility">3</td>
+            </tr>
+            <tr>
+                <td><i class="fa-solid fa-brain"></i></td>
+                <td>Intelligence</td>
+                <td id="cpu-intelligence">8</td>
+            </tr>
+            <tr>
+                <td><i class="fa-solid fa-hand-fist"></i></td>
+                <td>Fighting Skills</td>
+                <td id="cpu-fighting">6</td>
+            </tr>
+            <tr>
+                <td><i class="fa-solid fa-bullseye"></i></td>
+                <td>Battle IQ</td>
+                <td id="cpu-battle-iq">10</td>
+            </tr>
+        </table>
+    </div>
+  `;
+
+let killmonger = `
+  <img src="assets/images/villains/killmonger.webp">
+    <h3 class="villain-name">Erik Killmonger</h3>
+    <h4>"Is this your king? Nah, I'm your king."</h4>
+    <div id="villain-stats" class="hidden-text">
+        <table>
+            <tr>
+                <td><i class="fa-solid fa-fire-flame-curved"></i></td>
+                <td class="skill">Power</td>
+                <td id="cpu-power">5</td>
+            </tr>
+            <tr>
+                <td><i class="fa-solid fa-feather-pointed"></i></td>
+                <td>Agility</td>
+                <td id="cpu-agility">7</td>
+            </tr>
+            <tr>
+                <td><i class="fa-solid fa-brain"></i></td>
+                <td>Intelligence</td>
+                <td id="cpu-intelligence">5</td>
+            </tr>
+            <tr>
+                <td><i class="fa-solid fa-hand-fist"></i></td>
+                <td>Fighting Skills</td>
+                <td id="cpu-fighting">8</td>
+            </tr>
+            <tr>
+                <td><i class="fa-solid fa-bullseye"></i></td>
+                <td>Battle IQ</td>
+                <td id="cpu-battle-iq">8</td>
+            </tr>
+        </table>
+    </div>
+  `;
+
+let scarletWitch = `
+  <img src="assets/images/villains/scarlet-witch.webp">
+    <h3 class="villain-name">The Scarlet Witch</h3>
+      <h4>"You break the rules and become a hero. I do it and I become the enemy. That doesn't seem fair."</h4>
+      <div id="villain-stats" class="hidden-text">
+      <table>
+          <tr>
+              <td><i class="fa-solid fa-fire-flame-curved"></i></td>
+              <td class="skill">Power</td>
+              <td id="cpu-power">9</td>
+          </tr>
+          <tr>
+              <td><i class="fa-solid fa-feather-pointed"></i></td>
+              <td>Agility</td>
+              <td id="cpu-agility">3</td>
+          </tr>
+          <tr>
+              <td><i class="fa-solid fa-brain"></i></td>
+              <td>Intelligence</td>
+              <td id="cpu-intelligence">5</td>
+          </tr>
+          <tr>
+              <td><i class="fa-solid fa-hand-fist"></i></td>
+              <td>Fighting Skills</td>
+              <td id="cpu-fighting">3</td>
+          </tr>
+          <tr>
+              <td><i class="fa-solid fa-bullseye"></i></td>
+              <td>Battle IQ</td>
+              <td id="cpu-battle-iq">5</td>
+          </tr>
+      </table>
+  </div>
+`;
+
+let kingpin = `
+  <img src="assets/images/villains/kingpin.webp">
+    <h3 class="villain-name">Kingpin</h3>
+      <h4>"Killing a journalist is a high-profile high-risk endeavor. I try to avoid it when possible."</h4>
+      <div id="villain-stats" class="hidden-text">
+      <table>
+          <tr>
+              <td><i class="fa-solid fa-fire-flame-curved"></i></td>
+              <td class="skill">Power</td>
+              <td id="cpu-power">4</td>
+          </tr>
+          <tr>
+              <td><i class="fa-solid fa-feather-pointed"></i></td>
+              <td>Agility</td>
+              <td id="cpu-agility">2</td>
+          </tr>
+          <tr>
+              <td><i class="fa-solid fa-brain"></i></td>
+              <td>Intelligence</td>
+              <td id="cpu-intelligence">7</td>
+          </tr>
+          <tr>
+              <td><i class="fa-solid fa-hand-fist"></i></td>
+              <td>Fighting Skills</td>
+              <td id="cpu-fighting">8</td>
+          </tr>
+          <tr>
+              <td><i class="fa-solid fa-bullseye"></i></td>
+              <td>Battle IQ</td>
+              <td id="cpu-battle-iq">8</td>
+          </tr>
+      </table>
+  </div>
+`;
+
+let drDoom = `
+  <img src="assets/images/villains/dr-doom.webp">
+    <h3 class="villain-name">Doctor Doom</h3>
+      <h4>"The world is mine to rule. Mine alone."</h4>
+      <div id="villain-stats" class="hidden-text">
+      <table>
+          <tr>
+              <td><i class="fa-solid fa-fire-flame-curved"></i></td>
+              <td class="skill">Power</td>
+              <td id="cpu-power">8</td>
+          </tr>
+          <tr>
+              <td><i class="fa-solid fa-feather-pointed"></i></td>
+              <td>Agility</td>
+              <td id="cpu-agility">4</td>
+          </tr>
+          <tr>
+              <td><i class="fa-solid fa-brain"></i></td>
+              <td>Intelligence</td>
+              <td id="cpu-intelligence">9</td>
+          </tr>
+          <tr>
+              <td><i class="fa-solid fa-hand-fist"></i></td>
+              <td>Fighting Skills</td>
+              <td id="cpu-fighting">7</td>
+          </tr>
+          <tr>
+              <td><i class="fa-solid fa-bullseye"></i></td>
+              <td>Battle IQ</td>
+              <td id="cpu-battle-iq">8</td>
+          </tr>
+      </table>
+  </div>
+`;
+
+let mandarin = `
+  <img src="assets/images/villains/mandarin.webp">
+    <h3 class="villain-name">The Mandarin</h3>
+      <h4>"I'll give you a choice. Do you want an empty life, or a meaningful death?"</h4>
+      <div id="villain-stats" class="hidden-text">
+      <table>
+          <tr>
+              <td><i class="fa-solid fa-fire-flame-curved"></i></td>
+              <td class="skill">Power</td>
+              <td id="cpu-power">8</td>
+          </tr>
+          <tr>
+              <td><i class="fa-solid fa-feather-pointed"></i></td>
+              <td>Agility</td>
+              <td id="cpu-agility">7</td>
+          </tr>
+          <tr>
+              <td><i class="fa-solid fa-brain"></i></td>
+              <td>Intelligence</td>
+              <td id="cpu-intelligence">9</td>
+          </tr>
+          <tr>
+              <td><i class="fa-solid fa-hand-fist"></i></td>
+              <td>Fighting Skills</td>
+              <td id="cpu-fighting">8</td>
+          </tr>
+          <tr>
+              <td><i class="fa-solid fa-bullseye"></i></td>
+              <td>Battle IQ</td>
+              <td id="cpu-battle-iq">8</td>
+          </tr>
+      </table>
+  </div>
+`;
+
+let destroyer = `
+  <img src="assets/images/villains/destroyer.webp">
+    <h3 class="villain-name">The Destroyer</h3>
+      <h4>"..."</h4>
+      <div id="villain-stats" class="hidden-text">
+      <table>
+          <tr>
+              <td><i class="fa-solid fa-fire-flame-curved"></i></td>
+              <td class="skill">Power</td>
+              <td id="cpu-power">8</td>
+          </tr>
+          <tr>
+              <td><i class="fa-solid fa-feather-pointed"></i></td>
+              <td>Agility</td>
+              <td id="cpu-agility">2</td>
+          </tr>
+          <tr>
+              <td><i class="fa-solid fa-brain"></i></td>
+              <td>Intelligence</td>
+              <td id="cpu-intelligence">2</td>
+          </tr>
+          <tr>
+              <td><i class="fa-solid fa-hand-fist"></i></td>
+              <td>Fighting Skills</td>
+              <td id="cpu-fighting">7</td>
+          </tr>
+          <tr>
+              <td><i class="fa-solid fa-bullseye"></i></td>
+              <td>Battle IQ</td>
+              <td id="cpu-battle-iq">3</td>
+          </tr>
+      </table>
+  </div>
+`;
+
+let greenGoblin = `
+  <img src="assets/images/villains/green-goblin.webp">
+    <h3 class="villain-name">Green Goblin</h3>
+      <h4>"The itsy bitsy spider went up the water spout. Down came the goblin and took the spider out."</h4>
+      <div id="villain-stats" class="hidden-text">
+      <table>
+          <tr>
+              <td><i class="fa-solid fa-fire-flame-curved"></i></td>
+              <td class="skill">Power</td>
+              <td id="cpu-power">6</td>
+          </tr>
+          <tr>
+              <td><i class="fa-solid fa-feather-pointed"></i></td>
+              <td>Agility</td>
+              <td id="cpu-agility">6</td>
+          </tr>
+          <tr>
+              <td><i class="fa-solid fa-brain"></i></td>
+              <td>Intelligence</td>
+              <td id="cpu-intelligence">9</td>
+          </tr>
+          <tr>
+              <td><i class="fa-solid fa-hand-fist"></i></td>
+              <td>Fighting Skills</td>
+              <td id="cpu-fighting">7</td>
+          </tr>
+          <tr>
+              <td><i class="fa-solid fa-bullseye"></i></td>
+              <td>Battle IQ</td>
+              <td id="cpu-battle-iq">7</td>
+          </tr>
+      </table>
+  </div>
+`;
+
+let abomination = `
+  <img src="assets/images/villains/abomination.webp">
+    <h3 class="villain-name">The Abomination</h3>
+      <h4>"Give me a real fight!"</h4>
+      <div id="villain-stats" class="hidden-text">
+      <table>
+          <tr>
+              <td><i class="fa-solid fa-fire-flame-curved"></i></td>
+              <td class="skill">Power</td>
+              <td id="cpu-power">8</td>
+          </tr>
+          <tr>
+              <td><i class="fa-solid fa-feather-pointed"></i></td>
+              <td>Agility</td>
+              <td id="cpu-agility">2</td>
+          </tr>
+          <tr>
+              <td><i class="fa-solid fa-brain"></i></td>
+              <td>Intelligence</td>
+              <td id="cpu-intelligence">4</td>
+          </tr>
+          <tr>
+              <td><i class="fa-solid fa-hand-fist"></i></td>
+              <td>Fighting Skills</td>
+              <td id="cpu-fighting">8</td>
+          </tr>
+          <tr>
+              <td><i class="fa-solid fa-bullseye"></i></td>
+              <td>Battle IQ</td>
+              <td id="cpu-battle-iq">7</td>
+          </tr>
+      </table>
+  </div>
+`;
+
+let baronZemo = `
+  <img src="assets/images/villains/baron-zemo.webp">
+    <h3 class="villain-name">Baron Zemo</h3>
+      <h4>"An empire toppled by its enemies can rise again. But one which crumbles from within? That's dead, forever."</h4>
+      <div id="villain-stats" class="hidden-text">
+      <table>
+          <tr>
+              <td><i class="fa-solid fa-fire-flame-curved"></i></td>
+              <td class="skill">Power</td>
+              <td id="cpu-power">3</td>
+          </tr>
+          <tr>
+              <td><i class="fa-solid fa-feather-pointed"></i></td>
+              <td>Agility</td>
+              <td id="cpu-agility">5</td>
+          </tr>
+          <tr>
+              <td><i class="fa-solid fa-brain"></i></td>
+              <td>Intelligence</td>
+              <td id="cpu-intelligence">8</td>
+          </tr>
+          <tr>
+              <td><i class="fa-solid fa-hand-fist"></i></td>
+              <td>Fighting Skills</td>
+              <td id="cpu-fighting">8</td>
+          </tr>
+          <tr>
+              <td><i class="fa-solid fa-bullseye"></i></td>
+              <td>Battle IQ</td>
+              <td id="cpu-battle-iq">10</td>
+          </tr>
+      </table>
+  </div>
+`;
+
+let magneto = `
+  <img src="assets/images/villains/magneto.webp">
+    <h3 class="villain-name">Magneto</h3>
+      <h4>"Mankind has always feared what it doesn't understand."</h4>
+      <div id="villain-stats" class="hidden-text">
+      <table>
+          <tr>
+              <td><i class="fa-solid fa-fire-flame-curved"></i></td>
+              <td class="skill">Power</td>
+              <td id="cpu-power">8</td>
+          </tr>
+          <tr>
+              <td><i class="fa-solid fa-feather-pointed"></i></td>
+              <td>Agility</td>
+              <td id="cpu-agility">3</td>
+          </tr>
+          <tr>
+              <td><i class="fa-solid fa-brain"></i></td>
+              <td>Intelligence</td>
+              <td id="cpu-intelligence">8</td>
+          </tr>
+          <tr>
+              <td><i class="fa-solid fa-hand-fist"></i></td>
+              <td>Fighting Skills</td>
+              <td id="cpu-fighting">6</td>
+          </tr>
+          <tr>
+              <td><i class="fa-solid fa-bullseye"></i></td>
+              <td>Battle IQ</td>
+              <td id="cpu-battle-iq">9</td>
+          </tr>
+      </table>
+  </div>
+`;
+
+let mystique = `
+  <img src="assets/images/villains/mystique.webp">
+    <h3 class="villain-name">Mystique</h3>
+      <h4>"We shouldn't be trying to fit into society. Society should aspire to be more like us."</h4>
+      <div id="villain-stats" class="hidden-text">
+      <table>
+          <tr>
+              <td><i class="fa-solid fa-fire-flame-curved"></i></td>
+              <td class="skill">Power</td>
+              <td id="cpu-power">5</td>
+          </tr>
+          <tr>
+              <td><i class="fa-solid fa-feather-pointed"></i></td>
+              <td>Agility</td>
+              <td id="cpu-agility">9</td>
+          </tr>
+          <tr>
+              <td><i class="fa-solid fa-brain"></i></td>
+              <td>Intelligence</td>
+              <td id="cpu-intelligence">6</td>
+          </tr>
+          <tr>
+              <td><i class="fa-solid fa-hand-fist"></i></td>
+              <td>Fighting Skills</td>
+              <td id="cpu-fighting">8</td>
+          </tr>
+          <tr>
+              <td><i class="fa-solid fa-bullseye"></i></td>
+              <td>Battle IQ</td>
+              <td id="cpu-battle-iq">6</td>
+          </tr>
+      </table>
+  </div>
+`;
 
 /**
  * Villains Array
  */
-let villainsGallery = [venom];
+let villainsGallery = [
+  venom,
+  thanos,
+  ultron,
+  hela,
+  galactus,
+  redSkull,
+  killmonger,
+  scarletWitch,
+  kingpin,
+  drDoom,
+  mandarin,
+  destroyer,
+  greenGoblin,
+  abomination,
+  baronZemo,
+  magneto,
+  mystique
+];

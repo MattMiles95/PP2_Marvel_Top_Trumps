@@ -649,7 +649,7 @@ body {
   top: 70px;
   left: 190px;
   width: 250px;
-  height: 470px;
+  height: 490px;
   border-radius: 15px;
   text-align: center;
   border: groove 3px rgba(255, 255, 255, 0.3);
@@ -661,7 +661,7 @@ body {
   top: 60px;
   left: 200px;
   width: 250px;
-  height: 470px;
+  height: 490px;
   border-radius: 15px;
   text-align: center;
   border: groove 3px rgba(255, 255, 255, 0.3);
@@ -673,7 +673,7 @@ body {
   top: 50px;
   left: 210px;
   width: 250px;
-  height: 470px;
+  height: 490px;
   border-radius: 15px;
   text-align: center;
   border: groove 3px rgba(255, 255, 255, 0.3);
@@ -693,7 +693,7 @@ body {
   top: 70px;
   right: 190px;
   width: 250px;
-  height: 470px;
+  height: 490px;
   border-radius: 15px;
   text-align: center;
   border: groove 3px rgba(255, 255, 255, 0.3);
@@ -705,7 +705,7 @@ body {
   top: 60px;
   right: 200px;
   width: 250px;
-  height: 470px;
+  height: 490px;
   border-radius: 15px;
   text-align: center;
   border: groove 3px rgba(255, 255, 255, 0.3);
@@ -717,7 +717,7 @@ body {
   top: 50px;
   right: 210px;
   width: 250px;
-  height: 470px;
+  height: 490px;
   border-radius: 15px;
   text-align: center;
   border: groove 3px rgba(255, 255, 255, 0.3);
@@ -738,7 +738,7 @@ body {
   top: 40px;
   left: 220px;
   width: 250px;
-  height: 470px;
+  height: 490px;
   border-radius: 15px;
   transform-style: preserve-3d;
 }
@@ -749,7 +749,7 @@ body {
   right: 220px;
   border-radius: 15px;
   width: 250px;
-  height: 470px;
+  height: 490px;
   transform-style: preserve-3d;
 }
 
@@ -780,6 +780,7 @@ body {
   height: 100%;
   border-radius: 15px;
   background-image: url("../images/backgrounds/card-front-hero.webp");
+  background-size: cover;
   border: groove 3px rgba(17, 128, 255, 0.8);
   transform: rotateY(180deg);
 }
@@ -812,6 +813,7 @@ body {
   line-height: 140%;
   text-align: center;
   margin-bottom: 10px;
+  font-style: italic;
 }
 
 #hero-stats {
@@ -848,6 +850,7 @@ body {
   height: 100%;
   border-radius: 15px;
   background-image: url("../images/backgrounds/card-front-villain.webp");
+  background-size: cover;
   border: groove 3px rgba(255, 255, 255, 0.3);
   transform: rotateY(180deg);
 }
@@ -880,6 +883,7 @@ body {
   line-height: 140%;
   text-align: center;
   margin-bottom: 10px;
+  font-style: italic;
 }
 
 #villain-stats {
