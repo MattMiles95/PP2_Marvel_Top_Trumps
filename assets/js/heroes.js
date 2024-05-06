@@ -9,24 +9,36 @@ dealCardsBtn.addEventListener("click", () => {
   heroCard.classList.toggle("active");
   villainCard.classList.toggle("active");
   userBtns.style.display = "block";
-  dealCardsUH();
+  dealCards();
   dealBtnContainer.style.display = "none";
 });
 
 /**
- * Start Game
+ * MAIN GAME LOOP - deals the User's and
+ * CPU's cards by randomly generating heroes
+ * and villains, then removing each from their
+ * respective arrays to prevent the same cards
+ * from coming up more than once
  */
-function dealCardsUH() {
-  let selectHero =
-    heroesGallery[Math.floor(Math.random() * heroesGallery.length)];
-  let selectVillain =
-    villainsGallery[Math.floor(Math.random() * villainsGallery.length)];
+function dealCards() {
+  // Generate random index for hero
+ let heroIndex = Math.floor(Math.random() * heroesGallery.length);
+ let selectHero = heroesGallery[heroIndex];
 
-  document.getElementById("hero").innerHTML = selectHero;
-  document.getElementById("villain").innerHTML = selectVillain;
+ // Generate random index for villain
+ let villainIndex = Math.floor(Math.random() * villainsGallery.length);
+ let selectVillain = villainsGallery[villainIndex];
+
+ // Display the selected hero and villain
+ document.getElementById("hero").innerHTML = selectHero;
+ document.getElementById("villain").innerHTML = selectVillain;
+
+ // Remove the selected hero and villain from their arrays
+ heroesGallery.splice(heroIndex, 1);
+ villainsGallery.splice(villainIndex, 1);
 }
 
-// Results
+// RESULTS
 let heroName = document.getElementsByClassName("hero-name");
 let villainName = document.getElementsByClassName("villain-name");
 let resultsScreen = document.getElementById("results-screen");
@@ -34,6 +46,11 @@ let resultsWin = document.getElementById("win");
 let resultsDraw = document.getElementById("draw");
 let resultsLose = document.getElementById("lose");
 
+/**
+ * This function is called when the User wins.
+ * It displays the 'win' screen, increments their
+ * score by one and checks to see if they've one 7 rounds yet
+ */
 function win() {
   resultsScreen.style.display = "block";
   resultsWin.style.display = "block";
@@ -41,11 +58,20 @@ function win() {
   checkScore();
 }
 
+/**
+ * This function is called when the User
+ * and CPU draw. It displays the 'draw' screen
+ */
 function draw() {
   resultsScreen.style.display = "block";
   resultsDraw.style.display = "block";
 }
 
+/**
+ * This function is called when the CPU wins.
+ * It displays the 'lose' screen, increments their
+ * score by one and checks to see if they've one 7 rounds yet
+ */
 function lose() {
   resultsScreen.style.display = "block";
   resultsLose.style.display = "block";
@@ -53,11 +79,14 @@ function lose() {
   checkScore();
 }
 
-// Reset Game
+// RESET GAME
 let winResetButton = document.getElementsByClassName("next-game-button")[0];
 let drawResetButton = document.getElementsByClassName("next-game-button")[1];
 let loseResetButton = document.getElementsByClassName("next-game-button")[2];
 
+/**
+ * Resets the game from the 'win' screen
+ */
 winResetButton.addEventListener("click", function () {
   resultsScreen.style.display = "none";
   dealBtnContainer.style.display = "flex";
@@ -70,6 +99,9 @@ winResetButton.addEventListener("click", function () {
   checkRounds();
 });
 
+/**
+ * Resets the game from the 'draw' screen
+ */
 drawResetButton.addEventListener("click", function () {
   resultsScreen.style.display = "none";
   dealBtnContainer.style.display = "flex";
@@ -82,6 +114,9 @@ drawResetButton.addEventListener("click", function () {
   checkRounds();
 });
 
+/**
+ * Resets the game from the 'lose' screen
+ */
 loseResetButton.addEventListener("click", function () {
   resultsScreen.style.display = "none";
   dealBtnContainer.style.display = "flex";
@@ -94,7 +129,7 @@ loseResetButton.addEventListener("click", function () {
   checkRounds();
 });
 
-// Score Board
+// SCORE BOARD
 let userDisplayScore = document.getElementById("user-display-score");
 let userScore = 0;
 let cpuDisplayScore = document.getElementById("cpu-display-score");
@@ -105,24 +140,41 @@ let roundsPlayed = 0;
 let deckLimit = 13;
 let gameOverScreen = document.getElementById("game-over-screen");
 
+/**
+ * Increments the User's display score and
+ * the back-end score by 1
+ */
 function incrementUserWins() {
   let previousUserWins = parseInt(userDisplayScore.innerText);
   userDisplayScore.innerText = ++previousUserWins;
   ++userScore;
 }
 
+/**
+ * Increments the CPU's display score and
+ * the back-end score by 1
+ */
 function incrementCpuWins() {
   let previousCpuWins = parseInt(cpuDisplayScore.innerText);
   cpuDisplayScore.innerText = ++previousCpuWins;
   ++cpuScore;
 }
 
+/**
+ * Increments the 'rounds played' display and
+ * the back-end value by 1
+ */
 function incrementRounds() {
   let previousRoundsPlayed = parseInt(roundDisplay.innerText);
   roundDisplay.innerText = ++previousRoundsPlayed;
   ++roundsPlayed;
 }
 
+/**
+ * Called when User's score reaches 7.
+ * Displays victory screen and hides
+ * any other interactive elements
+ */
 function gameOverWon() {
   let victory = document.getElementById("victory");
 
@@ -137,6 +189,11 @@ function gameOverWon() {
   document.getElementById("help-button").removeEventListener("click");
 }
 
+/**
+ * Called when CPU's score reaches 7.
+ * Displays defeat screen and hides
+ * any other interactive elements
+ */
 function gameOverLost() {
   let defeat = document.getElementById("defeat");
 
@@ -151,6 +208,11 @@ function gameOverLost() {
   document.getElementById("help-button").removeEventListener("click");
 }
 
+/**
+ * Called when the round counter reaches 
+ * 14. Displays empty deck screen and hides
+ * any other interactive elements
+ */
 function gameOverEmpty() {
   let emptyDeck = document.getElementById("empty-deck");
 
@@ -169,6 +231,12 @@ function gameOverEmpty() {
   document.getElementById("help-button").removeEventListener("click");
 }
 
+/**
+ * Checks the score after each
+ * round to see if either side 
+ * has won yet. If so, calls
+ * the relevant function
+ */
 function checkScore() {
   if (userScore === winningScore) {
     gameOverWon();
@@ -177,20 +245,32 @@ function checkScore() {
   }
 }
 
+/**
+ * Checks the round counter after 
+ * each round to see if the limit
+ * has been reached. If so, calls the
+ * gameOverEmpty function
+ */
 function checkRounds() {
   if (roundsPlayed === deckLimit) {
     gameOverEmpty();
   }
 }
 
+/**Replay button - victory.
+ * Reloads the page*/
 document.getElementById("replay-win").addEventListener("click", () => {
   location.reload(true);
 });
 
+/**Replay button - defeat.
+ * Reloads the page*/ 
 document.getElementById("replay-lose").addEventListener("click", () => {
   location.reload(true);
 });
 
+/**Replay button - empty deck.
+ * Reloads the page*/ 
 document.getElementById("replay-empty").addEventListener("click", () => {
   location.reload(true);
 });
@@ -207,6 +287,9 @@ powerBtn.addEventListener("click", () => {
   userBtns.style.display = "none";
 });
 
+/**
+ * Compares power stats
+ */
 function powerAtk() {
   let userPower = parseInt(document.getElementById("user-power").innerText);
   let cpuPower = parseInt(document.getElementById("cpu-power").innerText);
@@ -227,6 +310,9 @@ agilityBtn.addEventListener("click", () => {
   userBtns.style.display = "none";
 });
 
+/**
+ * Compares agility stats
+ */
 function agilityAtk() {
   let userAgility = parseInt(document.getElementById("user-agility").innerText);
   let cpuAgility = parseInt(document.getElementById("cpu-agility").innerText);
@@ -247,6 +333,9 @@ intelBtn.addEventListener("click", () => {
   userBtns.style.display = "none";
 });
 
+/**
+ * Compares intelligence stats
+ */
 function intelAtk() {
   let userIntel = parseInt(
     document.getElementById("user-intelligence").innerText
@@ -271,6 +360,9 @@ fightingBtn.addEventListener("click", () => {
   userBtns.style.display = "none";
 });
 
+/**
+ * Compares fighting skills stats
+ */
 function fightingAtk() {
   let userFighting = parseInt(
     document.getElementById("user-fighting").innerText
@@ -293,6 +385,9 @@ battleIqBtn.addEventListener("click", () => {
   userBtns.style.display = "none";
 });
 
+/**
+ * Compares battle IQ stats
+ */
 function battleIqAtk() {
   let userBattleIq = parseInt(
     document.getElementById("user-battle-iq").innerText
@@ -310,11 +405,18 @@ function battleIqAtk() {
   }
 }
 
-// Page Buttons
+// PAGE BUTTONS
+
+/**
+ * Displays 'How to Play' screen 
+ */
 document.getElementById("help-button").addEventListener("click", () => {
   document.getElementById("h2p").style.display = "block";
 });
 
+/**
+ * Closes 'How to Play' screen
+ */
 let closeWindow = document.getElementsByClassName("close-window")[0];
 closeWindow.addEventListener("click", () => {
   document.getElementById("h2p").style.display = "none";
@@ -323,6 +425,9 @@ closeWindow.addEventListener("click", () => {
 let sfxBtnOn = document.getElementById("sfx-button-on");
 let sfxBtnOff = document.getElementById("sfx-button-off");
 
+/**
+ * Toggles SFX on and off
+ */
 sfxBtnOn.addEventListener("click", () => {
   sfxBtnOn.style.display = "none";
   sfxBtnOff.style.display = "block";
@@ -333,7 +438,7 @@ sfxBtnOff.addEventListener("click", () => {
   sfxBtnOn.style.display = "block";
 });
 
-// Heroes Gallery
+// HEROES
 let spiderMan = `
   <img src="assets/images/heroes/spider-man.webp">
     <h3 class="hero-name">The Amazing Spider-Man</h3>
@@ -1132,7 +1237,7 @@ let heroesGallery = [
   profX,
 ];
 
-// Villains Gallery
+// VILLAINS
 let venom = `
   <img src="assets/images/villains/venom.webp">
     <h3 class="villain-name">Venom</h3>
