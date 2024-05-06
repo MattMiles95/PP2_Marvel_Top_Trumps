@@ -178,6 +178,21 @@ body {
   width: 100vw;
 }
 
+/* ----------------- GAME PAGE: VILLAIN */
+#villains-game {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../images/backgrounds/game-villains-background.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* ----------------- GAME PAGE */
 #page-buttons {
   position: absolute;
   top: 15px;
@@ -375,6 +390,37 @@ body {
 }
 
 #user-buttons button:hover {
+  text-shadow: 0 0 7px #fff;
+}
+
+#user-villain-buttons {
+  display: none;
+  position: absolute;
+  left: 480px;
+  width: 55px;
+  height: 320px;
+  top: 120px;
+  background-image: url(../images/backgrounds/villain-buttons.webp);
+  border: groove 3px white;
+  border-radius: 10px;
+}
+
+#user-villain-buttons > ul {
+  list-style: none;
+  padding: 10px;
+  text-align: center;
+}
+
+#user-villain-buttons button {
+  margin-bottom: 30px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+#user-villain-buttons button:hover {
   text-shadow: 0 0 7px #fff;
 }
 

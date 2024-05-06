@@ -8,7 +8,7 @@
     <meta name="description" content="Marvel Top Trumps - Online Playing Card Game">
     <meta name="keywords" content="marvel, top trumps, heroes, villains, online, game, playing cards">
     <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/marvel-favicon.webp">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/logos/marvel-favicon.webp">
     <!-- Stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Title -->
@@ -17,11 +17,166 @@
 
 <body id="villains-game">
 
-    <!-- Game Controls -->
+    <!-- Page Buttons -->
+    <div id="page-buttons">
+        <a href="index.html" aria-label="go back to homepage">
+            <button id="home-arrow"></button>
+        </a>
+        <button id="help-button"></button>
+        <button id="sfx-button-on"></button>
+        <button id="sfx-button-off"></button>
+    </div>
+
+    <!-- How to Play -->
+    <div id="h2p">
+        <button class="close-window"><i class="fa-regular fa-circle-xmark grow"></i></button>
+        <h2>How to Play?</h2>
+        <ul>
+            <li>Click 'FIGHT' to deal the playing cards</li>
+            <li>Each card has 5 stats with a rating from 1 - 10:
+                <ol>
+                    <li>Power <i class="fa-solid fa-fire-flame-curved"></i></li>
+                    <li>Agility <i class="fa-solid fa-feather-pointed"></i></li>
+                    <li>Intelligence <i class="fa-solid fa-brain"></i></li>
+                    <li>Fighting Skills <i class="fa-solid fa-hand-fist"></i></li>
+                    <li>Battle IQ <i class="fa-solid fa-bullseye"></i></li>
+                </ol>
+            </li>
+            <li>The goal is to pick a stat with a higher score than your opponent's</li>
+            <li>Your opponent's stats are hidden, so you'll have to make an educated guess as to which stat your
+                character can win on</li>
+            <li>To play a stat, simply click on the corresponding button to the right of your card</li>
+            <li>The winner is the first player to reach a score of 7 - so pick wisely!</li>
+            <li>Your deck only holds 14 cards - careful you don't run out...</li>
+            <li>Good luck, True Believers!</li>
+        </ul>
+    </div>
+
+    <!-- Score Board -->
+    <table id="score-board">
+        <tr id="round-counter">
+            <td>Round</td>
+            <td></td>
+            <td id="round-display">1</td>
+        </tr>
+        <tr>
+            <td class="villain-score">Villains</td>
+            <td></td>
+            <td class="hero-score">Heroes</td>
+        </tr>
+        <tr>
+            <td id="user-display-score" class="villain-score">0</td>
+            <td class="glow">:</td>
+            <td id="cpu-display-score" class="hero-score">0</td>
+        </tr>
+    </table>
+
+    <!-- Deal Cards -->
+    <div id="deal-button-container">
+        <div id="deal-button-box">
+            <h2>Ready... Steady...</h2>
+            <button id="deal-cards-button">Fight!</button>
+        </div>
+    </div>
+
+    <!-- Results -->
+    <div id="results-screen">
+        <div id="win">
+            <h2>You win!</h2>
+            <button class="next-game-button">Next game</button>
+        </div>
+        <div id="draw">
+            <h2>Draw!</h2>
+            <button class="next-game-button">Next game</button>
+        </div>
+        <div id="lose">
+            <h2>You lose...</h2>
+            <button class="next-game-button">Next game</button>
+        </div>
+    </div>
+
+    <div id="game-over-screen">
+        <div id="victory">
+            <h2>Excelsior!</h2>
+            <p>You are</p>
+            <p>victorious</p>
+            <button id="replay-win" class="game-win-button">Play Again</button>
+            <a href="game-heroes.html"><Button class="game-win-button">Change Deck</Button></a>
+            <a href="index.html"><button class="game-win-button push-down">Exit</button></a>
+        </div>
+        <div id="defeat">
+            <div id="defeat-buttons-container">
+                <button id="replay-lose" class="game-lose-button">Play Again</button>
+                <a href="game-heroes.html"><Button class="game-lose-button">Change Deck</Button></a>
+                <a href="index.html"><button class="game-lose-button push-down">Exit</button></a>
+            </div>
+        </div>
+        <div id="empty-deck">
+            <h2>You're out of cards</h2>
+            <div id="empty-buttons-container">
+                <button id="replay-empty" class="game-empty-button">Play Again</button>
+                <a href="game-heroes.html"><Button class="game-empty-button">Change Deck</Button></a>
+                <a href="index.html"><button class="game-empty-button push-down">Exit</button></a>
+            </div>
+        </div>
+    </div>
 
     <!-- User Card -->
+    <div id="user-background-card1">
+    </div>
+    <div id="user-background-card2">
+    </div>
+    <div id="user-background-card3">
+        <img src="assets/images/logos/game-logo.webp">
+    </div>
+    <div id="user-card">
+        <div id="villain-card-back">
+            <img src="assets/images/logos/game-logo.webp">
+        </div>
+        <div id="villain-card-front">
+            <div id="villain">
+                <!-- This div will be populated with a randomly selected hero from userHeroesGallery array -->
+            </div>
+        </div>
+    </div>
+    <div id="user-villain-buttons">
+        <ul>
+            <li>
+                <button id="power-btn"><i class="fa-solid fa-fire-flame-curved"></i></button>
+            </li>
+            <li>
+                <button id="agility-btn"><i class="fa-solid fa-feather-pointed"></i></button>
+            </li>
+            <li>
+                <button id="intel-btn"><i class="fa-solid fa-brain"></i></button>
+            </li>
+            <li>
+                <button id="fighting-btn"><i class="fa-solid fa-hand-fist"></i></button>
+            </li>
+            <li>
+                <button id="battle-iq-btn"><i class="fa-solid fa-bullseye"></i></button>
+            </li>
+        </ul>
+    </div>
 
     <!-- CPU Card -->
+    <div id="cpu-background-card1">
+    </div>
+    <div id="cpu-background-card2">
+    </div>
+    <div id="cpu-background-card3">
+        <img src="assets/images/logos/game-logo.webp">
+    </div>
+    <div id="cpu-card">
+        <div id="hero-card-back">
+            <img src="assets/images/logos/game-logo.webp">
+        </div>
+        <div id="hero-card-front">
+            <div id="hero">
+                <!-- This div will be filled with a randomly selected villain from villainsGallery array -->
+            </div>
+        </div>
+    </div>
 
     <!-- SCRIPT LINKS -->
 
@@ -29,7 +184,7 @@
     <script src="https://kit.fontawesome.com/fadb375f06.js" crossorigin="anonymous"></script>
 
     <!-- JavaScript -->
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/villains.js"></script>
 
 </body>
 
