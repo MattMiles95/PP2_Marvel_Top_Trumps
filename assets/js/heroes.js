@@ -111,6 +111,7 @@ function incrementCpuWins() {
 function gameOverWon() {
   let victory = document.getElementById("victory");
 
+  document.getElementById("page-buttons").style.display = "none";
   document.getElementById("heroes-game").style.backdropFilter = "blur(5px)";
   document.getElementById("page-buttons").style.filter = "blur(5px)";
   userBtns.style.display = "none";
@@ -124,6 +125,7 @@ function gameOverWon() {
 function gameOverLost() {
   let defeat = document.getElementById("defeat");
 
+  document.getElementById("page-buttons").style.display = "none";
   document.getElementById("heroes-game").style.backdropFilter = "blur(5px)";
   document.getElementById("page-buttons").style.filter = "blur(5px)";
   userBtns.style.display = "none";
