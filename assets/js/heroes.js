@@ -817,7 +817,7 @@ let falcon = `
 let winterSoldier = `
   <img src="assets/images/heroes/winter-soldier.webp">
     <h3 class="hero-name">The Winter Soldier</h3>
-      <h4>"I Read The Hobbit In 1937 When It First Came Out."</h4>
+      <h4>"I read The Hobbit in 1937 when it first came out."</h4>
         <div id="hero-stats">
             <table>
                 <tr>

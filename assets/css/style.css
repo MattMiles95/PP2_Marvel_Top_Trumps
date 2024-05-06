@@ -540,11 +540,12 @@ body {
   top: 10px;
   background: none;
   border: none;
-  color: #fbc969;
-  background-color: white;
+  color: #f69f26;
+  text-shadow: 0 0 5px rgb(251, 201, 105);
+  background-color: rgba(0, 0, 0, 0.8);
   text-transform: uppercase;
   font-size: 20px;
-  border: groove 3px white;
+  border: groove 3px rgba(0, 0, 0, 0.7);
   border-radius: 5px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   padding: 5px;
@@ -553,9 +554,8 @@ body {
 
 .game-win-button:hover {
   box-shadow: none;
-  filter: brightness(120%);
-  color: #ffb326;
-  text-shadow: 0 0 5px #ffa600;
+  color: #ecd479;
+  text-shadow: 0 0 10px rgb(243, 207, 114);;
 }
 
 #victory {
@@ -567,8 +567,8 @@ body {
   width: 100%;
   font-weight: 900;
   font-stretch: condensed;
-  color: #d5dfe4;
-  background-image: url(../images/backgrounds/victory-background.webp);
+  text-shadow: 0 0 10px rgb(243, 207, 114);
+  background-image: url(../images/backgrounds/victory-background2.webp);
   background-size: cover;
   background-position: center center;
   border: groove 3px white;
@@ -577,19 +577,21 @@ body {
 }
 
 #victory h2 {
+  position: relative;
+  bottom: 10px;;
+  color: #ecd479;
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: white;
-  text-shadow: 0 3px 10px black;
+  -webkit-text-stroke-color: #b27418;
   backdrop-filter: blur(1px);
   border-radius: 10px;
   padding: 0 10px;
 }
 
 #victory p {
+  color: #f3cf72;
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: white;
+  -webkit-text-stroke-color: #b27418;
   line-height: 35px;
-  text-shadow: 0 3px 10px black;
   backdrop-filter: blur(1px);
   border-radius: 10px;
   padding: 0 10px;
