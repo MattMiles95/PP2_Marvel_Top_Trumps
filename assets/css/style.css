@@ -13,6 +13,14 @@ body {
   font-family: "News Cycle", Impact, sans-serif;
 }
 
+#alert-container {
+  display: none;
+}
+
+#mobile-device-alert {
+  display: none;
+}
+
 /* ----------------- General Classes */
 .hidden-text {
   display: none;
@@ -39,7 +47,7 @@ body {
   width: 100vw;
 }
 
-#play-button-contiainer {
+#play-button-container {
   position: absolute;
   right: 290px;
   text-align: center;
@@ -608,7 +616,7 @@ body {
 .game-win-button:hover {
   box-shadow: none;
   color: #ecd479;
-  text-shadow: 0 0 10px rgb(243, 207, 114);;
+  text-shadow: 0 0 10px rgb(243, 207, 114);
 }
 
 #victory {
@@ -631,7 +639,7 @@ body {
 
 #victory h2 {
   position: relative;
-  bottom: 10px;;
+  bottom: 10px;
   color: #ecd479;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #b27418;
@@ -1021,3 +1029,108 @@ td > i {
   transition: all 1.2s;
 }
 
+/* RESPONSIVITY - MEDIA QUERIES */
+
+/* Mobile Devices (max-width 500px) */
+@media (max-width: 500px) {
+
+  /* MOBILE DEVICE ALERT */
+  #alert-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #alert-container > img {
+    position: relative;
+    bottom: 50px;
+    height: 100px;
+    width: 160px;
+  }
+
+  #mobile-device-alert {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #ed1d24;
+    border: groove 5px white;
+    border-radius: 15px;
+    width: 75%;
+    min-height: 60%;
+    text-align: center;
+    color: white;
+    font-weight: 900;
+  }
+
+  /* HOMEPAGE */
+  #homepage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: none;
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  #play-button-container {
+    display: none;
+  }
+
+  /* GAME PAGES */
+  #heroes-game {
+    background-image: none;
+    background-color: black;
+  }
+
+  #villains-game {
+    background-image: none;
+    background-color: black;
+  }
+  
+  #page-buttons {
+    display: none;
+  }
+  
+  #score-board {
+    display: none;
+  }
+
+  #deal-button-container {
+    display: none;
+  }
+
+  #user-background-card1 {
+    display: none;
+  }
+
+  #user-background-card2 {
+    display: none;
+  }
+
+  #user-background-card3 {
+    display: none;
+  }
+
+  #user-card {
+    display: none;
+  }
+
+  #cpu-background-card1 {
+    display: none;
+  }
+
+  #cpu-background-card2 {
+    display: none;
+  }
+
+  #cpu-background-card3 {
+    display: none;
+  }
+
+  #cpu-card {
+    display: none;
+  }
+}
