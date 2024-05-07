@@ -137,7 +137,7 @@ let cpuScore = 0;
 let winningScore = 7;
 let roundDisplay = document.getElementById("round-display");
 let roundsPlayed = 0;
-let deckLimit = 1;
+let deckLimit = 13;
 let gameOverScreen = document.getElementById("game-over-screen");
 
 /**
