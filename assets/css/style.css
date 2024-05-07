@@ -369,10 +369,9 @@ body {
 #user-buttons {
   display: none;
   position: absolute;
-  left: 480px;
+  left: 34%;
   width: 55px;
   height: 320px;
-  top: 120px;
   background-color: #ed1d24;
   border: groove 3px white;
   border-radius: 10px;
@@ -400,10 +399,9 @@ body {
 #user-villain-buttons {
   display: none;
   position: absolute;
-  left: 480px;
+  left: 34%;
   width: 55px;
   height: 320px;
-  top: 120px;
   background-image: url(../images/backgrounds/villain-buttons.webp);
   border: groove 3px white;
   border-radius: 10px;
@@ -433,9 +431,9 @@ body {
   display: none;
   text-align: center;
   width: 370px;
-  height: 300px;
+  height: 240px;
   color: white;
-  font-size: 30px;
+  font-size: 35px;
   text-transform: uppercase;
 }
 
@@ -445,7 +443,7 @@ body {
 
 #win {
   display: none;
-  height: 200px;
+  height: 100%;
   background-image: url(../images/backgrounds/green-background.webp);
   border: groove 3px white;
   border-radius: 30px;
@@ -454,7 +452,7 @@ body {
 
 #draw {
   display: none;
-  height: 200px;
+  height: 100%;
   background-image: url(../images/backgrounds/yellow-background.webp);
   border: groove 3px white;
   border-radius: 30px;
@@ -463,7 +461,7 @@ body {
 
 #lose {
   display: none;
-  height: 200px;
+  height: 100%;
   background-image: url(../images/backgrounds/red-background.webp);
   border: groove 3px white;
   border-radius: 30px;
@@ -478,7 +476,7 @@ body {
   color: #0daa63;
   background-color: white;
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 25px;
   border: groove 3px white;
   border-radius: 5px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
@@ -499,7 +497,7 @@ body {
   color: #eec008;
   background-color: white;
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 25px;
   border: groove 3px white;
   border-radius: 5px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
@@ -520,7 +518,7 @@ body {
   color: #931323;
   background-color: white;
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 25px;
   border: groove 3px white;
   border-radius: 5px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
@@ -759,8 +757,8 @@ body {
 /* ----------------- Background Cards */
 #user-background-card1 {
   position: absolute;
-  top: 70px;
-  left: 190px;
+  top: 18%;
+  left: 12%;
   width: 250px;
   height: 490px;
   border-radius: 15px;
@@ -771,8 +769,8 @@ body {
 
 #user-background-card2 {
   position: absolute;
-  top: 60px;
-  left: 200px;
+  top: 17%;
+  left: 13%;
   width: 250px;
   height: 490px;
   border-radius: 15px;
@@ -783,8 +781,8 @@ body {
 
 #user-background-card3 {
   position: absolute;
-  top: 50px;
-  left: 210px;
+  top: 16%;
+  left: 14%;
   width: 250px;
   height: 490px;
   border-radius: 15px;
@@ -803,8 +801,8 @@ body {
 
 #cpu-background-card1 {
   position: absolute;
-  top: 70px;
-  right: 190px;
+  top: 18%;
+  right: 12%;
   width: 250px;
   height: 490px;
   border-radius: 15px;
@@ -815,8 +813,8 @@ body {
 
 #cpu-background-card2 {
   position: absolute;
-  top: 60px;
-  right: 200px;
+  top: 17%;
+  right: 13%;
   width: 250px;
   height: 490px;
   border-radius: 15px;
@@ -827,8 +825,8 @@ body {
 
 #cpu-background-card3 {
   position: absolute;
-  top: 50px;
-  right: 210px;
+  top: 16%;
+  right: 14%;
   width: 250px;
   height: 490px;
   border-radius: 15px;
@@ -848,8 +846,8 @@ body {
 /* ----------------- User & CPU Cards */
 #user-card {
   position: absolute;
-  top: 40px;
-  left: 220px;
+  top: 15%;
+  left: 15%;
   width: 250px;
   height: 490px;
   border-radius: 15px;
@@ -858,8 +856,8 @@ body {
 
 #cpu-card {
   position: absolute;
-  top: 40px;
-  right: 220px;
+  top: 15%;
+  right: 15%;
   border-radius: 15px;
   width: 250px;
   height: 490px;
@@ -1028,6 +1026,176 @@ td > i {
 }
 
 /* RESPONSIVITY - MEDIA QUERIES */
+
+/* Large Laptops and Desktops (min width 1440px and min-height 700px) */
+@media (min-width: 1440px) and (min-height: 700px) {
+
+  /* ----------------- Page Buttons */
+  #help-button {
+    width: 70px;
+    height: 70px;
+  }
+
+  #help-button:hover {
+    width: 75px;
+    height: 75px;
+  }
+
+  #sfx-button-on {
+    width: 75px;
+    height: 75px;
+  }
+
+  #sfx-button-off {
+    width: 75px;
+    height: 75px;
+  }
+
+  #sfx-button-on:hover {
+    width: 80px;
+    height: 80px;
+  }
+
+  #sfx-button-off:hover {
+    width: 80px;
+    height: 80px;
+  }
+
+  #h2p {
+   font-size: 20px;
+  }
+
+  /* ----------------- User Buttons */
+  #user-buttons {
+    left: 36%;
+    height: 375px;
+    width: 60px;
+  }
+
+  #user-buttons button {
+    font-size: 35px;
+    margin-bottom: 36px;
+  }
+
+  #user-villain-buttons {
+    left: 36%;
+    height: 375px;
+    width: 60px;
+  }
+
+  #user-villain-buttons button {
+    font-size: 35px;
+    margin-bottom: 36px;
+  }
+
+  /* ----------------- Score Board */
+  #score-board {
+    top: 5%;
+    height: 200px;
+    width: 300px;
+    font-size: 36px;
+  }
+
+  #round-counter {
+    line-height: 50px;
+  }
+
+  #user-display-score,
+  #cpu-display-score {
+    font-size: 50px;
+  }
+
+  /* ----------------- Results */
+  #results-screen {
+    width: 290px;
+    height: 250px;
+  }
+
+  /* ----------------- Game Over Screen */
+  #victory p {
+    line-height: 10px;
+    padding: 0 10px;
+    font-size: 38px;
+  }
+  
+  /* ----------------- Background Cards */
+  #user-background-card1 {
+    width: 300px;
+    height: 600px;
+  }
+
+  #user-background-card2 {
+    width: 300px;
+    height: 600px;
+  }
+
+  #user-background-card3 {
+    width: 300px;
+    height: 600px;
+  }
+
+  #cpu-background-card1 {
+    width: 300px;
+    height: 600px;
+  }
+
+  #cpu-background-card2 {
+    width: 300px;
+    height: 600px;
+  }
+
+  #cpu-background-card3 {
+    width: 300px;
+    height: 600px;
+  }
+
+  /* ----------------- User & CPU Cards */
+  #user-card {
+    width: 300px;
+    height: 600px;
+  }
+
+  #cpu-card {
+    width: 300px;
+    height: 600px;
+  }
+
+  /* ----------------- Hero Cards */
+  #hero > img {
+    height: 280px;
+    margin-bottom: 40px;
+  }
+
+  #hero > h3 {
+    font-size: 140%;
+  }
+
+  #hero > h4 {
+    font-size: 95%;
+  }
+
+  #hero-stats {
+    font-size: 95%;
+  }
+
+  /* ----------------- Villain Card */
+  #villain > img {
+    height: 280px;
+    margin-bottom: 40px;
+  }
+
+  #villain > h3 {
+    font-size: 140%;
+  }
+
+  #villain > h4 {
+    font-size: 95%;
+  }
+
+  #villain-stats {
+    font-size: 95%;
+  }
+}
 
 /* Mobile Devices (max-width 767px) */
 @media (max-width: 767px) {
@@ -1304,17 +1472,7 @@ td > i {
     font-size: 15px;
   }
 
-  .hero-score {
-    font-size: 15px;
-  }
-
-  .villain-score {
-    color: #f52220;
-    text-shadow: 0 0 10px #ff5e5b;
-  }
-
   #round-counter {
-    text-shadow: 0 0 5px white;
     line-height: 10px;
   }
 
