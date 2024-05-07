@@ -1031,7 +1031,6 @@ td > i {
 
 /* Mobile Devices (max-width 767px) */
 @media (max-width: 767px) {
-  
   /* MOBILE DEVICE ALERT */
   #alert-container {
     display: flex;
@@ -1138,7 +1137,6 @@ td > i {
 
 /* Medium - Large Horizontal Phones (max height 500px) */
 @media (max-height: 500px) {
-  
   /* HOMEPAGE */
   #play-button-container {
     left: 37%;
@@ -1560,7 +1558,6 @@ td > i {
 
 /* Medium horizontal phones (max height 430px) */
 @media (max-height: 430px) {
-
   /* ----------------- Hero Cards */
   #hero > img {
     top: 12px;
@@ -1568,21 +1565,19 @@ td > i {
     height: 170px;
     margin-bottom: 15px;
   }
-  
+
   /* ----------------- Villain Cards */
-  
+
   #villain > img {
     top: 12px;
     width: 75%;
     height: 170px;
     margin-bottom: 15px;
   }
-
 }
 
 /* Small - Medium Horizontal Phones (max height 385px) */
 @media (max-height: 385px) {
-
   /* ----------------- Hero Cards */
   #hero > h3 {
     font-size: 85%;
@@ -1595,9 +1590,9 @@ td > i {
   #hero-stats {
     font-size: 65%;
   }
-  
+
   /* ----------------- Villain Cards */
-  
+
   #villain > h3 {
     font-size: 85%;
   }
@@ -1613,12 +1608,11 @@ td > i {
 
 /* Small horizontal phones (max height 350px) */
 @media (max-height: 350px) {
-
   /* HOMEPAGE */
-#play-button-container {
-  left: 25%;
-  transform: translate(-60%);
-}
+  #play-button-container {
+    left: 25%;
+    transform: translate(-60%);
+  }
 
   #play-button {
     height: 40px;
@@ -1700,307 +1694,462 @@ td > i {
   }
 }
 
-/* Tablets (max width 800px and min-height 650px) */
-@media(max-width: 800px) and (min-height: 650px) {
-
+/* Laptops & Small Desktops (max width 1080px and min-height 650px) */
+@media (max-width: 1080px) and (min-height: 650px) {
   /* HOMEPAGE */
   #play-button-container {
-   left: 37%;
-   transform: translate(-63%);
- }
+    left: 38%;
+    transform: translate(-63%);
+  }
 
- #play-button {
-   height: 80px;
-   width: 160px;
-   font-size: 25px;
- }
+  #play-button {
+    height: 90px;
+    width: 180px;
+    font-size: 30px;
+  }
 
- #play-button:hover {
-   font-size: 28px;
- }
+  #play-button:hover {
+    font-size: 32px;
+  }
 
- #deck-choice-container {
-   height: 200px;
-   width: 350px;
- }
+  /* ----------------- GAME PAGES */
+  #page-buttons {
+    top: 30px;
+    height: 80px;
+    width: 320px;
+    flex-direction: row;
+  }
 
- #deck-choice-container > h3 {
-   margin-bottom: 10px;
-   font-size: 30px;
- }
+  #home-arrow {
+    width: 115px;
+    height: 83px;
+  }
 
- #heroes-button {
-   margin-bottom: 10px;
-   height: 50px;
-   width: 130px;
-   font-size: 20px;
- }
+  #home-arrow:hover {
+    width: 122px;
+    height: 88px;
+  }
 
- #villains-button {
-   margin-bottom: 5px;
-   height: 50px;
-   width: 130px;
-   font-size: 20px;
- }
+  #help-button {
+    width: 58px;
+    height: 58px;
+  }
 
- #heroes-button:hover {
-   font-size: 24px;
- }
+  #help-button:hover {
+    width: 62px;
+    height: 62px;
+  }
 
- #villains-button:hover {
-   font-size: 24px;
- }
+  #sfx-button-on {
+    width: 62px;
+    height: 62px;
+  }
 
- .close-window {
-   top: 10px;
-   right: 10px;
-   font-size: 16px;
- }
+  #sfx-button-off {
+    width: 62px;
+    height: 62px;
+  }
 
- /* ----------------- GAME PAGES */
- #page-buttons {
-   top: 20px;
-   left: 20px;
-   height: 60px;
-   width: 220px;
-   flex-direction: row;
- }
+  #sfx-button-on:hover {
+    width: 65px;
+    height: 65px;
+  }
 
- #home-arrow {
-   width: 77px;
-   height: 55px;
- }
+  #sfx-button-off:hover {
+    width: 65px;
+    height: 65px;
+  }
 
- #home-arrow:hover {
-   width: 62px;
-   height: 42px;
- }
+  #h2p {
+    width: 500px;
+  }
 
- #help-button {
-   width: 40px;
-   height: 40px;
- }
+  /* ----------------- Deal Cards */
+  #deal-button-box {
+    width: 300px;
+    height: 280px;
+  }
 
- #help-button:hover {
-   width: 45px;
-   height: 45px;
- }
+  #deal-button-box h2 {
+    font-size: 34px;
+    margin-bottom: 10px;
+  }
 
- #sfx-button-on {
-   width: 50px;
-   height: 50px;
- }
+  #deal-cards-button {
+    height: 120px;
+    width: 120px;
+    padding: 0 5px;
+    margin-bottom: 0;
+    font-size: 30px;
+  }
 
- #sfx-button-off {
-   width: 50px;
-   height: 50px;
- }
+  /* ----------------- User Buttons */
+  #user-buttons {
+    top: 40%;
+    left: 35%;
+  }
 
- #sfx-button-on:hover {
-   width: 50px;
-   height: 50px;
- }
+  #user-buttons > ul {
+    flex-direction: column;
+  }
 
- #sfx-button-off:hover {
-   width: 50px;
-   height: 50px;
- }
+  #user-villain-buttons {
+    top: 40%;
+    left: 35%;
+  }
 
- #h2p {
-   padding: 10px;
-   font-size: 13px;
- }
+  #user-villain-buttons > ul {
+    flex-direction: column;
+  }
 
- /* ----------------- Deal Cards */
- #deal-button-box {
-   width: 180px;
-   height: 200px;
- }
+  /* ----------------- Results */
+  #results-screen {
+    width: 280px;
+  }
 
- #deal-button-box h2 {
-   font-size: 24px;
-   margin-bottom: 10px;
- }
+  /* ----------------- Background Cards */
+  #user-background-card1 {
+    top: 200px;
+    left: 70px;
+  }
 
- #deal-cards-button {
-   height: 90px;
-   width: 90px;
-   padding: 0 5px;
-   margin-bottom: 0;
-   font-size: 22px;
- }
+  #user-background-card2 {
+    top: 190px;
+    left: 80px;
+  }
 
- /* ----------------- User Buttons */
- #user-buttons {
-  top: 80%;
-  left: 6%;
-  width: 220px;
-  height: 50px;
- }
+  #user-background-card3 {
+    top: 180px;
+    left: 90px;
+  }
 
- #user-buttons > ul {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
- }
+  #cpu-background-card1 {
+    top: 200px;
+    right: 70px;
+  }
 
- #user-buttons button {
-   margin-bottom: 15px;
-   font-size: 18px;
- }
+  #cpu-background-card2 {
+    top: 190px;
+    right: 80px;
+  }
 
- #user-villain-buttons {
-  top: 80%;
-  left: 6%;
-  width: 220px;
-  height: 50px;
- }
+  #cpu-background-card3 {
+    top: 180px;
+    right: 90px;
+  }
 
- #user-villain-buttons > ul {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
- }
+  /* ----------------- User & CPU Cards */
+  #user-card {
+    top: 170px;
+    left: 100px;
+  }
 
- #user-villain-buttons button {
-   margin-bottom: 15px;
-   font-size: 18px;
- }
+  #cpu-card {
+    top: 170px;
+    right: 100px;
+  }
+}
 
- /* ----------------- Results */
- #results-screen {
-   width: 200px;
-   height: 180px;
- }
+/* Tablets (max width 800px and min-height 650px) */
+@media (max-width: 800px) and (min-height: 650px) {
+  /* HOMEPAGE */
+  #play-button-container {
+    left: 37%;
+    transform: translate(-63%);
+  }
 
- #results-screen h2 {
-   margin-top: 5px;
-   font-size: 30px;
- }
+  #play-button {
+    height: 80px;
+    width: 160px;
+    font-size: 25px;
+  }
 
- #win button {
-  font-size: 18px;
- }
+  #play-button:hover {
+    font-size: 28px;
+  }
 
- #draw button {
-  font-size: 18px;
- }
+  #deck-choice-container {
+    height: 200px;
+    width: 350px;
+  }
 
- #lose button {
-   font-size: 18px;
- }
- 
- /* ----------------- Background Cards */
- #user-background-card1 {
-   top: 200px;
-   left: 25px;
-   width: 235px;
-   height: 450px;
- }
+  #deck-choice-container > h3 {
+    margin-bottom: 10px;
+    font-size: 30px;
+  }
 
- #user-background-card2 {
-   top: 190px;
-   left: 30px;
-   width: 235px;
-   height: 450px;
- }
+  #heroes-button {
+    margin-bottom: 10px;
+    height: 50px;
+    width: 130px;
+    font-size: 20px;
+  }
 
- #user-background-card3 {
-   top: 180px;
-   left: 35px;
-   width: 235px;
-   height: 450px;
- }
+  #villains-button {
+    margin-bottom: 5px;
+    height: 50px;
+    width: 130px;
+    font-size: 20px;
+  }
 
- #user-background-card3 > img {
-   top: 50px;
-   width: 75%;
- }
+  #heroes-button:hover {
+    font-size: 24px;
+  }
 
- #cpu-background-card1 {
-  top: 200px;
-  right: 25px;
-  width: 235px;
-  height: 450px;
- }
+  #villains-button:hover {
+    font-size: 24px;
+  }
 
- #cpu-background-card2 {
-  top: 190px;
-  right: 30px;
-  width: 235px;
-  height: 450px;
- }
+  .close-window {
+    top: 10px;
+    right: 10px;
+    font-size: 16px;
+  }
 
- #cpu-background-card3 {
-  top: 180px;
-  right: 35px;
-  width: 235px;
-  height: 450px;
- }
+  /* ----------------- GAME PAGES */
+  #page-buttons {
+    top: 20px;
+    left: 20px;
+    height: 60px;
+    width: 220px;
+    flex-direction: row;
+  }
 
- #cpu-background-card3 > img {
-   top: 50px;
-   width: 70%;
- }
+  #home-arrow {
+    width: 77px;
+    height: 55px;
+  }
 
- /* ----------------- User & CPU Cards */
- #user-card {
-   top: 170px;
-   left: 40px;
-   width: 235px;
-   height: 450px;
- }
+  #home-arrow:hover {
+    width: 62px;
+    height: 42px;
+  }
 
- #cpu-card {
-   top: 170px;
-   right: 40px;
-   width: 235px;
-   height: 450px;
- }
+  #help-button {
+    width: 40px;
+    height: 40px;
+  }
 
- /* ----------------- Hero Cards */
- #hero-card-back > img {
-   top: 50px;
-   width: 70%;
- }
+  #help-button:hover {
+    width: 45px;
+    height: 45px;
+  }
 
- #hero > img {
-   top: 20px;
-   height: 220px;
- }
+  #sfx-button-on {
+    width: 50px;
+    height: 50px;
+  }
 
- #hero > h3 {
-   font-size: 100%;
- }
+  #sfx-button-off {
+    width: 50px;
+    height: 50px;
+  }
 
- #hero > h4 {
-   font-size: 75%;
- }
+  #sfx-button-on:hover {
+    width: 50px;
+    height: 50px;
+  }
 
- #hero-stats {
-   font-size: 75%;
- }
+  #sfx-button-off:hover {
+    width: 50px;
+    height: 50px;
+  }
 
- /* ----------------- Villain Card */
- #villain-card-back > img {
-   top: 50px;
-   width: 70%;
- }
+  #h2p {
+    padding: 10px;
+    font-size: 13px;
+  }
 
- #villain > img {
-  top: 20px;
-  height: 220px;
- }
+  /* ----------------- Deal Cards */
+  #deal-button-box {
+    width: 180px;
+    height: 200px;
+  }
 
- #villain > h3 {
-  font-size: 100%;
- }
+  #deal-button-box h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
 
- #villain > h4 {
-  font-size: 75%;
- }
+  #deal-cards-button {
+    height: 90px;
+    width: 90px;
+    padding: 0 5px;
+    margin-bottom: 0;
+    font-size: 22px;
+  }
 
- #villain-stats {
-  font-size: 75%;
- }
+  /* ----------------- User Buttons */
+  #user-buttons {
+    top: 80%;
+    left: 6%;
+    width: 220px;
+    height: 50px;
+  }
+
+  #user-buttons > ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #user-buttons button {
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+
+  #user-villain-buttons {
+    top: 80%;
+    left: 6%;
+    width: 220px;
+    height: 50px;
+  }
+
+  #user-villain-buttons > ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #user-villain-buttons button {
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+
+  /* ----------------- Results */
+  #results-screen {
+    width: 200px;
+    height: 180px;
+  }
+
+  #results-screen h2 {
+    margin-top: 5px;
+    font-size: 30px;
+  }
+
+  #win button {
+    font-size: 18px;
+  }
+
+  #draw button {
+    font-size: 18px;
+  }
+
+  #lose button {
+    font-size: 18px;
+  }
+
+  /* ----------------- Background Cards */
+  #user-background-card1 {
+    top: 200px;
+    left: 25px;
+    width: 235px;
+    height: 450px;
+  }
+
+  #user-background-card2 {
+    top: 190px;
+    left: 30px;
+    width: 235px;
+    height: 450px;
+  }
+
+  #user-background-card3 {
+    top: 180px;
+    left: 35px;
+    width: 235px;
+    height: 450px;
+  }
+
+  #user-background-card3 > img {
+    top: 50px;
+    width: 75%;
+  }
+
+  #cpu-background-card1 {
+    top: 200px;
+    right: 25px;
+    width: 235px;
+    height: 450px;
+  }
+
+  #cpu-background-card2 {
+    top: 190px;
+    right: 30px;
+    width: 235px;
+    height: 450px;
+  }
+
+  #cpu-background-card3 {
+    top: 180px;
+    right: 35px;
+    width: 235px;
+    height: 450px;
+  }
+
+  #cpu-background-card3 > img {
+    top: 50px;
+    width: 70%;
+  }
+
+  /* ----------------- User & CPU Cards */
+  #user-card {
+    top: 170px;
+    left: 40px;
+    width: 235px;
+    height: 450px;
+  }
+
+  #cpu-card {
+    top: 170px;
+    right: 40px;
+    width: 235px;
+    height: 450px;
+  }
+
+  /* ----------------- Hero Cards */
+  #hero-card-back > img {
+    top: 50px;
+    width: 70%;
+  }
+
+  #hero > img {
+    top: 20px;
+    height: 220px;
+  }
+
+  #hero > h3 {
+    font-size: 100%;
+  }
+
+  #hero > h4 {
+    font-size: 75%;
+  }
+
+  #hero-stats {
+    font-size: 75%;
+  }
+
+  /* ----------------- Villain Card */
+  #villain-card-back > img {
+    top: 50px;
+    width: 70%;
+  }
+
+  #villain > img {
+    top: 20px;
+    height: 220px;
+  }
+
+  #villain > h3 {
+    font-size: 100%;
+  }
+
+  #villain > h4 {
+    font-size: 75%;
+  }
+
+  #villain-stats {
+    font-size: 75%;
+  }
 }
