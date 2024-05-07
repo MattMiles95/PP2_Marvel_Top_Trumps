@@ -6,6 +6,7 @@ let dealBtnContainer = document.getElementById("deal-button-container");
 let dealCardsBtn = document.getElementById("deal-cards-button");
 
 dealCardsBtn.addEventListener("click", () => {
+  playClick1();
   heroCard.classList.toggle("active");
   villainCard.classList.toggle("active");
   userBtns.style.display = "block";
@@ -21,21 +22,23 @@ dealCardsBtn.addEventListener("click", () => {
  * from coming up more than once
  */
 function dealCards() {
+  // Plays audio
+  playDeal();
   // Generate random index for hero
- let heroIndex = Math.floor(Math.random() * heroesGallery.length);
- let selectHero = heroesGallery[heroIndex];
+  let heroIndex = Math.floor(Math.random() * heroesGallery.length);
+  let selectHero = heroesGallery[heroIndex];
 
- // Generate random index for villain
- let villainIndex = Math.floor(Math.random() * villainsGallery.length);
- let selectVillain = villainsGallery[villainIndex];
+  // Generate random index for villain
+  let villainIndex = Math.floor(Math.random() * villainsGallery.length);
+  let selectVillain = villainsGallery[villainIndex];
 
- // Display the selected hero and villain
- document.getElementById("hero").innerHTML = selectHero;
- document.getElementById("villain").innerHTML = selectVillain;
+  // Display the selected hero and villain
+  document.getElementById("hero").innerHTML = selectHero;
+  document.getElementById("villain").innerHTML = selectVillain;
 
- // Remove the selected hero and villain from their arrays
- heroesGallery.splice(heroIndex, 1);
- villainsGallery.splice(villainIndex, 1);
+  // Remove the selected hero and villain from their arrays
+  heroesGallery.splice(heroIndex, 1);
+  villainsGallery.splice(villainIndex, 1);
 }
 
 // RESULTS
@@ -52,6 +55,7 @@ let resultsLose = document.getElementById("lose");
  * score by one and checks to see if they've one 7 rounds yet
  */
 function win() {
+  playWin();
   resultsScreen.style.display = "block";
   resultsWin.style.display = "block";
   incrementUserWins();
@@ -63,6 +67,7 @@ function win() {
  * and CPU draw. It displays the 'draw' screen
  */
 function draw() {
+  playDraw();
   resultsScreen.style.display = "block";
   resultsDraw.style.display = "block";
 }
@@ -73,6 +78,7 @@ function draw() {
  * score by one and checks to see if they've one 7 rounds yet
  */
 function lose() {
+  playLose();
   resultsScreen.style.display = "block";
   resultsLose.style.display = "block";
   incrementCpuWins();
@@ -88,6 +94,7 @@ let loseResetButton = document.getElementsByClassName("next-game-button")[2];
  * Resets the game from the 'win' screen
  */
 winResetButton.addEventListener("click", function () {
+  playClick1();
   resultsScreen.style.display = "none";
   dealBtnContainer.style.display = "flex";
   heroCard.classList.toggle("active");
@@ -103,6 +110,7 @@ winResetButton.addEventListener("click", function () {
  * Resets the game from the 'draw' screen
  */
 drawResetButton.addEventListener("click", function () {
+  playClick1();
   resultsScreen.style.display = "none";
   dealBtnContainer.style.display = "flex";
   heroCard.classList.toggle("active");
@@ -118,6 +126,7 @@ drawResetButton.addEventListener("click", function () {
  * Resets the game from the 'lose' screen
  */
 loseResetButton.addEventListener("click", function () {
+  playClick1();
   resultsScreen.style.display = "none";
   dealBtnContainer.style.display = "flex";
   heroCard.classList.toggle("active");
@@ -178,6 +187,7 @@ function incrementRounds() {
 function gameOverWon() {
   let victory = document.getElementById("victory");
 
+  playVictory();
   document.getElementById("page-buttons").style.display = "none";
   document.getElementById("heroes-game").style.backdropFilter = "blur(5px)";
   document.getElementById("page-buttons").style.filter = "blur(5px)";
@@ -197,6 +207,7 @@ function gameOverWon() {
 function gameOverLost() {
   let defeat = document.getElementById("defeat");
 
+  playDefeat();
   document.getElementById("page-buttons").style.display = "none";
   document.getElementById("heroes-game").style.backdropFilter = "blur(5px)";
   document.getElementById("page-buttons").style.filter = "blur(5px)";
@@ -209,13 +220,14 @@ function gameOverLost() {
 }
 
 /**
- * Called when the round counter reaches 
+ * Called when the round counter reaches
  * 14. Displays empty deck screen and hides
  * any other interactive elements
  */
 function gameOverEmpty() {
   let emptyDeck = document.getElementById("empty-deck");
 
+  playEmpty();
   document.getElementById("page-buttons").style.display = "none";
   document.getElementById("heroes-game").style.backdropFilter = "blur(5px)";
   document.getElementById("page-buttons").style.filter = "blur(5px)";
@@ -233,7 +245,7 @@ function gameOverEmpty() {
 
 /**
  * Checks the score after each
- * round to see if either side 
+ * round to see if either side
  * has won yet. If so, calls
  * the relevant function
  */
@@ -246,7 +258,7 @@ function checkScore() {
 }
 
 /**
- * Checks the round counter after 
+ * Checks the round counter after
  * each round to see if the limit
  * has been reached. If so, calls the
  * gameOverEmpty function
@@ -260,18 +272,21 @@ function checkRounds() {
 /**Replay button - victory.
  * Reloads the page*/
 document.getElementById("replay-win").addEventListener("click", () => {
+  playClick1();
   location.reload(true);
 });
 
 /**Replay button - defeat.
- * Reloads the page*/ 
+ * Reloads the page*/
 document.getElementById("replay-lose").addEventListener("click", () => {
+  playClick1();
   location.reload(true);
 });
 
 /**Replay button - empty deck.
- * Reloads the page*/ 
+ * Reloads the page*/
 document.getElementById("replay-empty").addEventListener("click", () => {
+  playClick1();
   location.reload(true);
 });
 
@@ -283,6 +298,7 @@ document.getElementById("replay-empty").addEventListener("click", () => {
 // Power
 let powerBtn = document.getElementById("power-btn");
 powerBtn.addEventListener("click", () => {
+  playClick1();
   powerAtk();
   userBtns.style.display = "none";
 });
@@ -306,6 +322,7 @@ function powerAtk() {
 // Agility
 let agilityBtn = document.getElementById("agility-btn");
 agilityBtn.addEventListener("click", () => {
+  playClick1();
   agilityAtk();
   userBtns.style.display = "none";
 });
@@ -329,6 +346,7 @@ function agilityAtk() {
 // Intelligence
 let intelBtn = document.getElementById("intel-btn");
 intelBtn.addEventListener("click", () => {
+  playClick1();
   intelAtk();
   userBtns.style.display = "none";
 });
@@ -356,6 +374,7 @@ function intelAtk() {
 // Fighting Skills
 let fightingBtn = document.getElementById("fighting-btn");
 fightingBtn.addEventListener("click", () => {
+  playClick1();
   fightingAtk();
   userBtns.style.display = "none";
 });
@@ -381,6 +400,7 @@ function fightingAtk() {
 // Battle IQ
 let battleIqBtn = document.getElementById("battle-iq-btn");
 battleIqBtn.addEventListener("click", () => {
+  playClick1();
   battleIqAtk();
   userBtns.style.display = "none";
 });
@@ -408,9 +428,10 @@ function battleIqAtk() {
 // PAGE BUTTONS
 
 /**
- * Displays 'How to Play' screen 
+ * Displays 'How to Play' screen
  */
 document.getElementById("help-button").addEventListener("click", () => {
+  playPop();
   document.getElementById("h2p").style.display = "block";
 });
 
@@ -419,21 +440,119 @@ document.getElementById("help-button").addEventListener("click", () => {
  */
 let closeWindow = document.getElementsByClassName("close-window")[0];
 closeWindow.addEventListener("click", () => {
+  playClick1();
   document.getElementById("h2p").style.display = "none";
 });
 
 let sfxBtnOn = document.getElementById("sfx-button-on");
 let sfxBtnOff = document.getElementById("sfx-button-off");
 
+// AUDIO
+const clickSound1 = new Audio("assets/audio/click-sound1.mp3");
+const clickSound2 = new Audio("assets/audio/click-sound2.mp3");
+const popSound = new Audio("assets/audio/pop-sound.mp3");
+const dealSound = new Audio("assets/audio/deal-sound.mp3");
+const winSound = new Audio("assets/audio/win-sound.mp3");
+const loseSound = new Audio("assets/audio/lose-sound.mp3");
+const drawSound = new Audio("assets/audio/draw-sound.mp3");
+const victorySound = new Audio("assets/audio/victory-sound.mp3");
+const defeatSound = new Audio("assets/audio/defeat-sound.mp3");
+const emptySound = new Audio("assets/audio/empty-sound.mp3");
+
+clickSound1.muted = true;
+clickSound2.muted = true;
+popSound.muted = true;
+dealSound.muted = true;
+winSound.muted = true;
+loseSound.muted = true;
+drawSound.muted = true;
+victorySound.muted = true;
+defeatSound.muted = true;
+emptySound.muted = true;
+
+function playClick1() {
+  clickSound1.play();
+}
+
+function playClick2() {
+  clickSound2.play();
+}
+
+function playPop() {
+  popSound.play();
+}
+
+function playDeal() {
+  dealSound.play();
+}
+
+function playWin() {
+  winSound.play();
+}
+
+function playLose() {
+  loseSound.play();
+}
+
+function playDraw() {
+  drawSound.play();
+}
+
+function playVictory() {
+  victorySound.play();
+}
+
+function playDefeat() {
+  defeatSound.play();
+}
+
+function playEmpty() {
+  emptySound.play();
+}
+
+function muteSfx() {
+  if (clickSound1.muted === true) {
+    clickSound1.muted = false;
+    clickSound2.muted = false;
+    popSound.muted = false;
+    dealSound.muted = false;
+    winSound.muted = false;
+    loseSound.muted = false;
+    drawSound.muted = false;
+    victorySound.muted = false;
+    defeatSound.muted = false;
+    emptySound.muted = false;
+  }
+}
+
+function unmuteSfx() {
+  if (clickSound1.muted === false) {
+    clickSound1.muted = true;
+    clickSound2.muted = true;
+    popSound.muted = true;
+    dealSound.muted = true;
+    winSound.muted = true;
+    loseSound.muted = true;
+    drawSound.muted = true;
+    victorySound.muted = true;
+    defeatSound.muted = true;
+    emptySound.muted = true;
+  }
+}
+
 /**
  * Toggles SFX on and off
  */
 sfxBtnOn.addEventListener("click", () => {
+  clickSound1.muted === true;
+  muteSfx();
   sfxBtnOn.style.display = "none";
   sfxBtnOff.style.display = "block";
 });
 
 sfxBtnOff.addEventListener("click", () => {
+  clickSound1.muted === false;
+  unmuteSfx();
   sfxBtnOff.style.display = "none";
   sfxBtnOn.style.display = "block";
 });
