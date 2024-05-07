@@ -7,6 +7,7 @@ let closeWindow = document.getElementsByClassName("close-window")[0];
  */
 playBtn.addEventListener("click", () => {
     deckChoiceContainer.style.display = "flex";
+    document.getElementById("play-button-container").style.display = "none";
 })
 
 /**
@@ -14,4 +15,5 @@ playBtn.addEventListener("click", () => {
  */
 closeWindow.addEventListener("click", () => {
     deckChoiceContainer.style.display = "none";
+    document.getElementById("play-button-container").style.display = "block";
 });
