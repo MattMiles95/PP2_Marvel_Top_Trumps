@@ -328,6 +328,9 @@ body {
   border-radius: 30px;
   box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.9);
   background-image: url(../images/backgrounds/yellow-background.webp);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 #deal-button-box h2 {
@@ -443,6 +446,9 @@ body {
   display: none;
   height: 100%;
   background-image: url(../images/backgrounds/green-background.webp);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   border: groove 3px white;
   border-radius: 30px;
   box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.9);
@@ -452,6 +458,9 @@ body {
   display: none;
   height: 100%;
   background-image: url(../images/backgrounds/yellow-background.webp);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   border: groove 3px white;
   border-radius: 30px;
   box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.9);
@@ -461,6 +470,9 @@ body {
   display: none;
   height: 100%;
   background-image: url(../images/backgrounds/red-background.webp);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   border: groove 3px white;
   border-radius: 30px;
   box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.9);
@@ -643,6 +655,7 @@ body {
 }
 
 #victory p {
+  position: relative;
   color: #f3cf72;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #b27418;
@@ -900,7 +913,7 @@ body {
 #hero-card-back > img {
   position: relative;
   top: 150px;
-  width: 150px;
+  width: 60%;
   border-radius: 10px;
   opacity: 0.9;
 }
@@ -973,7 +986,7 @@ body {
 #villain-card-back > img {
   position: relative;
   top: 150px;
-  width: 150px;
+  width: 60%;
   border-radius: 10px;
   opacity: 0.9;
 }
@@ -1051,7 +1064,6 @@ td > i {
 
 /* Large Laptops and Desktops (min width 1440px and min-height 700px) */
 @media (min-width: 1440px) and (min-height: 700px) {
-
   /* ----------------- Page Buttons */
   #help-button {
     width: 70px;
@@ -1084,7 +1096,7 @@ td > i {
   }
 
   #h2p {
-   font-size: 20px;
+    font-size: 20px;
   }
 
   /* ----------------- User Buttons */
@@ -1139,7 +1151,7 @@ td > i {
     padding: 0 10px;
     font-size: 38px;
   }
-  
+
   /* ----------------- Background Cards */
   #user-background-card1 {
     width: 300px;
@@ -1221,7 +1233,6 @@ td > i {
 
 /* Large and HD Devices (min width 1920px and min-height 1080px) */
 @media (min-width: 1920px) and (min-height: 1080px) {
-  
   /* ----------------- HOMEPAGE */
   #play-button {
     height: 150px;
@@ -1270,7 +1281,7 @@ td > i {
   }
 
   /* ----------------- GAMES PAGES */
-  
+
   /* ----------------- Page Buttons */
   #page-buttons {
     top: 30px;
@@ -1288,7 +1299,7 @@ td > i {
     width: 160px;
     height: 110px;
   }
-  
+
   #help-button {
     width: 80px;
     height: 80px;
@@ -1320,7 +1331,7 @@ td > i {
   }
 
   #h2p {
-   font-size: 28px;
+    font-size: 28px;
   }
 
   /* ----------------- Deal Cards */
@@ -1377,7 +1388,7 @@ td > i {
     width: 440px;
     height: 480px;
   }
-  
+
   #victory p {
     line-height: 5px;
     padding: 0 10px;
@@ -1392,7 +1403,7 @@ td > i {
     font-size: 25px;
     margin-bottom: 15px;
   }
-  
+
   /* ----------------- Background Cards */
   #user-background-card1 {
     top: 23%;
@@ -1466,7 +1477,6 @@ td > i {
 
   #hero-stats {
     font-size: 105%;
-    width: 70%;
   }
 
   /* ----------------- Villain Card */
@@ -1485,6 +1495,335 @@ td > i {
   #villain-stats {
     font-size: 105%;
     width: 70%;
+  }
+}
+
+/* Very Large and 4K Devices (min width 2560px and min-height 1440px) */
+@media (min-width: 2560px) and (min-height: 1440px) {
+  /* ----------------- HOMEPAGE */
+  #play-button {
+    height: 200px;
+    width: 350px;
+    font-size: 55px;
+  }
+
+  #play-button:hover {
+    font-size: 60px;
+  }
+
+  #deck-choice-container {
+    height: 750px;
+    width: 900px;
+  }
+
+  #deck-choice-container > h3 {
+    font-size: 80px;
+  }
+
+  #heroes-button {
+    height: 200px;
+    width: 400px;
+    font-size: 60px;
+  }
+
+  #villains-button {
+    height: 200px;
+    width: 400px;
+    font-size: 60px;
+  }
+
+  #heroes-button:hover {
+    font-size: 65px;
+  }
+
+  #villains-button:hover {
+    font-size: 65px;
+  }
+
+  .close-window {
+    top: 10px;
+    right: 10px;
+    font-size: 40px;
+  }
+
+  /* ----------------- GAMES PAGES */
+
+  /* ----------------- Page Buttons */
+  #page-buttons {
+    width: 650px;
+  }
+
+  #home-arrow {
+    width: 200px;
+    height: 145px;
+  }
+
+  #home-arrow:hover {
+    width: 220px;
+    height: 155px;
+  }
+
+  #help-button {
+    width: 110px;
+    height: 110px;
+  }
+
+  #help-button:hover {
+    width: 120px;
+    height: 120px;
+  }
+
+  #sfx-button-on {
+    width: 115px;
+    height: 115px;
+  }
+
+  #sfx-button-off {
+    width: 115px;
+    height: 115px;
+  }
+
+  #sfx-button-on:hover {
+    width: 120px;
+    height: 120px;
+  }
+
+  #sfx-button-off:hover {
+    width: 120px;
+    height: 120px;
+  }
+
+  #h2p {
+    font-size: 35px;
+  }
+
+  /* ----------------- Deal Cards */
+  #deal-button-box {
+    width: 600px;
+    height: 500px;
+  }
+
+  #deal-button-box h2 {
+    font-size: 80px;
+  }
+
+  #deal-cards-button {
+    height: 250px;
+    width: 250px;
+    font-size: 70px;
+  }
+
+  /* ----------------- User Buttons */
+  #user-buttons {
+    top: 35%;
+    left: 35%;
+    width: 100px;
+    height: 660px;
+  }
+
+  #user-buttons button {
+    font-size: 55px;
+    margin-bottom: 50px;
+    padding-top: 20px;
+  }
+
+  #user-villain-buttons {
+    top: 35%;
+    left: 35%;
+    width: 100px;
+    height: 660px;
+  }
+
+  #user-villain-buttons button {
+    font-size: 55px;
+    margin-bottom: 50px;
+    padding-top: 20px;
+  }
+
+  /* ----------------- Score Board */
+  #score-board {
+    top: 5%;
+    height: 400px;
+    width: 600px;
+    font-size: 70px;
+  }
+
+  #round-counter {
+    line-height: 150px;
+  }
+
+  #user-display-score,
+  #cpu-display-score {
+    line-height: 150px;
+    font-size: 120px;
+  }
+
+  /* ----------------- Results */
+  #results-screen {
+    width: 500px;
+    height: 400px;
+  }
+
+  #results-screen h2 {
+    font-size: 70px; 
+    margin-bottom: 30px;
+  }
+
+  #results-screen button {
+    font-size: 45px;
+    padding: 15px;
+  }
+
+  /* ----------------- Game Over Screen */
+  #game-over-screen {
+    width: 620px;
+    height: 540px;
+  }
+
+  #victory > h2 {
+    font-size: 55px;
+    bottom: 40px;
+  }
+
+  #victory p {
+    bottom: 30px;
+    font-size: 50px;
+  }
+
+  #defeat {
+    background-position: center 10%;
+  }
+
+  #defeat-buttons-container {
+    margin-top: 260px;
+  }
+
+  #empty-deck > h2 {
+    font-size: 55px;
+    margin-top: 40px;
+  }
+
+  .game-win-button {
+    font-size: 30px;
+    padding: 20px 10px;
+  }
+
+  .game-lose-button {
+    font-size: 25px;
+    margin-bottom: 15px;
+  }
+
+  .game-empty-button {
+    font-size: 30px;
+    margin-bottom: 50px;
+  }
+
+  /* ----------------- Background Cards */
+  #user-background-card1 {
+    top: 23%;
+    left: 10%;
+    width: 540px;
+    height: 1000px;
+  }
+
+  #user-background-card2 {
+    top: 22%;
+    left: 11%;
+    width: 540px;
+    height: 1000px;
+  }
+
+  #user-background-card3 {
+    top: 21%;
+    left: 12%;
+    width: 540px;
+    height: 1000px;
+  }
+
+  #cpu-background-card1 {
+    top: 23%;
+    right: 10%;
+    width: 540px;
+    height: 1000px;
+  }
+
+  #cpu-background-card2 {
+    top: 22%;
+    right: 11%;
+    width: 540px;
+    height: 1000px;
+  }
+
+  #cpu-background-card3 {
+    top: 21%;
+    right: 12%;
+    width: 540px;
+    height: 1000px;
+  }
+
+  /* ----------------- User & CPU Cards */
+  #user-card {
+    top: 20%;
+    left: 13%;
+    width: 540px;
+    height: 1000px;
+  }
+
+  #cpu-card {
+    top: 20%;
+    right: 13%;
+    width: 540px;
+    height: 1000px;
+  }
+
+  /* ----------------- Hero Cards */
+  #hero-card-back > img {
+    top: 250px;
+  }
+  
+  #hero > img {
+    top: 40px;
+    height: 480px;
+    width: 80%;
+  }
+
+  #hero > h3 {
+    font-size: 50px;
+  }
+
+  #hero > h4 {
+    font-size: 26px;
+  }
+
+  #hero-stats {
+    font-size: 26px;
+  }
+
+  .skill {
+    padding-right: 200px;
+  }
+
+  /* ----------------- Villain Card */
+  #villain-card-back > img {
+    top: 250px;
+  }
+
+  #villain > img {
+    top: 40px;
+    height: 480px;
+    width: 80%;
+  }
+
+  #villain > h3 {
+    font-size: 50px;
+  }
+
+  #villain > h4 {
+    font-size: 26px;
+  }
+
+  #villain-stats {
+    font-size: 26px;
   }
 }
 
