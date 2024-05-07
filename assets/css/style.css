@@ -1965,25 +1965,20 @@ td > i {
  }
 
  #hero > img {
-   top: 15px;
-   width: 75%;
-   height: 200px;
-   margin-bottom: 20px;
+   top: 20px;
+   height: 220px;
  }
 
  #hero > h3 {
    font-size: 100%;
-   margin-bottom: 3px;
  }
 
  #hero > h4 {
-   width: 85%;
-   font-size: 70%;
-   margin-bottom: 10px;
+   font-size: 75%;
  }
 
  #hero-stats {
-   font-size: 70%;
+   font-size: 75%;
  }
 
  /* ----------------- Villain Card */
@@ -1993,24 +1988,19 @@ td > i {
  }
 
  #villain > img {
-   top: 15px;
-   width: 75%;
-   height: 200px;
-   margin-bottom: 20px;
+  top: 20px;
+  height: 220px;
  }
 
  #villain > h3 {
-   font-size: 100%;
-   margin-bottom: 3px;
+  font-size: 100%;
  }
 
  #villain > h4 {
-   width: 85%;
-   font-size: 70%;
-   margin-bottom: 10px;
+  font-size: 75%;
  }
 
  #villain-stats {
-   font-size: 70%;
+  font-size: 75%;
  }
 }
