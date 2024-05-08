@@ -559,7 +559,7 @@ sfxBtnOff.addEventListener("click", () => {
 
 // HEROES
 let spiderMan = `
-  <img src="assets/images/heroes/spider-man.webp">
+  <img src="assets/images/heroes/spider-man.webp" alt="Image of Spider-Man">
     <h3 class="hero-name">The Amazing Spider-Man</h3>
       <h4>"I don't suppose I could convince you to come up here and fight like a spider?"</h4>
         <div id="hero-stats">
@@ -594,7 +594,7 @@ let spiderMan = `
   `;
 
 let ironMan = `
-  <img src="assets/images/heroes/iron-man.webp">
+  <img src="assets/images/heroes/iron-man.webp" alt="Image of Iron Man">
     <h3 class="hero-name">Iron Man</h3>
       <h4>"Doth mother know you weareth her drapes?"</h4>
         <div id="hero-stats">
@@ -629,7 +629,7 @@ let ironMan = `
   `;
 
 let captainAmerica = `
-  <img src="assets/images/heroes/capt-america.webp">
+  <img src="assets/images/heroes/capt-america.webp" alt="Image of Captain America">
     <h3 class="hero-name">Captain America</h3>
       <h4>"I can do this all day."</h4>
         <div id="hero-stats">
@@ -664,7 +664,7 @@ let captainAmerica = `
   `;
 
 let hulk = `
-  <img src="assets/images/heroes/hulk.webp">
+  <img src="assets/images/heroes/hulk.webp" alt="Image of the Hulk">
     <h3 class="hero-name">The Incredible Hulk</h3>
       <h4>"Hulk... SMASH!"</h4>
         <div id="hero-stats">
@@ -699,7 +699,7 @@ let hulk = `
   `;
 
 let thor = `
-  <img src="assets/images/heroes/thor.webp">
+  <img src="assets/images/heroes/thor.webp" alt="Image of Thor">
     <h3 class="hero-name">Thor Odinson</h3>
       <h4>"He's a friend from work!"</h4>
         <div id="hero-stats">
@@ -734,7 +734,7 @@ let thor = `
   `;
 
 let blackWidow = `
-  <img src="assets/images/heroes/black-widow.webp">
+  <img src="assets/images/heroes/black-widow.webp" alt="Image of Black Widow">
     <h3 class="hero-name">Black Widow</h3>
       <h4>"I'm always picking up after you boys"</h4>
         <div id="hero-stats">
@@ -769,7 +769,7 @@ let blackWidow = `
   `;
 
 let captMarvel = `
-  <img src="assets/images/heroes/capt-marvel.webp">
+  <img src="assets/images/heroes/capt-marvel.webp" alt="Image of Captain Marvel">
     <h3 class="hero-name">Captain Marvel</h3>
       <h4>"These are not the droids you're looking for… It was worth a shot."</h4>
         <div id="hero-stats">
@@ -804,7 +804,7 @@ let captMarvel = `
   `;
 
 let squirrelGirl = `
-  <img src="assets/images/heroes/squirrel-girl.webp">
+  <img src="assets/images/heroes/squirrel-girl.webp" alt="Image of Squirrel Girl">
     <h3 class="hero-name">Squirrel Girl</h3>
       <h4>"Give a squirrel a nut, feed 'im for a day...but teach 'im to plant an oak tree, and he'll never go nut-less."</h4>
         <div id="hero-stats">
@@ -839,7 +839,7 @@ let squirrelGirl = `
   `;
 
 let wandaMaximoff = `
-  <img src="assets/images/heroes/wanda-maximoff.webp">
+  <img src="assets/images/heroes/wanda-maximoff.webp" alt="Image of Wanda Maximoff">
     <h3 class="hero-name">Wanda Maximoff</h3>
       <h4>"I can't control their fear. Only my own."</h4>
         <div id="hero-stats">
@@ -874,7 +874,7 @@ let wandaMaximoff = `
   `;
 
 let drStrange = `
-  <img src="assets/images/heroes/dr-strange.webp">
+  <img src="assets/images/heroes/dr-strange.webp" alt="Image of Dr Strange">
     <h3 class="hero-name">Dr Strange</h3>
       <h4>"Dormammu, I have come to bargain."</h4>
         <div id="hero-stats">
@@ -909,7 +909,7 @@ let drStrange = `
   `;
 
 let deadpool = `
-  <img src="assets/images/heroes/deadpool.webp">
+  <img src="assets/images/heroes/deadpool.webp" alt="Image of Deadpool">
     <h3 class="hero-name">Deadpool</h3>
       <h4>"With this collar on, my superpower is just unbridled cancer. Give me a bow and arrow and I'm basically Hawkeye."</h4>
         <div id="hero-stats">
@@ -944,7 +944,7 @@ let deadpool = `
   `;
 
 let wolverine = `
-  <img src="assets/images/heroes/wolverine.webp">
+  <img src="assets/images/heroes/wolverine.webp" alt="Image of Wolverine">
     <h3 class="hero-name">Wolverine</h3>
       <h4>"I'm the best at what I do. And what I do isn't very nice."</h4>
         <div id="hero-stats">
@@ -979,7 +979,7 @@ let wolverine = `
   `;
 
 let blackPanther = `
-  <img src="assets/images/heroes/black-panther.webp">
+  <img src="assets/images/heroes/black-panther.webp" alt="Image of Black Panther">
     <h3 class="hero-name">Black Panther</h3>
       <h4>"Wakanda forever!"</h4>
         <div id="hero-stats">
@@ -1014,7 +1014,7 @@ let blackPanther = `
   `;
 
 let msMarvel = `
-  <img src="assets/images/heroes/ms-marvel.webp">
+  <img src="assets/images/heroes/ms-marvel.webp" alt="Image of Ms Marvel">
     <h3 class="hero-name">Ms Marvel</h3>
       <h4>"Good is not a thing you are. It's a thing you do."</h4>
         <div id="hero-stats">
@@ -1049,7 +1049,7 @@ let msMarvel = `
   `;
 
 let falcon = `
-  <img src="assets/images/heroes/falcon.webp">
+  <img src="assets/images/heroes/falcon.webp" alt="Image of Falcon">
     <h3 class="hero-name">Falcon</h3>
       <h4>"On your left."</h4>
         <div id="hero-stats">
@@ -1084,7 +1084,7 @@ let falcon = `
   `;
 
 let winterSoldier = `
-  <img src="assets/images/heroes/winter-soldier.webp">
+  <img src="assets/images/heroes/winter-soldier.webp" alt="Image of Winter Soldier">
     <h3 class="hero-name">The Winter Soldier</h3>
       <h4>"I read The Hobbit in 1937 when it first came out."</h4>
         <div id="hero-stats">
@@ -1119,7 +1119,7 @@ let winterSoldier = `
   `;
 
 let punisher = `
-  <img src="assets/images/heroes/punisher.webp">
+  <img src="assets/images/heroes/punisher.webp" alt="Image of the Punisher">
     <h3 class="hero-name">The Punisher</h3>
       <h4>"One batch, two batch, penny and dime."</h4>
         <div id="hero-stats">
@@ -1154,7 +1154,7 @@ let punisher = `
   `;
 
 let daredevil = `
-  <img src="assets/images/heroes/daredevil.webp">
+  <img src="assets/images/heroes/daredevil.webp" alt="Image of Daredevil">
     <h3 class="hero-name">Daredevil</h3>
       <h4>"I'm not seeking penance for what I've done, father. I'm asking forgiveness for what I'm about to do."</h4>
         <div id="hero-stats">
@@ -1189,7 +1189,7 @@ let daredevil = `
   `;
 
 let storm = `
-  <img src="assets/images/heroes/storm.webp">
+  <img src="assets/images/heroes/storm.webp" alt="Image of Storm">
     <h3 class="hero-name">Storm</h3>
       <h4>"You spoke once of power. Little man, you do not know the meaning of the word!"</h4>
         <div id="hero-stats">
@@ -1224,7 +1224,7 @@ let storm = `
   `;
 
 let gamora = `
-  <img src="assets/images/heroes/gamora.webp">
+  <img src="assets/images/heroes/gamora.webp" alt="Image of Gamora">
     <h3 class="hero-name">Gamora</h3>
       <h4>"Shoot her if she does anything suspicious. Or if you feel like it."</h4>
         <div id="hero-stats">
@@ -1259,7 +1259,7 @@ let gamora = `
   `;
 
 let theCreator = `
-  <img src="assets/images/heroes/the-creator.webp">
+  <img src="assets/images/heroes/the-creator.webp" alt="Image of me - the Creator!">
     <h3 class="hero-name">The Creator</h3>
       <h4>"What kind of ego maniac puts himself in his own game?."</h4>
         <div id="hero-stats">
@@ -1294,7 +1294,7 @@ let theCreator = `
   `;
 
 let profX = `
-  <img src="assets/images/heroes/prof-x.webp">
+  <img src="assets/images/heroes/prof-x.webp" alt="Image of Professor X">
     <h3 class="hero-name">Professor X</h3>
       <h4>"Just because someone stumbles and loses their way, doesn't mean they're lost forever."</h4>
         <div id="hero-stats">
@@ -1358,7 +1358,7 @@ let heroesGallery = [
 
 // VILLAINS
 let venom = `
-  <img src="assets/images/villains/venom.webp">
+  <img src="assets/images/villains/venom.webp" alt="Image of Venom">
     <h3 class="villain-name">Venom</h3>
     <h4>“Eyes, lungs, pancreas. So many snacks, so little time.”</h4>
     <div id="villain-stats" class="hidden-text">
@@ -1393,7 +1393,7 @@ let venom = `
   `;
 
 let thanos = `
-  <img src="assets/images/villains/thanos.webp">
+  <img src="assets/images/villains/thanos.webp" alt="Image of Thanos">
     <h3 class="villain-name">Thanos</h3>
     <h4>"Fun isn't something one considers when balancing the universe. But this... this does put a smile on my face.”</h4>
     <div id="villain-stats" class="hidden-text">
@@ -1428,7 +1428,7 @@ let thanos = `
   `;
 
 let ultron = `
-  <img src="assets/images/villains/ultron.webp">
+  <img src="assets/images/villains/ultron.webp" alt="Image of Ultron">
     <h3 class="villain-name">Ultron</h3>
     <h4>"I had strings, but now I'm free...”</h4>
     <div id="villain-stats" class="hidden-text">
@@ -1463,7 +1463,7 @@ let ultron = `
   `;
 
 let loki = `
-  <img src="assets/images/villains/loki.webp">
+  <img src="assets/images/villains/loki.webp" alt="Image of Loki">
     <h3 class="villain-name">Loki</h3>
     <h4>"I am Loki, of Asgard, and I am burdened with glorious purpose."</h4>
     <div id="villain-stats" class="hidden-text">
@@ -1498,7 +1498,7 @@ let loki = `
   `;
 
 let hela = `
-  <img src="assets/images/villains/hela.webp">
+  <img src="assets/images/villains/hela.webp" alt="Image of Hela">
     <h3 class="villain-name">Hela</h3>
     <h4>"Our destiny is to rule over all others."</h4>
     <div id="villain-stats" class="hidden-text">
@@ -1533,7 +1533,7 @@ let hela = `
   `;
 
 let galactus = `
-  <img src="assets/images/villains/galactus.webp">
+  <img src="assets/images/villains/galactus.webp" alt="Image of Galactus">
     <h3 class="villain-name">Galactus</h3>
     <h4>"You are not unlike an ant fighting the Sun."</h4>
     <div id="villain-stats" class="hidden-text">
@@ -1568,7 +1568,7 @@ let galactus = `
   `;
 
 let redSkull = `
-  <img src="assets/images/villains/red-skull.webp">
+  <img src="assets/images/villains/red-skull.webp" alt="Image of Red Skull">
     <h3 class="villain-name">Red Skull</h3>
     <h4>"Quite simply, gentlemen, I have harnessed the power of the Gods."</h4>
     <div id="villain-stats" class="hidden-text">
@@ -1603,7 +1603,7 @@ let redSkull = `
   `;
 
 let killmonger = `
-  <img src="assets/images/villains/killmonger.webp">
+  <img src="assets/images/villains/killmonger.webp" alt="Image of Erik Killmonger">
     <h3 class="villain-name">Erik Killmonger</h3>
     <h4>"Is this your king? Nah, I'm your king."</h4>
     <div id="villain-stats" class="hidden-text">
@@ -1638,7 +1638,7 @@ let killmonger = `
   `;
 
 let scarletWitch = `
-  <img src="assets/images/villains/scarlet-witch.webp">
+  <img src="assets/images/villains/scarlet-witch.webp" alt="Image of the Scarlet Witch">
     <h3 class="villain-name">The Scarlet Witch</h3>
       <h4>"You break the rules and become a hero. I do it and I become the enemy. That doesn't seem fair."</h4>
       <div id="villain-stats" class="hidden-text">
@@ -1673,7 +1673,7 @@ let scarletWitch = `
 `;
 
 let kingpin = `
-  <img src="assets/images/villains/kingpin.webp">
+  <img src="assets/images/villains/kingpin.webp" alt="Image of the Kingpin">
     <h3 class="villain-name">Kingpin</h3>
       <h4>"Killing a journalist is a high-profile high-risk endeavor. I try to avoid it when possible."</h4>
       <div id="villain-stats" class="hidden-text">
@@ -1708,7 +1708,7 @@ let kingpin = `
 `;
 
 let drDoom = `
-  <img src="assets/images/villains/dr-doom.webp">
+  <img src="assets/images/villains/dr-doom.webp" alt="Image of Doctor Doom">
     <h3 class="villain-name">Doctor Doom</h3>
       <h4>"The world is mine to rule. Mine alone."</h4>
       <div id="villain-stats" class="hidden-text">
@@ -1743,7 +1743,7 @@ let drDoom = `
 `;
 
 let mandarin = `
-  <img src="assets/images/villains/mandarin.webp">
+  <img src="assets/images/villains/mandarin.webp" alt="Image of the Mandarin">
     <h3 class="villain-name">The Mandarin</h3>
       <h4>"I'll give you a choice. Do you want an empty life, or a meaningful death?"</h4>
       <div id="villain-stats" class="hidden-text">
@@ -1778,7 +1778,7 @@ let mandarin = `
 `;
 
 let destroyer = `
-  <img src="assets/images/villains/destroyer.webp">
+  <img src="assets/images/villains/destroyer.webp" alt="Image of the Destroyer">
     <h3 class="villain-name">The Destroyer</h3>
       <h4>"Is that one of Stark's?" - S.H.I.E.L.D. Agent</h4>
       <div id="villain-stats" class="hidden-text">
@@ -1813,7 +1813,7 @@ let destroyer = `
 `;
 
 let greenGoblin = `
-  <img src="assets/images/villains/green-goblin.webp">
+  <img src="assets/images/villains/green-goblin.webp" alt="Image of the Green Goblin">
     <h3 class="villain-name">Green Goblin</h3>
       <h4>"The itsy bitsy spider went up the water spout. Down came the goblin and took the spider out."</h4>
       <div id="villain-stats" class="hidden-text">
@@ -1848,7 +1848,7 @@ let greenGoblin = `
 `;
 
 let abomination = `
-  <img src="assets/images/villains/abomination.webp">
+  <img src="assets/images/villains/abomination.webp" alt="Image of the Abomination">
     <h3 class="villain-name">The Abomination</h3>
       <h4>"Give me a real fight!"</h4>
       <div id="villain-stats" class="hidden-text">
@@ -1883,7 +1883,7 @@ let abomination = `
 `;
 
 let baronZemo = `
-  <img src="assets/images/villains/baron-zemo.webp">
+  <img src="assets/images/villains/baron-zemo.webp" alt="Image of Baron Zemo">
     <h3 class="villain-name">Baron Zemo</h3>
       <h4>"An empire toppled by its enemies can rise again. But one which crumbles from within? That's dead, forever."</h4>
       <div id="villain-stats" class="hidden-text">
@@ -1918,7 +1918,7 @@ let baronZemo = `
 `;
 
 let magneto = `
-  <img src="assets/images/villains/magneto.webp">
+  <img src="assets/images/villains/magneto.webp" alt="Image of Magneto">
     <h3 class="villain-name">Magneto</h3>
       <h4>"Mankind has always feared what it doesn't understand."</h4>
       <div id="villain-stats" class="hidden-text">
@@ -1953,7 +1953,7 @@ let magneto = `
 `;
 
 let mystique = `
-  <img src="assets/images/villains/mystique.webp">
+  <img src="assets/images/villains/mystique.webp" alt="Image of Mystique">
     <h3 class="villain-name">Mystique</h3>
       <h4>"We shouldn't be trying to fit into society. Society should aspire to be more like us."</h4>
       <div id="villain-stats" class="hidden-text">
