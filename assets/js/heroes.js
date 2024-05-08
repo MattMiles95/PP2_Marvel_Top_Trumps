@@ -6,7 +6,7 @@ let dealBtnContainer = document.getElementById("deal-button-container");
 let dealCardsBtn = document.getElementById("deal-cards-button");
 
 dealCardsBtn.addEventListener("click", () => {
-  playClick1();
+  playClick2();
   heroCard.classList.toggle("active");
   villainCard.classList.toggle("active");
   userBtns.style.display = "block";
@@ -42,8 +42,6 @@ function dealCards() {
 }
 
 // RESULTS
-let heroName = document.getElementsByClassName("hero-name");
-let villainName = document.getElementsByClassName("villain-name");
 let resultsScreen = document.getElementById("results-screen");
 let resultsWin = document.getElementById("win");
 let resultsDraw = document.getElementById("draw");
@@ -94,7 +92,7 @@ let loseResetButton = document.getElementsByClassName("next-game-button")[2];
  * Resets the game from the 'win' screen
  */
 winResetButton.addEventListener("click", function () {
-  playClick1();
+  playClick2();
   resultsScreen.style.display = "none";
   dealBtnContainer.style.display = "flex";
   heroCard.classList.toggle("active");
@@ -110,7 +108,7 @@ winResetButton.addEventListener("click", function () {
  * Resets the game from the 'draw' screen
  */
 drawResetButton.addEventListener("click", function () {
-  playClick1();
+  playClick2();
   resultsScreen.style.display = "none";
   dealBtnContainer.style.display = "flex";
   heroCard.classList.toggle("active");
@@ -126,7 +124,7 @@ drawResetButton.addEventListener("click", function () {
  * Resets the game from the 'lose' screen
  */
 loseResetButton.addEventListener("click", function () {
-  playClick1();
+  playClick2();
   resultsScreen.style.display = "none";
   dealBtnContainer.style.display = "flex";
   heroCard.classList.toggle("active");
@@ -272,21 +270,21 @@ function checkRounds() {
 /**Replay button - victory.
  * Reloads the page*/
 document.getElementById("replay-win").addEventListener("click", () => {
-  playClick1();
+  playClick2();
   location.reload(true);
 });
 
 /**Replay button - defeat.
  * Reloads the page*/
 document.getElementById("replay-lose").addEventListener("click", () => {
-  playClick1();
+  playClick2();
   location.reload(true);
 });
 
 /**Replay button - empty deck.
  * Reloads the page*/
 document.getElementById("replay-empty").addEventListener("click", () => {
-  playClick1();
+  playClick2();
   location.reload(true);
 });
 
@@ -440,7 +438,7 @@ document.getElementById("help-button").addEventListener("click", () => {
  */
 let closeWindow = document.getElementsByClassName("close-window")[0];
 closeWindow.addEventListener("click", () => {
-  playClick1();
+  playClick2();
   document.getElementById("h2p").style.display = "none";
 });
 
@@ -544,14 +542,12 @@ function unmuteSfx() {
  * Toggles SFX on and off
  */
 sfxBtnOn.addEventListener("click", () => {
-  clickSound1.muted === true;
   muteSfx();
   sfxBtnOn.style.display = "none";
   sfxBtnOff.style.display = "block";
 });
 
 sfxBtnOff.addEventListener("click", () => {
-  clickSound1.muted === false;
   unmuteSfx();
   sfxBtnOff.style.display = "none";
   sfxBtnOn.style.display = "block";
@@ -1994,6 +1990,7 @@ let villainsGallery = [
   venom,
   thanos,
   ultron,
+  loki,
   hela,
   galactus,
   redSkull,

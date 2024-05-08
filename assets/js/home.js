@@ -8,7 +8,7 @@ let closeWindow = document.getElementsByClassName("close-window")[0];
 playBtn.addEventListener("click", () => {
     deckChoiceContainer.style.display = "flex";
     document.getElementById("play-button-container").style.display = "none";
-})
+});
 
 /**
  * Closes User's Deck Choice window
