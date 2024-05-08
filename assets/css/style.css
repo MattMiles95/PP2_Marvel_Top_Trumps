@@ -21,6 +21,10 @@ body {
   display: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* ----------------- General Classes */
 .hidden-text {
   display: none;
@@ -106,14 +110,19 @@ body {
 }
 
 #heroes-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 70px;
   width: 180px;
-  font-size: 30px;
+  font-size: 40px;
   font-style: italic;
   color: white;
+  text-decoration: none;
   font-stretch: condensed;
   font-weight: 900;
   text-transform: uppercase;
+  border: solid white 2px;
   border-radius: 10px;
   background-image: url(../images/backgrounds/card-front-hero.webp);
   background-size: cover;
@@ -122,14 +131,19 @@ body {
 }
 
 #villains-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 70px;
   width: 180px;
-  font-size: 30px;
-  font-stretch: condensed;
-  font-weight: 900;
+  font-size: 40px;
   font-style: italic;
   color: white;
+  text-decoration: none;
+  font-stretch: condensed;
+  font-weight: 900;
   text-transform: uppercase;
+  border: solid white 2px;
   border-radius: 10px;
   background-image: url(../images/backgrounds/card-front-villain.webp);
   background-size: cover;
@@ -138,7 +152,7 @@ body {
 }
 
 #heroes-button:hover {
-  font-size: 32px;
+  font-size: 44px;
   text-shadow: 0 0 10px #fff;
   transition: all 0.5s;
   box-shadow: none;
@@ -146,7 +160,7 @@ body {
 }
 
 #villains-button:hover {
-  font-size: 32px;
+  font-size: 44px;
   text-shadow: 0 0 10px #fff;
   transition: all 0.5s;
   box-shadow: none;
@@ -602,6 +616,18 @@ body {
   z-index: 1;
 }
 
+#replay-win {
+  padding: 11px 2px;
+}
+
+#replay-lose {
+  padding: 11px 2px;
+}
+
+#replay-empty {
+  padding: 11px 2px;
+}
+
 .game-win-button {
   position: relative;
   top: 10px;
@@ -645,7 +671,7 @@ body {
 
 #victory h2 {
   position: relative;
-  bottom: 10px;
+  bottom: 20px;
   color: #ecd479;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #b27418;
@@ -656,10 +682,13 @@ body {
 
 #victory p {
   position: relative;
+  bottom: 30px;
+  width: 250px;
+  text-wrap: wrap;
+  font-size: 35px;
   color: #f3cf72;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #b27418;
-  line-height: 35px;
   backdrop-filter: blur(1px);
   border-radius: 10px;
   padding: 0 10px;
@@ -703,6 +732,7 @@ body {
   border-radius: 5px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   padding: 5px;
+  margin-bottom: 10px;
   cursor: pointer;
 }
 
@@ -739,7 +769,7 @@ body {
 }
 
 #empty-buttons-container {
-  margin-bottom: 5px;
+  margin-bottom: 45px;
 }
 
 .game-empty-button {
@@ -1101,6 +1131,7 @@ td > i {
 
   /* ----------------- User Buttons */
   #user-buttons {
+    top: 35%;
     left: 36%;
     height: 375px;
     width: 60px;
@@ -1112,6 +1143,7 @@ td > i {
   }
 
   #user-villain-buttons {
+    top: 35%;
     left: 36%;
     height: 375px;
     width: 60px;
@@ -1147,7 +1179,6 @@ td > i {
 
   /* ----------------- Game Over Screen */
   #victory p {
-    line-height: 10px;
     padding: 0 10px;
     font-size: 38px;
   }
@@ -1257,21 +1288,21 @@ td > i {
   #heroes-button {
     height: 140px;
     width: 300px;
-    font-size: 50px;
+    font-size: 65px;
   }
 
   #villains-button {
     height: 140px;
     width: 300px;
-    font-size: 50px;
+    font-size: 65px;
   }
 
   #heroes-button:hover {
-    font-size: 55px;
+    font-size: 75px;
   }
 
   #villains-button:hover {
-    font-size: 55px;
+    font-size: 75px;
   }
 
   .close-window {
@@ -1390,7 +1421,6 @@ td > i {
   }
 
   #victory p {
-    line-height: 5px;
     padding: 0 10px;
     font-size: 38px;
   }
@@ -1523,21 +1553,23 @@ td > i {
   #heroes-button {
     height: 200px;
     width: 400px;
-    font-size: 60px;
+    font-size: 90px;
+    border-radius: 30px;
   }
 
   #villains-button {
     height: 200px;
     width: 400px;
-    font-size: 60px;
+    font-size: 90px;
+    border-radius: 30px;
   }
 
   #heroes-button:hover {
-    font-size: 65px;
+    font-size: 100px;
   }
 
   #villains-button:hover {
-    font-size: 65px;
+    font-size: 100px;
   }
 
   .close-window {
@@ -1665,7 +1697,7 @@ td > i {
   }
 
   #results-screen h2 {
-    font-size: 70px; 
+    font-size: 70px;
     margin-bottom: 30px;
   }
 
@@ -1708,6 +1740,10 @@ td > i {
     padding: 20px 10px;
   }
 
+  #replay-win {
+    padding: 30px 10px;
+  }
+
   .game-lose-button {
     font-size: 25px;
     margin-bottom: 15px;
@@ -1715,7 +1751,7 @@ td > i {
 
   .game-empty-button {
     font-size: 30px;
-    margin-bottom: 50px;
+    margin: 0 5px;
   }
 
   /* ----------------- Background Cards */
@@ -1780,7 +1816,7 @@ td > i {
   #hero-card-back > img {
     top: 250px;
   }
-  
+
   #hero > img {
     top: 40px;
     height: 480px;
@@ -1831,9 +1867,15 @@ td > i {
 @media (max-width: 767px) {
   /* MOBILE DEVICE ALERT */
   #alert-container {
+    position: relative;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    flex-direction: column;
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
   }
 
   #alert-container > img {
@@ -1859,15 +1901,6 @@ td > i {
   }
 
   /* HOMEPAGE */
-  #homepage {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: none;
-    background-color: black;
-    height: 100vh;
-    width: 100vw;
-  }
 
   #play-button-container {
     display: none;
@@ -1878,17 +1911,12 @@ td > i {
   }
 
   /* GAME PAGES */
-  #heroes-game {
-    background-image: none;
-    background-color: black;
-  }
-
-  #villains-game {
-    background-image: none;
-    background-color: black;
-  }
 
   #page-buttons {
+    display: none;
+  }
+
+  #user-buttons {
     display: none;
   }
 
@@ -1994,7 +2022,7 @@ td > i {
     position: absolute;
     top: 5px;
     left: 5px;
-    height: 150px;
+    height: 180px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -2050,22 +2078,22 @@ td > i {
   #deal-button-box {
     top: 30px;
     left: 5px;
-    width: 170px;
-    height: 150px;
+    width: 200px;
+    height: 170px;
   }
 
   #deal-button-box h2 {
     padding: 0;
     margin-bottom: 10px;
-    font-size: 20px;
+    font-size: 24px;
   }
 
   #deal-cards-button {
-    height: 60px;
-    width: 60px;
+    height: 80px;
+    width: 80px;
     padding: 0 5px;
     margin-bottom: 0;
-    font-size: 15px;
+    font-size: 20px;
   }
 
   /* ----------------- User Buttons */
@@ -2098,12 +2126,12 @@ td > i {
     line-height: 30px;
     top: 10px;
     height: 120px;
-    width: 170px;
-    font-size: 15px;
+    width: 190px;
+    font-size: 20px;
   }
 
   #round-counter {
-    line-height: 10px;
+    line-height: 25px;
   }
 
   #user-display-score,
@@ -2116,14 +2144,15 @@ td > i {
     position: relative;
     top: 30px;
     left: 5px;
-    width: 170px;
-    height: 120px;
+    width: 200px;
+    height: 160px;
   }
 
   #results-screen h2 {
     padding: 0;
     margin-bottom: 0;
-    font-size: 25px;
+    margin-top: 10px;
+    font-size: 30px;
   }
 
   #win {
@@ -2162,20 +2191,27 @@ td > i {
   }
 
   .game-win-button {
-    top: 10px;
+    top: 0;
+    margin-bottom: 5px;
     font-size: 14px;
     padding: 0;
+  }
+
+  #replay-win {
+    padding: 5px;
   }
 
   #victory h2 {
     padding: 0 10px;
     font-size: 30px;
+    bottom: 10px;
   }
 
   #victory p {
-    line-height: 15px;
     padding: 0 10px;
     font-size: 20px;
+    width: 150px;
+    bottom: 10px;
   }
 
   #defeat {
@@ -2186,13 +2222,17 @@ td > i {
 
   #defeat-buttons-container {
     margin-top: 60px;
-    display: block;
+    display: flex;
+  }
+
+  #replay-lose {
+    padding: 5px;
   }
 
   .game-lose-button {
-    top: 10px;
-    font-size: 14px;
+    font-size: 13px;
     padding: 0;
+    margin-bottom: 5px;
   }
 
   #empty-deck {
@@ -2213,8 +2253,12 @@ td > i {
     display: block;
   }
 
+  #replay-empty {
+    padding: 5px;
+  }
+
   .game-empty-button {
-    top: 5px;
+    top: 30px;
     font-size: 16px;
     padding: 0;
   }
@@ -2344,9 +2388,40 @@ td > i {
   }
 }
 
-/* Medium horizontal phones (max height 430px) */
-@media (max-height: 430px) {
-  /* ----------------- Hero Cards */
+/* Medium horizontal phones (max height 460px) */
+@media (max-height: 460px) {
+  #user-card {
+    width: 24%;
+  }
+
+  #cpu-card {
+    width: 24%;
+  }
+
+  #user-background-card1 {
+    width: 24%;
+  }
+
+  #user-background-card2 {
+    width: 24%;
+  }
+
+  #user-background-card3 {
+    width: 24%;
+  }
+
+  #cpu-background-card1 {
+    width: 24%;
+  }
+
+  #cpu-background-card2 {
+    width: 24%;
+  }
+
+  #cpu-background-card3 {
+    width: 24%;
+  }
+
   #hero > img {
     top: 12px;
     width: 75%;
@@ -2354,43 +2429,82 @@ td > i {
     margin-bottom: 15px;
   }
 
-  /* ----------------- Villain Cards */
-
   #villain > img {
     top: 12px;
     width: 75%;
     height: 170px;
     margin-bottom: 15px;
   }
+
+  #user-buttons {
+    left: 34%;
+  }
 }
 
 /* Small - Medium Horizontal Phones (max height 385px) */
 @media (max-height: 385px) {
-  /* ----------------- Hero Cards */
+  /* ----------------- Card Dimeonsions */
+
+  #user-card {
+    width: 22%;
+  }
+
+  #cpu-card {
+    width: 22%;
+  }
+
+  #user-background-card1 {
+    width: 22%;
+  }
+
+  #user-background-card2 {
+    width: 22%;
+  }
+
+  #user-background-card3 {
+    width: 22%;
+  }
+
+  #cpu-background-card1 {
+    width: 22%;
+  }
+
+  #cpu-background-card2 {
+    width: 22%;
+  }
+
+  #cpu-background-card3 {
+    width: 22%;
+  }
+
+  /* ----------------- Hero Card */
+
   #hero > h3 {
     font-size: 85%;
   }
 
   #hero > h4 {
-    font-size: 65%;
+    font-size: 60%;
+    margin-bottom: 0;
   }
 
   #hero-stats {
-    font-size: 65%;
+    font-size: 60%;
   }
 
-  /* ----------------- Villain Cards */
+  /* ----------------- Villain Card */
 
   #villain > h3 {
     font-size: 85%;
   }
 
   #villain > h4 {
-    font-size: 65%;
+    font-size: 60%;
+    margin-bottom: 0;
   }
 
   #villain-stats {
-    font-size: 65%;
+    font-size: 60%;
   }
 }
 

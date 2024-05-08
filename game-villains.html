@@ -21,20 +21,18 @@
     <div id="alert-container">
         <img src="assets/images/logos/game-logo.webp" alt="Marvel Top Trumps logo">
         <div id="mobile-device-alert">
-            <h3>Uh-oh...</h3>
-            <p>It looks like you're using a narrow device, such as a mobile phone. To experience epic battles between
-                your
-                favourite heroes and villains, please turn your mobile device side on - or even better, load this game
-                on
-                your tablet or PC!</p>
+            <h2>Welcome, True Believer!</h2>
+            <p>It looks like you're using a narrow device, such as a mobile phone.</p>
+            <br>
+            <P>To experience epic battles between your favourite heroes and villains, please turn your mobile device
+                side on - or even better, load this game on your tablet or PC!
+            </p>
         </div>
     </div>
 
     <!-- Page Buttons -->
     <div id="page-buttons">
-        <a href="index.html" aria-label="go back to homepage">
-            <button id="home-arrow"></button>
-        </a>
+        <a id="home-arrow" href="index.html" aria-label="go back to homepage"></a>
         <button id="help-button" aria-label="Opens window with info on how to play the game"></button>
         <button id="sfx-button-on" aria-label="Toggles sound effects on and off"></button>
         <button id="sfx-button-off" aria-label="Toggles sound effects on and off"></button>
@@ -111,25 +109,29 @@
     <div id="game-over-screen">
         <div id="victory">
             <h2>Excelsior!</h2>
-            <p>You are</p>
-            <p>victorious</p>
-            <button id="replay-win" class="game-win-button" aria-label="Start another game from the beginning">Play Again</button>
-            <a href="game-heroes.html" aria-label="Change to the heroes deck"><Button class="game-win-button">Change Deck</Button></a>
-            <a href="index.html" aria-label="Exit to the homepage"><button class="game-win-button push-down">Exit</button></a>
+            <p>You are victorious</p>
+            <div id=victory-button-container>
+                <button id="replay-win" class="game-win-button" aria-label="Start another game from the beginning">Play
+                    Again</button>
+                <a class="game-win-button" href="game-heroes.html" aria-label="Change to the heroes deck">Change Deck</a>
+                <a class="game-win-button push-down" href="index.html" aria-label="Exit to the homepage">Exit</a>
+            </div>
         </div>
         <div id="defeat">
             <div id="defeat-buttons-container">
-                <button id="replay-lose" class="game-lose-button" aria-label="Start another game from the beginning">Play Again</button>
-                <a href="game-heroes.html" aria-label="Change to the heroes deck"><Button class="game-lose-button">Change Deck</Button></a>
-                <a href="index.html" aria-label="Exit to the homepage"><button class="game-lose-button push-down">Exit</button></a>
+                <button id="replay-lose" class="game-lose-button"
+                    aria-label="Start another game from the beginning">Play Again</button>
+                    <a class="game-lose-button" href="game-heroes.html" aria-label="Change to the heroes deck">Change Deck</a>
+                    <a class="game-lose-button push-down" href="index.html" aria-label="Exit to the homepage">Exit</a>
             </div>
         </div>
         <div id="empty-deck">
             <h2>You're out of cards</h2>
             <div id="empty-buttons-container">
-                <button id="replay-empty" class="game-empty-button" aria-label="Start another game from the beginning">Play Again</button>
-                <a href="game-heroes.html" aria-label="Change to the heroes deck"><Button class="game-empty-button">Change Deck</Button></a>
-                <a href="index.html" aria-label="Exit to the homepage"><button class="game-empty-button push-down">Exit</button></a>
+                <button id="replay-empty" class="game-empty-button"
+                    aria-label="Start another game from the beginning">Play Again</button>
+                    <a class="game-empty-button" href="game-heroes.html" aria-label="Change to the heroes deck">Change Deck</a>
+                    <a class="game-empty-button push-down" href="index.html" aria-label="Exit to the homepage">Exit</a>
             </div>
         </div>
     </div>
