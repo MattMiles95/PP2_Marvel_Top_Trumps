@@ -2429,8 +2429,8 @@ td > i {
   }
 }
 
-/* Small - Medium Horizontal Phones (max height 385px) */
-@media (max-height: 385px) {
+/* Small - Medium Horizontal Phones (max height 400px) */
+@media (max-height: 400px) {
   /* ----------------- Card Dimeonsions */
 
   #user-card {
@@ -2496,8 +2496,8 @@ td > i {
   }
 }
 
-/* Small horizontal phones (max height 350px) */
-@media (max-height: 350px) {
+/* Small horizontal phones (max height 385px) */
+@media (max-height: 385px) {
   /* HOMEPAGE */
   /* HOMEPAGE */
   #play-button-container {
@@ -2872,7 +2872,7 @@ td > i {
 
   /* ----------------- User Buttons */
   #user-buttons {
-    top: 80%;
+    top: 645px;
     left: 6%;
     width: 220px;
     height: 50px;
@@ -2891,7 +2891,7 @@ td > i {
   }
 
   #user-villain-buttons {
-    top: 80%;
+    top: 645px;
     left: 6%;
     width: 220px;
     height: 50px;
@@ -2937,21 +2937,21 @@ td > i {
     top: 200px;
     left: 25px;
     width: 235px;
-    height: 450px;
+    height: 460px;
   }
 
   #user-background-card2 {
     top: 190px;
     left: 30px;
     width: 235px;
-    height: 450px;
+    height: 460px;
   }
 
   #user-background-card3 {
     top: 180px;
     left: 35px;
     width: 235px;
-    height: 450px;
+    height: 460px;
   }
 
   #user-background-card3 > img {
@@ -2963,21 +2963,21 @@ td > i {
     top: 200px;
     right: 25px;
     width: 235px;
-    height: 450px;
+    height: 460px;
   }
 
   #cpu-background-card2 {
     top: 190px;
     right: 30px;
     width: 235px;
-    height: 450px;
+    height: 460px;
   }
 
   #cpu-background-card3 {
     top: 180px;
     right: 35px;
     width: 235px;
-    height: 450px;
+    height: 460px;
   }
 
   #cpu-background-card3 > img {
@@ -2990,14 +2990,14 @@ td > i {
     top: 170px;
     left: 40px;
     width: 235px;
-    height: 450px;
+    height: 460px;
   }
 
   #cpu-card {
     top: 170px;
     right: 40px;
     width: 235px;
-    height: 450px;
+    height: 460px;
   }
 
   /* ----------------- Hero Cards */
