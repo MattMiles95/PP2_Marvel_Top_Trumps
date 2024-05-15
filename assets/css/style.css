@@ -307,7 +307,7 @@ a {
   font-weight: 900;
   border: solid 5px black;
   border-radius: 20px;
-  z-index: 1;
+  z-index: 99;
 }
 
 #h2p > h2 {
