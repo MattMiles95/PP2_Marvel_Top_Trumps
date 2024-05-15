@@ -82,23 +82,27 @@ Marvel Top Trumps is a website for people that enjoy simple card games and the s
 #### Colours
 Marvel Top Trumps utilises several different colour schemes to establish a clear divide between different features. However, these different schemes each share the pop-art / comic book asthetic (vibrant, high-contrast colours), to provide a sense of consistency throughout the website.
 
-* Marvel's iconic red and white colour-scheme for neutral features:
+##### Marvel's iconic red and white colour-scheme for neutral features:
 
 ![Marvel Palette](assets/images/readme-images/marvel-palette.webp)
 
-* Traditional blues and reds to depict opposing teams (heroes and villains, respectively):
+##### Traditional blues and reds to depict opposing teams (heroes and villains, respectively):
 
-![Heroes & Villains Palette](assets/images/readme-images/heroes-villains-palette.webp)
+![Heroes Palette](assets/images/readme-images/heroes-palette.webp)
 
-* Orange, white and black for Options buttons:
+![Villains Palette](assets/images/readme-images/villains-palette.webp)
+
+##### Orange, white and black for Options buttons:
 
 ![Options Palette](assets/images/readme-images/options-palette.webp)
 
-* Greens and reds for wins and losses:
+##### Greens and reds for wins and losses:
 
-![Wins & Losses Palette](assets/images/readme-images/wins-losses-palette.webp)
+![Wins Palette](assets/images/readme-images/wins-palette.webp)
 
-* Yellows for neutral backgrounds:
+![Losses Palette](assets/images/readme-images/losses-palette.webp)
+
+##### Yellows for neutral backgrounds:
 
 ![Neutral Yellows Palette](assets/images/readme-images/neutral-yellows-palette.webp)
 
@@ -111,19 +115,17 @@ The majority of background images I have used share the same pop-art / comic boo
 #### Wireframes
 I used wireframes to express my initial design ideas for the game. 
 
-<details><summary>A sample of my initial wireframes:</summary><p align="left"><img src="https://res.cloudinary.com/drnx69cce/image/upload/v1712187930/wireframe-sample_vyqrv4.webp"></p></details>
+<details><summary>A sample of my initial wireframes:</summary>
+
+![Wireframe Screenshot](assets/images/readme-images/wireframe-screenshot.webp)
+</details>
 
 #### Accessibility
 To ensure every User has equal opportunity to enjoy my game, I ensured maximum accessibility in its design and code:
  
 * Alt text and aria-labels are used throughout the site to aid screen readers.
 
-* All colour schemes utilise contrast between background and foreground to ensure ease of readability. All background/foreground contrasts were tested using [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) and recieved passing grades across the board.
-
-<details><summary>Screenshot of Contrast Checker to demonstrate test:</summary>
-
-![Contrast Checker Test](assets/images/readme-images/contrast-checker.webp)
-</details>
+* All colour schemes utilise contrast between background and foreground to ensure ease of readability.
 
 #### Responsiveness
 As my game utilises a landscape format, I initially designed the website for use on larger screens and then adjusted its responsiveness on smaller devices from there. 
@@ -149,7 +151,8 @@ The purpose of the homepage is very simple - to capture the User's attention and
 The background image features Marvel heroes along the top, a white space in the centre, and Marvel villains along the bottom. This imagery reflects the nature of the game; Marvel heroes vs Marvel villains. Using a photo editor, I created a logo for the game and placed this within the white space of the image. I then layered the parts of the image that overlap the white space to also overlap the logo, giving more depth to the imagery.
 
 #### The Play Button
-![Play Button Screenshot](assets/images/readme-images/features-play-button.webp)
+![Play Button Screenshot](assets/images/readme-images/features-play-button.png)
+![Play Button Screenshot](assets/images/readme-images/features-play-button-hover.webp)
 
 The only interactive feature the User is met with when opening the site is a large red button containing a simple call to action: "Play Game". The Button is set against a plain white background to ensure it grabs the User's attention. When hovering the cursor over the button, the text begins to expand and glow, the box shadow fades away (giving the impression of a button being pressed) and the cursor becomes a pointer. This provides the User with a satisfying feedback response, making the button feel interactive.
 
@@ -165,16 +168,16 @@ Upon clicking the Play button, a window opens within the centre of the page, off
 Both the Heroes and Villains buttons use similar hover effects as the Play button to provide feedback to the user. Clicking either button takes the User through to the respective game page.
 
 #### The Game
-![Heroes Game](assets/images/readme-images/heroes-game.webp)
+![Heroes Game](assets/images/readme-images/features-heroes-game.webp)
 
-![Villains Game](assets/images/readme-images/villains-game.webp)
+![Villains Game](assets/images/readme-images/features-villains-game.webp)
 
 Once the user has selected the deck of cards they wish to play with, they are taken to either the Heroes game or the Villains game. The layout of both is entirely the same, only mirrored to ensure the User's deck and score are always displayed on the left half of the screen, with the opponent's deck and score on the right. The background image also changes to reflect this mirrored design, as well as the Villains game using slightly darker tones. 
 
-#### Start of the Game
-![Fight Button Screenshot](assets/images/readme-images/features-fight-button.webp)
+#### Gameplay
+![Gameplay Screenshot](assets/images/readme-images/features-gameplay.webp)
 
-Initially, the User is met with two decks of cards, all face down. In the centre of the screen is a window with a big red button conatining the word, "Fight!". Upon clicking this this button, the top card of each deck is flipped over (animated using CSS and JavaScript) revealing the User's and opponent's playing cards.
+Initially, the User is met with two decks of cards, all face down. In the centre of the screen is a window with a big red button conatining the word, "Fight!". Upon clicking this this button, the top card of each deck is flipped over (animated using CSS and JavaScript) revealing the User's and opponent's playing cards and the User Buttons panel.
 
 #### The Cards
 ![User Card Screenshot](assets/images/readme-images/features-user-card.webp)
@@ -200,9 +203,9 @@ Upon playing a stat, the User's button panel disappears and a results window ope
 At the top of the screen is the scoreboard, which keeps track of how many rounds have been played and how many points each side has scored. This is important, as the game will end when either one team reaches 7 points, or 14 cards have been played (the limit of each deck). Once one of these parameters is met, another window opens at the centre of the screen, confirming that either the User has won the game, lost or run out of cards.
 
 #### Game Over
-![Game Won Screenshot](assets/images/readme-images/features-game-won.webp)
-![Game Lost Screenshot](assets/images/readme-images/features-game-won.webp)
-![Deck Limit Reached Screenshot](assets/images/readme-images/features-empty-deck.webp)
+![Game Won Screenshot](assets/images/readme-images/features-victory.webp)
+![Game Lost Screenshot](assets/images/readme-images/features-game-defeat.webp)
+![Deck Limit Reached Screenshot](assets/images/readme-images/features-game-empty-deck.webp)
 
 As stated above, there are three parameters for the game ending: the User winning, the User losing, or the User running out of cards. Each of these game endings have a specific themed "Game-Over" window pop up in the centre of the screen. Whilst all different in appearence and text content, each offers the User the same options: 
 
@@ -215,7 +218,7 @@ As stated above, there are three parameters for the game ending: the User winnin
 When the Game Over screen appears, the background image is blurred and the Options buttons disppear, to draw focus to the Game Over screen and stop other features from being triggered in the background (such as opening the How to Play window). 
 
 #### Options Buttons
-![Option Buttons Screenshot](assets/images/readme-images/features-options-buttons.webp)
+![Option Buttons Screenshot](assets/images/readme-images/features-options.webp)
 
 In the top-left corner of the screen are three "Options" buttons, identified by their shared colour scheme of orange, white and black.
 
@@ -434,7 +437,7 @@ The website was developed using Visual Studio Code, with all local files stored 
 
 This site was deployed via GitHub Pages, using the following steps:
 
-1. Open the GitHub repository - [PP2_Marvel_Top_Trumps](https://github.com/MattMiles95/ PP2_Marvel_Top_Trumps).
+1. Open the GitHub repository - [PP2_Marvel_Top_Trumps](https://github.com/MattMiles95/PP2_Marvel_Top_Trumps).
 
 2. Select the Settings tab.
 
@@ -445,7 +448,7 @@ Upon completion of the above steps, refresh the repository homepage and scroll t
 #### Forking the GitHub Repository
 Forking the repository creates a copy of the original, allowing us to view and change the repository without affecting the original. This can be done by following the below steps:
 
-1. Open the GitHub repository - [PP2_Marvel_Top_Trumps](https://github.com/MattMiles95/ PP2_Marvel_Top_Trumps).
+1. Open the GitHub repository - [PP2_Marvel_Top_Trumps](https://github.com/MattMiles95/PP2_Marvel_Top_Trumps).
 
 2. Select the "Fork" button in the top-right section of the page.
 
@@ -454,7 +457,7 @@ A copy of the repository should now be in your own GitHub account.
 #### Local Clone
 Cloning the repository allows you to copy the files into your own IDE for local development. This can be done by following the below steps:
 
-1. Open the GitHub repository - [PP2_Marvel_Top_Trumps](https://github.com/MattMiles95/ PP2_Marvel_Top_Trumps).
+1. Open the GitHub repository - [PP2_Marvel_Top_Trumps](https://github.com/MattMiles95/PP2_Marvel_Top_Trumps).
 
 2. Navigate the 'Code' dropdown menu and select whether you wish to clone the code using HTTPS, SSH or GitHub CLI.
 
