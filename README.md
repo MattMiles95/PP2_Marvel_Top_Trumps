@@ -309,9 +309,6 @@ For my Favicon, I have used the iconic Marvel symbol of a red letter 'M', as thi
 * [Chrome Eye Dropper](https://chromewebstore.google.com/detail/eye-dropper/hmdcmlfkchdmnmnmheododdhjedfccka)
     - For sampling colours.
 
-* [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/)
-    - For testing foreground/background contrasts.
-
 ### Testing
 
 #### Validators
@@ -322,102 +319,130 @@ To ensure there were no errors in the syntax of my code, each file was separatel
 
 <details><summary>index.html</summary>
 
-![Homepage Validator Result](assets/images/readme-images/html-validator-pass.webp)
+![Homepage Validator Result](assets/images/readme-images/w3-index.webp)
 </details>
 
 <details><summary>game-heroes.html</summary>
 
-![Heroes Page Validator Result](assets/images/readme-images/heroes-validator-pass.webp)
+![Heroes Page Validator Result](assets/images/readme-images/w3-heroes.webp)
 </details>
 
 <details><summary>game-villains.html</summary>
 
-![Villains Page Validator Result](assets/images/readme-images/villains-validator-pass.webp)
+![Villains Page Validator Result](assets/images/readme-images/w3-villains.webp)
 </details>
 
 ##### CSS
 
 <details><summary>style.css</summary>
 
-![CSS Validator Result](assets/images/readme-images/css-validator-pass.webp)
+![CSS Validator Result](assets/images/readme-images/w3-css.webp)
 </details>
 
 ##### JavaScript
 
 <details><summary>home.js</summary>
 
-![JSHint Result](assets/images/readme-images/jshint-home-pass.webp)
+![JSHint Result](assets/images/readme-images/jshint-home.webp)
 </details>
 
 <details><summary>heroes.js</summary>
 
-![JSHint Result](assets/images/readme-images/jshint-heroes-pass.webp)
+![JSHint Result](assets/images/readme-images/jshint-heroes.webp)
 </details>
 
 <details><summary>villains.js</summary>
 
-![JSHint Result](assets/images/readme-images/jshint-villains-pass.webp)
+![JSHint Result](assets/images/readme-images/jshint-villains.webp)
 </details>
 
 #### Lighthouse Testing
 
 I used the Google Lighthouse tool to test the performance, accessibility, SEO and best practices of each of webpages, generating reports for both mobile and desktop performance on each.
 
+All Lighthouse tests were conducted using Incognito Mode to ensure there was no interference from browser plugins.
+
 ##### Lighthouse Test Results
 
 <details><summary>index.html</summary>
 
-![Homepage Lighthouse Result](assets/images/readme-images/lighthouse-index.webp)
+![Homepage Lighthouse Result](assets/images/readme-images/lighthouse-result-index.png)
 </details>
 
 <details><summary>heroes.html</summary>
 
-![Heroes Page Lighthouse Result](assets/images/readme-images/lighthouse-heroes.webp)
+![Heroes Page Lighthouse Result](assets/images/readme-images/lighthouse-result-heroes.webp)
 </details>
 
 <details><summary>villains.html</summary>
 
-![Go Further Lighthouse Result](assets/images/readme-images/lighthouse-villains.webp)
+![Villains Lighthouse Result](assets/images/readme-images/lighthouse-result-villains.webp)
 </details>
 
 #### Manual Testing 
-
-##### Table of Results 
+ 
 To test the functionality of my JavaScript, myself and several friends and family play tested the game on various devices. I then compiled the data in the following table:
 
-<table>
+#### Browser Compatibility
 
-##### Browsers and Devices
+Browser | Expected Outcome  | Result
+--- | --- | ---
+Google Chrome | No issues with appearance, functionality, performance or responsiveness | Pass
+Microsoft Edge | No issues with appearance, functionality, performance or responsiveness | Pass
+Mozilla Firefox | No issues with appearance, functionality, performance or responsiveness | Pass
+Safari | No issues with appearance, functionality, performance or responsiveness | Pass
 
-###### Browsers
-* Google Chrome
-* Microsoft Edge
-* Mozilla Firefox
-* Safari
+#### Device Compatibility
 
-###### Devices
-* Samsung Galaxy S23 Ultra (412 x 750) 
-* iPhone 13 (390 x 661)
-* Apple iPad 8th Gen (580 x 548)
-* 15.6" Portable Monitor (1280 x 551)
-* 15.6" Windows Laptop (1536 x 695)
+Device | Expected Outcome | Result
+--- | --- | ---
+Samsung Galaxy S23 Ultra (412px x 750px) | No issues with appearance, functionality, performance or responsiveness | Pass
+iPhone 13 (390px x 661px) | No issues with appearance, functionality, performance or responsiveness | Pass
+Apple iPad 8th Gen (580px x 548px) | No issues with appearance, functionality, performance or responsiveness | Pass
+15.6" Portable Monitor (1280px x 551px) | No issues with appearance, functionality, performance or responsiveness | Pass
+15.6" Windows Laptop (1536px x 695px) | No issues with appearance, functionality, performance or responsiveness | Pass 
 
 (The above viewports were calculated using [whatismyviewport.com](https://whatismyviewport.com/) on each devices' maximised browser window.)
 
-The following features were manually tested on each of the above browsers and devices: 
+#### Play Testing
 
-* General performance
-* Script functionality
-* Responsiveness
-* Google Fonts
-* Internal links
-* Hover animations
+Feature | Expected Outcome | Result
+--- | --- | ---
+Play Button | Positioned centre/right of viewport, responds correctly to hovering mouse, opens 'deck choice' menu when clicked and disappears from view | Pass
+Deck Choice Menu | Positioned centre of viewport, each button responds correctly to hovering mouse, each button leads to correct game page, close window button causes Play button to reappear | Pass
+Games Page | All elements appear and in correct positions, correct formatting dependent on game type | Pass
+Fight Button | Container appears above other content, button responds correctly to hovering mouse, when clicked triggers (1) User and CPU cards to flip over (2) randomly generated hero & villain (3) User Buttons panel to appear (4) correct SFX | Pass
+User & CPU Cards | Card flip animation works as expected, randomly generates characters from respective arrays (including images, names, quotes and stats), User stats visible, CPU stats hidden, characters removed from respective arrays once selecetd to avoid repetition | Pass
+User Buttons | Correctly positioned depending on viewport dimensions with correct background depending on game type, buttons respond correctly to hovering mouse, each button triggers appropriate results screen, correct SFX | Pass
+Round Win | 'Win' window appears, scoreboard adjusts accordingly, User Button panel disappears, button responds correctly to hovering mouse, button resets game and adds +1 to round counter, correct SFX | Pass
+Round Lose | 'Lose' window appears, scoreboard adjusts accordingly, User Button panel disappears, button responds correctly to hovering mouse, button resets game and adds +1 to round counter, correct SFX | Pass
+Round Draw | 'Draw' window appears, scoreboard remains the same, User Button panel disappears, button responds correctly to hovering mouse, button resets game and adds +1 to round counter, correct SFX | Pass
+Game Over - Victory | 'Victory' window appears, background image blurs, User Button panel disappears, Options buttons disappear, buttons respond correctly to hovering mouse, buttons trigger correct functions/page navigation, correct SFX | Pass
+Game Over - Defeat | 'Defeat' window appears, background image blurs, User Button panel disappears, Options buttons disappear, buttons respond correctly to hovering mouse, buttons trigger correct functions/page navigation, correct SFX | Pass
+Game Over - Empty Deck | 'Empty Deck' window appears, background image blurs, User Button panel disappears, Options buttons disappear, buttons respond correctly to hovering mouse, buttons trigger correct functions/page navigation, correct SFX | Pass
+Options Buttons | Correctly positioned depending on viewport dimensions, respond correctly to hovering mouse, trigger correct functions when clicked | Pass
+'How to Play' Window | Appears centre of viewport above all other content, close window button works as expected, correct SFX | Pass
+Audio Toggle | Default set to mute, toggle effects all audio events, icon changes accordingly | Pass
+Scoreboard | Appears top/centre of viewport, round counter and scores respond correctly at the appropriate events, triggers game over at expected values | Pass
 
 #### Bugs and Fixes
 
 During the development of my game, I encountered several bugs that required fixes. I have documented these in the table below:
 
-<table>
+Feature | Expected Outcome | Actual Outcome | Fix
+--- | --- | --- | ---
+Characters being randomly generated | Hero and Villain appear within User and CPU cards | Cards remained blank | moved arrays that stored characters below respective variable declarations
+Power Attack (User Button) | User & CPU 'power' stats compared and appropiate result screen triggered | 'Lose' window triggering regardless of stat values | Corrected syntax used for 'if / else if' loop (previously wrote code as 'if else')
+Intelligence Attack (User Button) | User & CPU 'intelligence' stats compared and appropiate result screen triggered | Button not triggering any event | Corrected spelling of intelligence button ID tag within the script
+Play Again Button | Reloads page to reset game | Button not triggering any event | Added [0] to getElementsByClassName() method to correctly target the Play Again button
+Play Again Button | Reloads page to reset game | Button only working within 'Victory' window | Created separate variables and event listeners for 'Victory', 'Defeat' and 'Empty Deck' windows
+Round Results Window | Each time a round ends, either the 'win', 'lose' or 'draw' window appears (nothwithstanding Game Over event triggers) | Previous rounds' results windows would begin to stack over the course of multiple rounds, leading to multiple results screens appearing at once | Added function to reset each results windows' 'display' property to 'none' when using the 'Next Game' button
+Audio Toggle Button | Upon hovering mouse, button should increase in size and brightness | Button not responding to hovering mouse | Corrected ID names in CSS
+Game Over Event | Once a team has reached 7 points, appropriate Game Over event is triggered | Game Over event not triggering for Victory or Defeat | Created a checkScore() function to check whether score limit has been reached by either team at the end of each round (triggers appropriate Game Over event if 'true')
+Removal of Previously Selected Characters | Once a character has been selected they are removed from their respective array to prevent repetition | Adding splice() method to existing card generating function caused cards to appear blank | Refactored dealCards() function into separate components to apply splice() method to only the applicable component
+Play Button | Upon mouse hovering, font increases in size and glows | Hover effect causing font to overflow container in certain screen dimensions | Adjusted font sizes in relevant media queries to eliminate overflow
+User Buttons Panel | Panel appears slightly below User Card on devices with viewport of max width 800px / max height 650px | Panel positioning at very bottom of viewport, causing large gap between User Card and panel | Changed positioning unit from % to px to keep position fixed just below User Card 
+'How to Play' Window | Window appears above all other content | Window appeared beneath 'Fight' button container | Increase z-index value to 99 to ensure window always appears on top
 
 ### Local Development & Deployment
 
